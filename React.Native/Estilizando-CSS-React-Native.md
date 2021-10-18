@@ -116,7 +116,7 @@ export default App;
 
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.2 Opção)
 
-Aqui já esporta direto no componente, não precisa fazer a linha abaixo que estava anteriormente,
+Aqui já exporta direto no componente, não precisa fazer a linha abaixo que estava anteriormente,
 
 ```js
 export default App;
