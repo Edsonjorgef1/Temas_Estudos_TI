@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
+## Estilizando o CSS, dentro de um arquivo .JS (Projeto básico do React, após criado o projeto, 2 Opção)
 
 Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text", "View".
 O"StyleSheet", que foi importado anteriormente neste exemplo não precisa.
@@ -90,7 +90,7 @@ Text, foi adicionado este comando para estilizar o css
 ```js
  <Text> style={{Aqui dentro, Css}} </Text>
 ```
-
+Arquivo App.js
 ```js
 import React from "react";
 
