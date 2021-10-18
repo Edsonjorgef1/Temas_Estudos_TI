@@ -1,3 +1,7 @@
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
 ## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 1 Opção)
 
 Arquivo App.js
@@ -37,7 +41,7 @@ font-size: 32px;
 color: #525252;
 ```
 
-## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
+## Estilizando o CSS, dentro de um arquivo .JS (Projeto básico do React, após criado o projeto, 2 Opção)
 
 Adiconei este comando abaixo, em h1 e h2, olha que facil.
 

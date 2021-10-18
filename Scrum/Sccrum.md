@@ -1,3 +1,7 @@
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
 ## Scrum
 
 Muito importante saber o que é scrum, as empresas hoje em dia, pedem muito.

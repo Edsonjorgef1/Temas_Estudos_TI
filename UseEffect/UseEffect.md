@@ -1,3 +1,7 @@
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
 ## UseEffect
 
 Roda uma função toda vez que o componente é iniciado ou quando está monitorando um comportamento de uma state ou um componente.
@@ -49,4 +53,5 @@ return (
   </View>
 );
 ```
+
 # UseEffect_Manual

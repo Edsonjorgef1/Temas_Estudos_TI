@@ -1,4 +1,8 @@
-## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React.native, após criado o projeto, 1 Opção)
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
+## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React.native, após criado o projeto, StyleSheet, 1 Opção)
 
 Comando para criar um projeto em React.native
 
@@ -74,7 +78,43 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
+## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.1 Opção)
+
+```js
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+
+function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.logo}>Engenheiro Youtuber</Text>
+    </View>
+  );
+}
+
+//Chamando o Css, estrutura padrão.
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // Pegar o espaço disponível
+    backgroundColor: "#003f5c", // Cor de fundo
+    alignItems: "center", //  Centraliza verticalmente
+    textAlign: "center", // Centraliza no meio da tela
+    justifyContent: "center", //Para alinhar itens flexíveis ao longo do eixo principal
+  },
+  logo: {
+    fontWeight: "bold", // Tipo da fonte
+    fontSize: 50, // Tamanho da fonte
+    color: "#fb5b5a", // Cor da fonte
+    textAlign: "center", // Centraliza no meio da tela
+    marginBottom: 10, // Margem inferior
+  },
+});
+
+//Exportando Componente
+export default App;
+```
+
+## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
 
 Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text", "View".
 O"StyleSheet", que foi importado anteriormente neste exemplo não precisa.
@@ -125,7 +165,7 @@ export default class App extends React.Component {
 }
 ```
 
-## Estilizando o CSS, dentro de um arquivo .js (styled-components, 1 Opção)
+## Estilizando o CSS, (Hooks) dentro de um arquivo .js (styled-components, 1 Opção)
 
 Comando para instalar o styled-components
 
@@ -168,7 +208,7 @@ export const Title = styled.Text`
 `;
 ```
 
-## Estilizando o CSS, dentro de um arquivo .js (styled-components, 2 Opção)
+## Estilizando o CSS, (Hooks) dentro de um arquivo .js (styled-components, 2 Opção)
 
 Repare que neste exemplo, é mais resumido, olha esta linha abaixo, o St,
 subistitui todos os nomes que estavam sendo importados anteriormente.

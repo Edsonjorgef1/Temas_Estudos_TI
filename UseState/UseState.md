@@ -1,3 +1,7 @@
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
 ## UseState
 
 Serve pra obter o valor inicial de uma constante ou utilizado para setar o Valor a uma constante

@@ -1,3 +1,7 @@
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
 ## Criando meu repositório no Github e enviando minhas alterações feitas no VsCode
 
 ## GitHub

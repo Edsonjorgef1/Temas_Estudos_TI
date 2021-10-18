@@ -1,9 +1,15 @@
+Inscrevam-se: Canal, Engenheiro Youtuber
+
+https://www.youtube.com/engenheiroyoutuber
+
 ## Comando para criar um projeto, React.Js
 
 ```js
 npx create-react-app Meu_Primeiro_Projeto
 ```
+
 ## Yarn ou NPM (Instalar dependências)
+
 Você pode instalar as dependência com npm ou yarn, lembre-se se for instalar com o yarn deve instalar ele no seu computador, no site, abaixo.
 
 ```js
