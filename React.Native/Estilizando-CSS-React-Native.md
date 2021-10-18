@@ -177,12 +177,14 @@ export default App;
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-export default App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.logo}>Engenheiro Youtuber</Text>
-    </View>
-  );
+export default class App extends React.Component() {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.logo}>Engenheiro Youtuber</Text>
+      </View>
+    );
+  }
 }
 
 //Chamando o Css, estrutura padrão.
@@ -202,7 +204,6 @@ const styles = StyleSheet.create({
     marginBottom: 10, // Margem inferior
   },
 });
-
 ```
 
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (styled-components, 1 Opção)
