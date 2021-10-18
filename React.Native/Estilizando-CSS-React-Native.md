@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
 });
 ```
 
-<<<<<<< HEAD
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.1 Opção)
 
 ```js
@@ -115,10 +114,47 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
+## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.2 Opção)
+
+Aqui já esporta direto no componente, não precisa fazer a linha abaixo que estava anteriormente,
+
+```js
+export default App;
+```
+
+```js
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+
+export default App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.logo}>Engenheiro Youtuber</Text>
+    </View>
+  );
+}
+
+//Chamando o Css, estrutura padrão.
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // Pegar o espaço disponível
+    backgroundColor: "#003f5c", // Cor de fundo
+    alignItems: "center", //  Centraliza verticalmente
+    textAlign: "center", // Centraliza no meio da tela
+    justifyContent: "center", //Para alinhar itens flexíveis ao longo do eixo principal
+  },
+  logo: {
+    fontWeight: "bold", // Tipo da fonte
+    fontSize: 50, // Tamanho da fonte
+    color: "#fb5b5a", // Cor da fonte
+    textAlign: "center", // Centraliza no meio da tela
+    marginBottom: 10, // Margem inferior
+  },
+});
+
+```
+
 ## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
-=======
-## Estilizando o CSS, dentro de um arquivo .JS (Projeto básico do React, após criado o projeto, 2 Opção)
->>>>>>> a11f77a1261bc43122186dec1e3d28d251fe5c9f
 
 Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text", "View".
 O"StyleSheet", que foi importado anteriormente neste exemplo não precisa.
@@ -134,7 +170,7 @@ Text, foi adicionado este comando para estilizar o css
 ```js
  <Text> style={{Aqui dentro, Css}} </Text>
 ```
-Arquivo App.js
+
 ```js
 import React from "react";
 
