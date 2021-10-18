@@ -78,6 +78,57 @@ const styles = StyleSheet.create({
 });
 ```
 
+## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
+
+Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text", "View".
+O"StyleSheet", que foi importado anteriormente neste exemplo não precisa.
+
+View foi adicionado este comando para estilizar o css
+
+```js
+ <View> style={{Aqui dentro, Css}} </View>
+```
+
+Text, foi adicionado este comando para estilizar o css
+
+```js
+ <Text> style={{Aqui dentro, Css}} </Text>
+```
+
+```js
+import React from "react";
+
+import { Text, View } from "react-native";
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: "#003f5c",
+          alignItems: "center",
+          textAlign: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Text
+          style={{
+            fontWeight: "bold",
+            fontSize: 50,
+            color: "#fb5b5a",
+            textAlign: "center",
+            marginBottom: 10,
+          }}
+        >
+          Engenheiro Youtuber
+        </Text>
+      </View>
+    );
+  }
+}
+```
+
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.1 Opção)
 
 ```js
@@ -152,57 +203,6 @@ const styles = StyleSheet.create({
   },
 });
 
-```
-
-## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
-
-Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text", "View".
-O"StyleSheet", que foi importado anteriormente neste exemplo não precisa.
-
-View foi adicionado este comando para estilizar o css
-
-```js
- <View> style={{Aqui dentro, Css}} </View>
-```
-
-Text, foi adicionado este comando para estilizar o css
-
-```js
- <Text> style={{Aqui dentro, Css}} </Text>
-```
-
-```js
-import React from "react";
-
-import { Text, View } from "react-native";
-
-export default class App extends React.Component {
-  render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "#003f5c",
-          alignItems: "center",
-          textAlign: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Text
-          style={{
-            fontWeight: "bold",
-            fontSize: 50,
-            color: "#fb5b5a",
-            textAlign: "center",
-            marginBottom: 10,
-          }}
-        >
-          Engenheiro Youtuber
-        </Text>
-      </View>
-    );
-  }
-}
 ```
 
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (styled-components, 1 Opção)
