@@ -2,7 +2,7 @@ Inscrevam-se: Canal, Engenheiro Youtuber
 
 https://www.youtube.com/engenheiroyoutuber
 
-## React.Js*(div)*(H1)_X_React.Native_(View)\_(Text)
+## React.Js "div" "H1" X React.Native "View" "Text"
 
 Este exemplo, vai ser bem legal, vamos abordar,
 como fazer o projeto em React.js e React.Native a mesma coisa,
@@ -54,9 +54,9 @@ import React from "react";
 
 Depois que você importar o react, igual o exemplo acima, servindo para React.js e React.Native, no seu código, o babel que é o processador do javascript vai começar a entender o JSX, dentro de uma div, que será aonde vamos fazer a estrutura do nosso código aonde podemos, escrever um código em html, dentro de um arquivo Javascript e também estilizar um CSS dentro de um arquivo javascript, lembrando que você não vai ver este código, que o babel está imterpretando por trás, do nosso código.
 
-## React.Js*(div)*(H1)_X_React.Native_(View)\_(Text)
+## React.Js "div" "H1" X React.Native "View" "Text"
 
-### React.Js*(div)*(H1)
+### React.Js "div" "H1"
 
 React.js, temos que importar o React, para que possa funcionar o Jsx dentro do componente.
 Exemplo abaixo:
@@ -128,7 +128,7 @@ function App() {
 export default App; // Exportando o componente, para que você possa reutilizar ele depois em outros lugares, o nome deste componente é App
 ```
 
-### React.Native*(View)*(Text)
+### React.Native "View" "Text"
 
 Aqui para rodar o projeto depois de pronto, comando: "expo start", você digita no terminar do vscode ou gitbast ou o terminal que você achar mais atraente para você.
 Vai criar uma estrutura de um projeto pronto para você, depois só aterar como desejar.
