@@ -2,6 +2,9 @@ Inscrevam-se: Canal, Engenheiro Youtuber
 
 https://www.youtube.com/engenheiroyoutuber
 
+## Criando repósitorio
+Quando for criar o seu repositório, você terá que fazer um repositório com o nome do seu usuário para que você possa fazer a apresentação do seu github.
+
 ## Como deixar o visual mais bunito do readme do seu github
 
 Quando você clicar no seu perfil, na opção Overview, abaixo vai conter alguns repositorios seus popular, a mais abaixo, vai conter um lugar escrito "contributions", neste lugar aonde está a quantidade e os dias que você está fazendo os commit, do lado direito escrito "contribution settings", clique na opção "Private contributions", ira começar a somar a quantidade de commit's que você faz no privado assim somando mais comit's.
