@@ -2,10 +2,10 @@ Inscrevam-se: Canal, Engenheiro Youtuber
 
 https://www.youtube.com/engenheiroyoutuber
 
-## Comando para criar um projeto, React.Js
+## Comando para criar um projeto, React.Native
 
 ```js
-npx create-react-app Meu_Primeiro_Projeto
+create-react-native-app Meu_Primeiro_Projeto
 ```
 
 ## Yarn ou NPM (Instalar dependências)
@@ -14,6 +14,23 @@ Você pode instalar as dependência com npm ou yarn, lembre-se se for instalar c
 
 ```js
 https://yarnpkg.com/
+```
+
+## Emular aplicativo
+
+Você pode usar o Expo, pois e mais leve, principalmente quem está aprendendo, pois o emulador android studio e muito pesado, tem que ter um computador bom para emular com ele, por isso recomento o expo.
+Comando para emular o aplicativo.
+
+```js
+expo start
+```
+
+## Emulador android studio
+
+Abrir o projeto dentro do emulador android studio, abrindo direto do vscode
+
+```js
+emulador -no-snapshot -avd Nexus_5_api_28
 ```
 
 ## Node_Modules
@@ -26,6 +43,8 @@ dentro desta pasta, para auxiliar você no desenvolvimento, lembrando que na sua
 da para ver todos os nomes de suas dependências que foram instaladas, mais facil.
 
 ## Componente, Function Component
+
+Arquivo, App.js
 
 ```js
 //Importando o react
@@ -45,6 +64,8 @@ export default App_function_Component;
 
 ## Componente, Function Component, outro jeito
 
+Arquivo, App.js
+
 ```js
 //Importando o react
 import React from "react";
@@ -59,6 +80,8 @@ export default function App_function_Component() {
 ```
 
 ## Componente, Arrow Function
+
+Arquivo, App.js
 
 ```js
 //Importando o react
@@ -78,6 +101,8 @@ export default App_Arrow_Funcion;
 
 # Componente, Class Component
 
+Arquivo, App.js
+
 ```js
 //Importando o react
 import React from "react";
@@ -96,7 +121,30 @@ class App_Class_Component extends React.Component {
 export default App_Class_Component;
 ```
 
+## Componente, Function Component, (Typescript)
+
+Arquivo App.tsx (Repare que aqui o arquivo diferente ele é .tsx)
+
+```js
+//Importando o react
+import React from "react";
+
+// Este React.FC, ele tipa o componente, este FC, é a abreviação do function component
+const App: React.FC = () => {
+  return (
+    <div className="App_function_Component">
+      <h1>Componente principal</h1>
+    </div>
+  );
+};
+
+//Exportando Componente
+export default App;
+```
+
 # Exemplo de um elemento em JSX
+
+Arquivo, App.js
 
 ```js
 //Importando o react
