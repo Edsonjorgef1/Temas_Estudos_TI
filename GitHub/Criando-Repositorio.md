@@ -365,25 +365,3 @@ Enviando as alterações do seu projeto
 ```js
 git push origin (nome da branch)
 ```
-
-## Para clonar um projeto do GitHub
-
-Basta você copiar a URL, do projeto que deseja,
-você vai achar na opção <code>, depois clique em Code, opção HTTPS, ai você
-copia a URL, e faz o comando abaixo.
-
-```js
-git clone (URL do projeto que deseja clonar)
-```
-
-Lembre-se que, se o projeto for em React, depois de clonar o projeto você deve
-fazer.
-
-```js
-yarn
-ou
-npm install
-```
-
-Para que fazer, yarn start ou npm start, para você instalar as dependencias do
-projeto padrão do react, que é a pasta node_modules, ai depois de fazer isso você deverá, verificar no arquivo package.json, se contém alguma dependencia instalada, exemplo: bootstrap, ai você deverá instalar todas as dependencias do projeto que você copiou para ele funcionar.
