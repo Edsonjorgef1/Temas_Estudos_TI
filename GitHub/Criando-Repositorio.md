@@ -77,6 +77,14 @@ Criando um novo projeto em react.js
 npx create-react-app (Nome do projeto)
 ```
 
+ou
+
+React.js (Typescript)
+
+```js
+npx create-react-app (Nome do Projeto) --template typescript
+```
+
 Pode rodar o projeto, já criado com o comando abaixo
 
 ```js
@@ -91,6 +99,14 @@ Para rodar o projeto, você pode utilizar o android studio ou o mais indicado o 
 
 ```js
 npx create-react-native-app (Nome do projeto)
+```
+
+ou
+
+Typescript
+
+```js
+npx react-native init (Nome do projeto) --template react-native-template-typescript
 ```
 
 ## Projeto do zero em html5
