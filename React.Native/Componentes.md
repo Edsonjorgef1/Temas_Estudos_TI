@@ -33,6 +33,7 @@ Abrir o projeto dentro do emulador android studio, abrindo direto do vscode
 emulador -no-snapshot -avd Nexus_5_api_28
 ```
 
+
 ## Node_Modules
 
 Depois que você criar seu projeto, repare que foi criado automático uma pasta

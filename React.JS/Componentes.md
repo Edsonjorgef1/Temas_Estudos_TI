@@ -27,6 +27,8 @@ da para ver todos os nomes de suas dependências que foram instaladas, mais faci
 
 ## Componente, Function Component
 
+Arquivo, App.js
+
 ```js
 //Importando o react
 import React from "react";
@@ -45,6 +47,8 @@ export default App_function_Component;
 
 ## Componente, Function Component, outro jeito
 
+Arquivo, App.js
+
 ```js
 //Importando o react
 import React from "react";
@@ -59,6 +63,8 @@ export default function App_function_Component() {
 ```
 
 ## Componente, Arrow Function
+
+Arquivo, App.js
 
 ```js
 //Importando o react
@@ -78,6 +84,8 @@ export default App_Arrow_Funcion;
 
 # Componente, Class Component
 
+Arquivo, App.js
+
 ```js
 //Importando o react
 import React from "react";
@@ -96,7 +104,30 @@ class App_Class_Component extends React.Component {
 export default App_Class_Component;
 ```
 
+## Componente, Function Component, (Typescript)
+
+Arquivo App.tsx (Repare que aqui o arquivo diferente ele é .tsx)
+
+```js
+//Importando o react
+import React from "react";
+
+// Este React.FC, ele tipa o componente, este FC, é a abreviação do function component
+const App: React.FC = () => {
+  return (
+    <div className="App_function_Component">
+      <h1>Componente principal</h1>
+    </div>
+  );
+};
+
+//Exportando Componente
+export default App;
+```
+
 # Exemplo de um elemento em JSX
+
+Arquivo, App.js
 
 ```js
 //Importando o react
