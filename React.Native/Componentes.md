@@ -5,13 +5,13 @@ https://www.youtube.com/engenheiroyoutuber
 ## Comando para criar um projeto, React.Native
 
 ```js
-create-react-native-app Meu_Primeiro_Projeto
+create-react-native-app (Nome do projeto)
 ```
 
 ## Comando para criar um projeto, React.Native (Typescript)
 
 ```js
-npx react-native init Meu_Primeiro_Projeto --template react-native-template-typescript
+npx react-native init (Nome do projeto) --template react-native-template-typescript
 ```
 
 ## Yarn ou NPM (Instalar dependências)
