@@ -8,6 +8,12 @@ https://www.youtube.com/engenheiroyoutuber
 create-react-native-app Meu_Primeiro_Projeto
 ```
 
+## Comando para criar um projeto, React.Native (Typescript)
+
+```js
+npx react-native init Meu_Primeiro_Projeto --template react-native-template-typescript
+```
+
 ## Yarn ou NPM (Instalar dependências)
 
 Você pode instalar as dependência com npm ou yarn, lembre-se se for instalar com o yarn deve instalar ele no seu computador, no site, abaixo.
@@ -32,7 +38,6 @@ Abrir o projeto dentro do emulador android studio, abrindo direto do vscode
 ```js
 emulador -no-snapshot -avd Nexus_5_api_28
 ```
-
 
 ## Node_Modules
 
