@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="App">
       <section>
-        <Dados canal={cnl} youtube={yt} curso={srs} />
+        <Dados canal={cnl} youtube={yt} curso={crs} />
       </section>
     </div>
   );

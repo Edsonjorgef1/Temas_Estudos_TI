@@ -289,7 +289,51 @@ export default App;
 
 ## Estilizando o css, Sass
 
-...
+Como Usar SCSS Com React
+Você utiliza Sass ou Scss para construir seu CSS e está criando um aplicação em React mas não sabe como utilizar ele?
+Usar o Sass dentro do React é muito simples e fácil de ser configurado!
+
+Para isso, em seu terminal instale o sass:
+
+```js
+npm install node-sass
+
+// Ou utlizando yarn
+
+yarn add node-sass
+```
+
+Pronto, agora você já está apto a utilizar arquivos Sass dentro do seu projeto!
+Mas como podemos importar os estilos? Da mesma maneira que fazemos com o CSS tradicional.
+Este exemplo é muito legal, imagina que você tem 50 titulos, todos iguais e depois você gostaria de trocar a cor de todos os textos, se não fosse o Sass, você ia ter que trocar um por um, agora com o Sass, basta trocar a cor uma vez só no .scss, lembrando que isso é apenas uma funcionalidade do Sass mas tem outras vantagens também.
+
+Criamos um arquivo .scss, nesse caso, chamaremos de estilo.scss:
+
+```js
+$color: #000;
+
+h1 {
+  color: $color;
+}
+```
+
+E dentro do nosso arquivo js, importamos nosso estilo:
+
+```js
+//Importando o react
+import React from "react";
+
+function App() {
+  return (
+    <div className="App">
+      <h1>Componente principal</h1>
+    </div>
+  );
+}
+
+//Exportando Componente
+export default App;
+```
 
 ## Estilizando o css, Less
 
