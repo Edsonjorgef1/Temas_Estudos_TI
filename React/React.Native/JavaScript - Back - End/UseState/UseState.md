@@ -149,6 +149,7 @@ function handleOrangeClick() {
 ```js
 import { useState } from "react";
 import { View, Button, Text } from "react-native";
+
 const stateComponent = () => {
   const [user, setUser] = useState({ username: joao });
 
