@@ -58,9 +58,9 @@ import React from "react";
 
 function App_function_Component() {
   return (
-    <div className="App_function_Component">
-      <h1>Componente principal</h1>
-    </div>
+    <View className="App_function_Component">
+      <Text> Componente principal </Text>
+    </View>
   );
 }
 
@@ -78,9 +78,9 @@ import React from "react";
 
 export default function App_function_Component() {
   return (
-    <div className="App_function_Component">
-      <h1>Componente principal</h1>
-    </div>
+    <View className="App_function_Component">
+      <Text> Componente principal </Text>
+    </View>
   );
 }
 ```
@@ -95,9 +95,9 @@ import React from "react";
 
 const App_Arrow_Funcion = () => {
   return (
-    <div className="App_Arrow_Funcion">
-      <h1>Componente principal</h1>
-    </div>
+    <View className="App_Arrow_Funcion">
+      <Text> Componente principal </Text>
+    </View>
   );
 };
 
@@ -116,9 +116,9 @@ import React from "react";
 class App_Class_Component extends React.Component {
   render() {
     return (
-      <div className="App_Class_Component">
-        <h1>Componente principal</h1>
-      </div>
+      <View className="App_Class_Component">
+        <Text> Componente principal </Text>
+      </View>
     );
   }
 }
@@ -138,9 +138,9 @@ import React from "react";
 // Este React.FC, ele tipa o componente, este FC, é a abreviação do function component
 const App: React.FC = () => {
   return (
-    <div className="App_function_Component">
-      <h1>Componente principal</h1>
-    </div>
+    <View className="App_function_Component">
+      <Text> Componente principal </Text>
+    </View>
   );
 };
 
@@ -158,17 +158,17 @@ import React from "react";
 
 //Elemento JSX
 const elemento = (
-  <div>
-    <h1>Elemento</h1>
-  </div>
+  <View>
+    <Text> Elemento </Text>
+  </View>
 );
 
 //Componente Function Component
 function ElementoJsx() {
   return (
-    <div className="ElementoJsx">
+    <View className="ElementoJsx">
       {elemento} {/*Repare que estou pegando os dados, fora do componente*/}
-    </div>
+    </View>
   );
 }
 
@@ -192,11 +192,11 @@ import App_Class_Component from "./App_Class_Component";
 //Componente Function Component
 function Identificacao() {
   return (
-    <div className="AppIdentificacao">
+    <View className="AppIdentificacao">
       <App_function_Component />
       <App_Arrow_Funcion />
       <App_Class_Component />
-    </div>
+    </View>
   );
 }
 
