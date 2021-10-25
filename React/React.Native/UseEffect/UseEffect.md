@@ -13,25 +13,6 @@ Quando renderiza pela primeira vez o Useeffect, o componente e toda alteração 
 useEffect(() => { Função que será executada, corpo de uma função de um componente de maut, componente update, resumindo o codigo que será executado }, [Em qual circunstancias este paramentro deve ser executado, Array de dependência, o efeito só será ativado se os valores na lista forem alterado, podendo ser um useState, uma variavel qualquer, ou qualquer coisa que possa sofrer alteração, useEffect só será disparado quando a variavel que estiver aqui dentro mudar, dentro desta array podemos passar varias variaveis ]
 ```
 
-Exemplo React.js:
-
-```js
-const [nome, setNome] = useState("Renata"); // Seta o valor inicial da state
-const [troca, setTroca] = useState(false);
-
-useEffect(() => {
-  // Troca o valor da State
-  setNome("Flavia");
-}, [troca]); // Monitorando o estado da const
-
-return (
-  <div>
-    <h1> {nome /*Recebe o valor inicial da State*/} </h1>
-    <button onClick={setTroca(true)}>Botão troca nome</button>
-  </div>
-);
-```
-
 Exemplo React.native:
 
 ```js
@@ -53,5 +34,3 @@ return (
   </View>
 );
 ```
-
-# UseEffect_Manual
