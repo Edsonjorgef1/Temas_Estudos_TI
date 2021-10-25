@@ -315,6 +315,9 @@ $color: #000;
 h1 {
   color: $color;
 }
+h2 {
+  color: $color;
+}
 ```
 
 E dentro do nosso arquivo js, importamos nosso estilo:
@@ -326,7 +329,8 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-      <h1>Componente principal</h1>
+      <h1>Titulo 1</h1>
+      <h1>Titulo 2</h1>
     </div>
   );
 }
