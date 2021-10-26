@@ -13,7 +13,7 @@ Exemplo: Resumindo: Se eu disparar uma ação, eu posso buscar estas informaçõ
 
 ### Fluxo de dados (Flux)
 
-<img src="https://res.cloudinary.com/drimg72d1/image/upload/v1635287246/Redux_Imagem.png" style=" width:300px ; height:300px " />
+<img src="https://res.cloudinary.com/drimg72d1/image/upload/v1635287246/Redux_Imagem.png" style=" width:500px ; height:300px " />
 
 Link do site para saber mais sobre o assunto:
 
