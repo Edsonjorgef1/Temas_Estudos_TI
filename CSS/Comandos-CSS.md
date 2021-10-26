@@ -306,6 +306,27 @@ font-weight: normal;
 flex: 1 1 200px;
 ```
 
+## Gradiente
+
+Site para achar seu gradiente.
+
+```js
+https://cssgradient.io/
+```
+
+Mais exemplos de gradientes
+
+```js
+https://www.w3schools.com/css/css3_gradients.asp
+```
+
+Você também pode copiar uma cor de um gradiente no paint,
+você copia e cola o desenho e clica em cima para visualisar o gradiente que está na imagem.
+
+```js
+background-color: rgb(70, 146, 169);
+```
+
 ## height:
 
 (Altura)
