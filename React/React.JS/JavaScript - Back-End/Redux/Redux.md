@@ -15,6 +15,8 @@ Exemplo: Resumindo: Se eu disparar uma ação, eu posso buscar estas informaçõ
 
 ![github-small](https://res.cloudinary.com/drimg72d1/image/upload/v1635287246/Redux_Imagem.png)
 
+<img src="https://res.cloudinary.com/drimg72d1/image/upload/v1635287246/Redux_Imagem.png" style=" width:100px ; height:100px " />
+
 Link do site para saber mais sobre o assunto:
 
 ```js
