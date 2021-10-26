@@ -339,6 +339,12 @@ function App() {
 export default App;
 ```
 
+Aqui neste site, tem mais exemplos como utilizar o Sass
+
+```js
+https://www.w3schools.com/sass/default.php
+```
+
 ## Estilizando o css, Less
 
 ...
