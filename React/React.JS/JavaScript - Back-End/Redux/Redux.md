@@ -2,9 +2,9 @@
 
 ## Redux
 
-Quais os problemas o Redux resolve?
-
 ### Prop Drilling
+
+Problemas o Redux resolve, Prop Drilling.
 
 Prop drilling é um estágio do desenvolvimento que acontece quando precisamos obter dados que estão em várias camadas na árvore de componente react.
 
