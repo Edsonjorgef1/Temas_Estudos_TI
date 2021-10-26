@@ -367,10 +367,89 @@ https://rebassjs.org/
 
 ## Estilizando o Css, boostrap
 
+### Estilizando o Css, boostrap (1 Opção)
+
+Para este modelo aqui, depois que você fizer o comando abaixo, vai ser instalada uma dependência dentro da pasta node_modules, para você importar o que foi instalado, com o comando abaixo, você vai importar a dependência, direto da pasta node_modules, exemplo:
+Depois, você já pode usar o boostrap, muito facil.
+
+```js
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+function App() {
+  return <div className="App"></div>;
+}
+
+export default App;
+```
+
+Comando para instalar o boostrap, digite no terminal:
+
+```js
+npm install bootstrap --save
+```
+
+ou
+
+```js
+yarn add bootstrap
+```
+
+### Estilizando o Css, boostrap (2 Opção)
+
+Você também pode copiar o link, CSS
+
+Site, Link
+
+```js
+https://getbootstrap.com/docs/5.1/getting-started/introduction/
+```
+
+React.js, copiar o link, dentro da pasta "public" depois entrar no arquivo "index.html'
+
+Copie e cole a folha de estilo <link> dentro do <head> para carregar o CSS, com o bootstrap.
+
+```js
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+```
+
 Site:
 
 ```js
 https://getbootstrap.com/
+```
+
+Arquivo index.html
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      Repare que eu copiei o link do boostrap, aqui dentro do head, esta aqui abaixo.
+    -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+  </body>
+</html>
 ```
 
 ## Estilizando o Css, reacstrap
