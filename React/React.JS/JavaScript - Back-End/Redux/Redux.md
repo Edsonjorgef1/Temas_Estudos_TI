@@ -2,6 +2,9 @@
 
 ## Redux
 
+Se você não sabe como funciona o (props), tem uma pasta acima desta aqui chamada, props, leia ela antes de proceguir, lendo este tutorial.
+Se você não conhece um componente em react e não sabe como funciona, tem uma pasta acima desta chamada componentes, estude ela antes de processeguir com este tutorial.
+
 ### Prop Drilling
 
 Problemas o Redux resolve, Prop Drilling.
@@ -46,6 +49,12 @@ Exemplo:
 
 ## Exemplo de uma aplicação, Redux
 
+Se você não conhece o que é Opeadores Aritméticos, assista a aula antes de continuar, lendo.
+
+```js
+https://www.youtube.com/watch?v=7RMtfwYDbDE&list=PLb8jL9jtpafkJAs5U5bc1lgmHIE6c_OK_&index=11
+```
+
 ### Action creator
 
 Aqui vai conter todas as nossas ações, Action creator é uma função, que retorna uma action, cria uma ação.
@@ -53,6 +62,12 @@ Aqui vai conter todas as nossas ações, Action creator é uma função, que ret
 Exemplo:
 
 Arquivo, store/Calculator/Calculator.action.js
+
+Se você não sabe o que é um array, assista a aula, antes de continuar lendo.
+
+```js
+https://www.youtube.com/watch?v=uYp2m7KU-KU&list=PLb8jL9jtpafkJAs5U5bc1lgmHIE6c_OK_&index=25
+```
 
 ```js
 export function sum(a, b) {
@@ -76,6 +91,12 @@ export function subract(a, b) {
 
 Arquivo, store/Calculator/Calculator.reducer.js
 
+Se você não sabe o que é [Switch e Case], do javascript, assista esta aula antes de continuar lendo.
+
+```js
+https://www.youtube.com/watch?v=CqC6pEgXgWI&list=PLb8jL9jtpafkJAs5U5bc1lgmHIE6c_OK_&index=34
+```
+
 ```js
 "Reducer": Vai receber os dados da action, "Arquivo, store/Calculator/Calculator.action.js" dentro dele vai conter toda a lógica de renderização dos dados.
 Uma função que retorna nosso estado, está função retorna o "state", e o segundo "action State" se refere ao estado atual de minha aplicação.
@@ -93,7 +114,8 @@ Agora preciso retornar um estado com o type de nossa ação
 export default function (state = 0, action) {
   // Aqui iniciamos com zero, a primeira vez, que renderiza a tela, está em zero, as demais acões vai ser substituido o state.
   switch (
-    action.type //
+    // Aqui estamos utilizando o [Switch e Case]
+    action.type
   ) {
     case "SUM":
       return action.payload[0] + action.payload[1];
