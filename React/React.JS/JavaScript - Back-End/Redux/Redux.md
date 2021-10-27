@@ -24,6 +24,7 @@ https://facebook.github.io/flux/
 Data Store:
 Sempre retorna um novo estado.
 
+```js
 Componentes:
 1.Recebe os dados via props.
 2.Se inscreve para receber as mudanças, do Data Store
@@ -34,4 +35,5 @@ Payload: Pode passar mais dados, como se fosse parametros para estar recebendo.
 Action: Ela retorna um objeto e vai parar la no nosso reducer.
 Reducer: Vai receber os dados da action, dentro dele vai conter toda a lógica de renderização dos dados.
 Exemplo:
-Action tem um type de "adicionar produtos ao carrinho" e o Payload tem o ID daquele determinado produto, então nosso reducer vai receber nossos dados da action, quando ele for mutar o Data Store, ele faz isso retornando, ele vai usar o Payload, para procurar la dentro do array de produtos e qual o produto exato para colocar no carrinho e mover ele para a lista do carrinho, como ele faz isso, ele retorna o novo estado da store.
+"Action" tem um type de "adicionar produtos ao carrinho" e o Payload tem o ID daquele determinado produto, então nosso reducer vai receber nossos dados da action, quando ele for mutar o Data Store, ele faz isso retornando, ele vai usar o Payload, para procurar la dentro do array de produtos e qual o produto exato para colocar no carrinho e mover ele para a lista do carrinho, como ele faz isso, ele retorna o novo estado da store.
+```
