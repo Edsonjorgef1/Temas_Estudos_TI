@@ -2,6 +2,22 @@
 
 ## Redux
 
+Comando para instalar o Redux
+
+```js
+yarn add react-redux redux
+ou
+npm install react-redux redux
+```
+
+Redux TypeScript
+
+Comando para instalar
+
+```js
+npm install @types/react-redux
+```
+
 Se você não sabe como funciona o (props), tem uma pasta acima desta aqui chamada, props, leia ela antes de proceguir, lendo este tutorial.
 Se você não conhece um componente em react e não sabe como funciona, tem uma pasta acima desta chamada componentes, estude ela antes de processeguir com este tutorial.
 
@@ -112,18 +128,23 @@ Agora preciso retornar um estado com o type de nossa ação
 
 ```js
 export default function (state = 0, action) {
-  // Aqui iniciamos com zero, a primeira vez, que renderiza a tela, está em zero, as demais acões vai ser substituido o state.
+  /* State, Aqui iniciamos com zero, a primeira vez, que renderiza a tela, está em zero, as demais acões vai ser substituido o state.
+  Action, Toda vez que meu componente dispara, alguma
+  action de algum lugar da aplicação, ela vai ser retornada
+  para nosso reducer, ou seja a cada modificação do estado
+  da aplicação nós vamos executar o metodo reducer*/
   switch (
     // Aqui estamos utilizando o [Switch e Case]
-    action.type
+    action.type // Aqui estamos, especificando, que abaixo, será o type, o nome que foi especificado no aquivo, store/Calculator/Calculator.action.js
   ) {
     case "SUM": // Aqui estamos buscando a informação no arquivo, store/Calculator/Calculator.action.js, type: "SUM", // Nome da ação, aqui você especifica qual o tipo, quem é, para depois abaixo retornar o que você deseja fazer.
       return action.payload[0] + action.payload[1]; // Aqui estamos buscando a informação, no Arquivo, store/Calculator/Calculator.action.js, payload: [a, b], // ID do produto, [a=0, b=1] = Array, e estamos retornando a soma para eles, igual está aqui.
 
-    case "SUBTACT":
+    case "SUBTACT": // este aqui é igual o exemplo anterior do SUM, lógica parecida, só muda agora que está subtraindo
       return action.payload[0] - action.payload[1];
 
     default:
+      // Caso meu case, não existir, permaneço no estado atual
       return state;
   }
 }
@@ -131,19 +152,120 @@ export default function (state = 0, action) {
 
 ### Configuração do redux, aonde vou estar armazenando meu store
 
-Arquivo, store/Calculator/Calculator.reducer
+Arquivo, store/Calculator/Calculator.store
+createStore = Cria uma loja Redux que contém a árvore de estado completa do seu aplicativo. Deve haver apenas uma única loja em seu aplicativo.
+combineReducers = Conforme seu aplicativo fica mais complexo, você desejará dividir sua função de redução em funções separadas, cada uma gerenciando partes independentes do estado .
+
+A combineReducers função auxiliar transforma um objeto cujos valores são diferentes funções de redução em uma única função de redução que você pode passar createStore.
+
+O redutor resultante chama cada redutor filho e reúne seus resultados em um único objeto de estado. O estado produzido por combineReducers()namespaces os estados de cada redutor em suas chaves, conforme passado paracombineReducers()
 
 ```js
 import { createStore, combineReducers } from "redux";
 import calculatorReducer from "./Calculator/Calculator.reducer";
 
 const rootReducer = combineReducers({
-  calculator: calculatorReducer,
+  // de onde vem o combineReducers
+  calculator: calculatorReducer, // o valor da propriedade calculator vai ser o calculatorReducer, que é o arquivo
 });
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer); // Criando uma store, nos dados que combinamos, const store recebe o valor do createStor e passando o ootReducer
 
 export default store;
+```
+
+### Como fazer a conecção com o redux, (1 Opção, forma antiga)
+
+Arquivo, Calculator.jsx
+
+```js
+//Como fazer a conecção redux
+
+import React from "react";
+// Conectando meu estado
+import { connect } from "react-redux"; // connect vai permitir que eu pegue algumas
+// propriedades la no redux, aquivo store.js
+
+function Calculator(result) {
+  return (
+    <>
+      <input type="text" placeholder="a" />
+      <input type="text" placeholder="b" />
+
+      <button>somar</button>
+      <button>subtrair</button>
+
+      <div>{result}</div>
+    </>
+  );
+}
+function mapStateToProps(state) {
+  return {
+    result: state.calculator,
+  };
+}
+
+export default connect(mapStateToProps)(Calculator); // uma função retornando outra função
+
+/*
+A connect()função conecta um componente React a uma loja Redux.
+
+Ele fornece a seu componente conectado as partes dos dados de que precisa da loja e as funções que pode usar para despachar ações para a loja.
+
+Ele não modifica a classe de componente transmitida a ele; em vez disso, ele retorna uma nova classe de componente conectado que envolve o componente que você transmitiu.
+
+// Exemplos connect, site link
+
+
+https://react-redux.js.org/api/connect
+*/
+```
+
+### Como fazer a conecção com o redux, (2 Opção, forma mais atual)
+
+Arquivo, Calculator.jsx
+
+```js
+//Como fazer a conecção redux
+
+import React from "react";
+// Conectando meu estado
+import { useSelector } from "react-redux"; // connect vai permitir que eu pegue algumas
+// propriedades la no redux, aquivo store.js
+
+function Calculator() {
+  const result = useSelector(function (state){
+  return state.calculator
+  //ou
+  //modelo arow function, const result = useSelector(state => state.calculator)
+
+  return <>
+    <>
+      <input type="text" placeholder="a" />
+      <input type="text" placeholder="b" />
+
+      <button>somar</button>
+      <button>subtrair</button>
+
+      <div>{result}</div>
+    </>
+  );
+}
+
+export default Calculator; // uma função retornando outra função
+
+/*
+A connect()função conecta um componente React a uma loja Redux.
+
+Ele fornece a seu componente conectado as partes dos dados de que precisa da loja e as funções que pode usar para despachar ações para a loja.
+
+Ele não modifica a classe de componente transmitida a ele; em vez disso, ele retorna uma nova classe de componente conectado que envolve o componente que você transmitiu.
+
+// Exemplos connect, site link
+
+
+https://react-redux.js.org/api/connect
+*/
 ```
 
 Arquivo, index.js
@@ -152,12 +274,76 @@ Arquivo, index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import store from "./store/store";
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"; // O React Redux inclui um componente <Provider />, que disponibiliza a loja Redux para o resto do aplicativo, conecta esta store dentro de nossa aplicação, provider ele é um componente.
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store} />
+    {/* Eu não preciso ficar passando o store varias vezes, não vai ser passado como props, só preciso passar minha store em volta do provider e pronto e encapsula minha aplicação*/}
   </React.StrictMode>,
   document.getElementById("root")
 );
+```
+
+React Redux fornece um par de ganchos React personalizados que permitem que seus componentes React interajam com a loja Redux.
+
+### useSelector
+
+lê um valor do estado da loja e assina atualizações, enquanto
+
+### useDispatch
+
+retorna
+
+### dispatchmétodo
+
+Permitir que você despache ações.
+
+## Exemplo 2
+
+```js
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+  incrementAsync,
+  selectCount,
+} from "./counterSlice";
+import styles from "./Counter.module.css";
+
+export function Counter() {
+  const count = useSelector(selectCount);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      <div className={styles.row}>
+        <button
+          className={styles.button}
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          +
+        </button>
+        <span className={styles.value}>{count}</span>
+        <button
+          className={styles.button}
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          -
+        </button>
+      </div>
+      {/* omit additional rendering output here */}
+    </div>
+  );
+}
+```
+
+Site para mais exemplos de redux
+
+```js
+https://react-redux.js.org/api/hooks
 ```
