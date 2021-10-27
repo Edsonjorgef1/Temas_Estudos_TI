@@ -117,7 +117,7 @@ export default function (state = 0, action) {
     // Aqui estamos utilizando o [Switch e Case]
     action.type
   ) {
-    case "SUM":
+    case "SUM": // Aqui estamos buscando a informação no arquivo, store/Calculator/Calculator.action.js, type: "SUM", // Nome da ação, aqui você especifica qual o tipo, quem é, para depois abaixo retornar o que você deseja fazer.
       return action.payload[0] + action.payload[1]; // Aqui estamos buscando a informação, no Arquivo, store/Calculator/Calculator.action.js, payload: [a, b], // ID do produto, [a=0, b=1] = Array, e estamos retornando a soma para eles, igual está aqui.
 
     case "SUBTACT":
