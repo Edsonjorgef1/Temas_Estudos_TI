@@ -261,9 +261,6 @@ O useSelector será executado sempre que houver um dispatch de uma action
 "useDispatch"
 Muito parecido com o dispatch do redux sem react, nos dá a possibilidade de disparar uma action.
 
-Estas são algumas possibilidades que temos usando o hooks, mas agora vamos voltar para o Redux.
-
-Já que apresentei todos os conceitos necessários, vou construir o mesmo código que fizemos no artigo anterior, só que agora usando react-redux. Os comentários terão propósitos didáticos para reforçar o que vimos até aqui.
 */
 ```
 
