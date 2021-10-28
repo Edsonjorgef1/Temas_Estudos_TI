@@ -1,5 +1,3 @@
-13:28
-
 ## Redux
 
 Comando para instalar o Redux
@@ -186,7 +184,7 @@ import React from "react";
 import { connect } from "react-redux"; // connect vai permitir que eu pegue algumas
 // propriedades la no redux, aquivo store.js
 
-function Calculator(result) {
+function Calculator({ result }) {
   return (
     <>
       <input type="text" placeholder="a" />
@@ -204,7 +202,6 @@ function mapStateToProps(state) {
     result: state.calculator,
   };
 }
-
 export default connect(mapStateToProps)(Calculator); // uma função retornando outra função
 
 /*
@@ -226,20 +223,19 @@ https://react-redux.js.org/api/connect
 Arquivo, Calculator.jsx
 
 ```js
-//Como fazer a conecção redux
-
 import React from "react";
-// Conectando meu estado
-import { useSelector } from "react-redux"; // connect vai permitir que eu pegue algumas
-// propriedades la no redux, aquivo store.js
+import { useSelector } from "react-redux";
 
 function Calculator() {
-  const result = useSelector(function (state){
+  /*const result = useSelector(function(state){
   return state.calculator
-  //ou
-  //modelo arow function, const result = useSelector(state => state.calculator)
+  })
+  */
+  /*ou*/
 
-  return <>
+  const result = useSelector((state) => state.calculator);
+
+  return (
     <>
       <input type="text" placeholder="a" />
       <input type="text" placeholder="b" />
@@ -252,7 +248,7 @@ function Calculator() {
   );
 }
 
-export default Calculator; // uma função retornando outra função
+export default Calculator;
 
 /*
 A connect()função conecta um componente React a uma loja Redux.
