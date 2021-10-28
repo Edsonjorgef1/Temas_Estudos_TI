@@ -223,10 +223,12 @@ https://react-redux.js.org/api/connect
 Arquivo, Calculator.jsx
 
 ```js
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { sum } from "./store/Calculator/Calculator.action";
 
 function Calculator() {
+  const dispatch = useDispatch();
   /*const result = useSelector(function(state){
   return state.calculator
   })
@@ -235,12 +237,41 @@ function Calculator() {
 
   const result = useSelector((state) => state.calculator);
 
+  //Estado local.
+  const [a, setA] = useState(0);
+  const [b, setB] = useState(0);
+
   return (
     <>
-      <input type="text" placeholder="a" />
-      <input type="text" placeholder="b" />
+      <input
+        type="text"
+        placeholder="a"
+        value={a}
+        onChange={(e) => setA(Number(e.target.value))}
+      />
 
-      <button>somar</button>
+      <input
+        type="text"
+        placeholder="b"
+        value={b}
+        onChange={(e) => setB(Number(e.target.value))}
+      />
+
+      <button
+        onClick={() => {
+          dispatch(sum(a, b));
+        }}
+      >
+        somar
+      </button>
+
+      {/*window.alert('batata')*/}
+      {/*teste
+/*dispatch({
+type: "SUM",
+payload: [1, 2]
+})
+*/}
       <button>subtrair</button>
 
       <div>{result}</div>
@@ -264,11 +295,47 @@ Muito parecido com o dispatch do redux sem react, nos dá a possibilidade de dis
 */
 ```
 
-Site para exemplo mais completo, UseSelector e Dispatch
+## Passando o resultado do redux, para qualquer lugar do seu projeto
+
+Arquivo, AppHeader.jsx
+
+Primeiro você deve importar:
 
 ```js
-https://serfrontend.com/blog/redux-com-react-para-iniciantes/index.html
+import { useSelector } from "react-redux";
 ```
+
+Depois:
+
+```js
+const result = useSelector((state) => state.calculator);
+```
+
+Depois:
+
+```js
+<span>{result}</span>
+```
+
+```js
+import React from "react";
+import { useSelector } from "react-redux";
+
+function AppHeader() {
+  //Passando o meu resultado para o header, olha que está em lugares diferente mesmo assim foi possivel verificar o valor do resultado, o redux está assecivel em toda aplicação
+
+  const result = useSelector((state) => state.calculator);
+  return (
+    <Wrapper>
+      <span>{result}</span>
+    </Wrapper>
+  );
+}
+
+export default AppHeader;
+```
+
+O mais legal, que você pode utilizar o Brak Pointer para acompanhar a aplicação.
 
 Arquivo, index.js
 
@@ -301,51 +368,16 @@ retorna
 
 Permitir que você despache ações.
 
-## Exemplo 2
+### Site de pesquisas
 
-```js
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  selectCount,
-} from "./counterSlice";
-import styles from "./Counter.module.css";
-
-export function Counter() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
-
-  return (
-    <div>
-      <div className={styles.row}>
-        <button
-          className={styles.button}
-          aria-label="Increment value"
-          onClick={() => dispatch(increment())}
-        >
-          +
-        </button>
-        <span className={styles.value}>{count}</span>
-        <button
-          className={styles.button}
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
-        </button>
-      </div>
-      {/* omit additional rendering output here */}
-    </div>
-  );
-}
-```
-
-Site para mais exemplos de redux
+Redux
 
 ```js
 https://react-redux.js.org/api/hooks
+```
+
+UseSelector e Dispatch
+
+```js
+https://serfrontend.com/blog/redux-com-react-para-iniciantes/index.html
 ```
