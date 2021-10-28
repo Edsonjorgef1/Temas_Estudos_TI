@@ -251,17 +251,26 @@ function Calculator() {
 export default Calculator;
 
 /*
-A connect()função conecta um componente React a uma loja Redux.
+"useSelector"
+Esse método, que também deve ser importado de ‘react-redux’, recebe um callback como parâmetro. Esse callback deve retornar o state novo. Se o state novo for diferente do anterior, então o componente irá renderizar o novo valor na tela. Tentei deixar a explicação simples.
 
-Ele fornece a seu componente conectado as partes dos dados de que precisa da loja e as funções que pode usar para despachar ações para a loja.
-
-Ele não modifica a classe de componente transmitida a ele; em vez disso, ele retorna uma nova classe de componente conectado que envolve o componente que você transmitiu.
-
-// Exemplos connect, site link
-
-
-https://react-redux.js.org/api/connect
+O useSelector será executado sempre que houver um dispatch de uma action
 */
+
+/*
+"useDispatch"
+Muito parecido com o dispatch do redux sem react, nos dá a possibilidade de disparar uma action.
+
+Estas são algumas possibilidades que temos usando o hooks, mas agora vamos voltar para o Redux.
+
+Já que apresentei todos os conceitos necessários, vou construir o mesmo código que fizemos no artigo anterior, só que agora usando react-redux. Os comentários terão propósitos didáticos para reforçar o que vimos até aqui.
+*/
+```
+
+Site para exemplo mais completo, UseSelector e Dispatch
+
+```js
+https://serfrontend.com/blog/redux-com-react-para-iniciantes/index.html
 ```
 
 Arquivo, index.js
