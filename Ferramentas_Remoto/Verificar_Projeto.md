@@ -10,8 +10,6 @@ let x = " "
 x = arr.push("Fogo", 1, aux)
 
 console.log(arr)
-console.log("\n")
-console.log("Retorno dda função: ")
 ```
 
 Para testar, digite no terminal
