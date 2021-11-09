@@ -7,4 +7,3 @@ Site.
 ```js
 https://dev.azure.com/
 ```
-s
