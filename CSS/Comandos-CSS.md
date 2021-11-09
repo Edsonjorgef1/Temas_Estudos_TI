@@ -172,7 +172,7 @@ box-sizing: border-box;
 border-style: solid;
 ```
 
-## Clildren
+## Children
 
 ```js
 //Metodo, React.js
