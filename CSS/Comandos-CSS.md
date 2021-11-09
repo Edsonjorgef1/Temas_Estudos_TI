@@ -172,6 +172,31 @@ box-sizing: border-box;
 border-style: solid;
 ```
 
+## Clildren
+
+```js
+//Metodo, React.js
+import React from "react";
+
+
+const QTY = "Beto"
+const nome = `Localizamos que você ${QTY}, contém endereço em Cadastro.` // Templete string, chamando o qty
+
+
+//Componente Function Component
+function ElementoJsx() {
+  return (
+    <div className="ElementoJsx">
+    <h1 children= {`Olá, ${nome}!`}/>
+    </div>
+  );
+}
+
+//Exportar componente
+export default ElementoJsx;
+```
+
+
 ## color:
 
 (Cor da fonte)
