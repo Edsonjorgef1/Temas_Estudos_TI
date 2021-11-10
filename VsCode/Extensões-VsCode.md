@@ -1,0 +1,1 @@
+## Aqui vai conter, algumas extenções, para auxiliar nos projetos
