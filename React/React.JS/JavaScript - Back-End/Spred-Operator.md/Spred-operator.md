@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Este exemplo, é como buscar variavel, com ..., Spred Operator
 
 ```js

@@ -1,5 +1,11 @@
 Arquivo, App.js
 
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ```js
 //Importando o react
 import React from "react";

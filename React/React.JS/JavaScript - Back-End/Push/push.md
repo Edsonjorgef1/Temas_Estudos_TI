@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Array Push
 
 Adicionando um item, no fim da array

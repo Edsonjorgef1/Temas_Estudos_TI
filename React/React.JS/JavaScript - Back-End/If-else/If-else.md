@@ -1,3 +1,11 @@
+## If e Else
+
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ```js
 //if e else,Validação simples de um cpf
 let cpf = "123.456.789-12";
