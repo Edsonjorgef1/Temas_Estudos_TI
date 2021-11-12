@@ -52,18 +52,21 @@ export default App_function_Component;
 ```js
 import React from "react"; 
 
-let final = "10"
+let nota = "6"
 
-let resultado = final.length
+let texto = nota < 6 ? "Reprovado" : "Aprovado"
+
+let resultado = texto.length
 
 console.log(resultado)
 
     function App_function_Component() {
      return (
     <div className="App">
-    {resultado}
+    {texto}
     </div>
   );
 }
 export default App_function_Component;
+
 ```
