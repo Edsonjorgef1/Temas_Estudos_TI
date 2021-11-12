@@ -514,3 +514,24 @@ Site:
 ```js
 https://react-hook-form.com/pt/dev-tools/
 ```
+
+## Metodo para estilizar o css, estilos Inline
+
+```js
+import React from "react"; 
+  
+    let estilo = {
+    color: "red",
+    fontSize: "2em",
+    border: "1px solid red" 
+    }
+ 
+    function App_function_Component() {
+     return (
+    <div className="App_function_Component">
+      <p style ={estilo}>Estilos Inline</p>
+    </div>
+  );
+}
+export default App_function_Component;
+```
