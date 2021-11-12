@@ -18,4 +18,13 @@ let resultado = frutas.slice(2, 4)
 // 4, posição final para fatiar
 
 console.log(resultado)
+
+function App_function_Component() {
+     return (
+    <div className="App">
+    {resultado}
+    </div>
+  );
+}
+export default App_function_Component;
 ```
