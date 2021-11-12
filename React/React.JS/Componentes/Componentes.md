@@ -1,6 +1,8 @@
-Inscrevam-se: Canal, Engenheiro Youtuber
+Canal do youtube:
 
+```js
 https://www.youtube.com/engenheiroyoutuber
+```
 
 ## Comando para criar um projeto, React.Js
 

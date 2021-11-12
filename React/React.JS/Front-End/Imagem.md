@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 Arquivo, App.js
 
 Pegando a imagem dentro do nosso projeto
