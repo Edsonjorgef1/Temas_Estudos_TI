@@ -4,6 +4,8 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
+## 1 Exemplo:
+
 Arquivo, Dados.js
 
 Passando conteúdo de uma constante
@@ -48,4 +50,31 @@ export default function Dados(props) {
     </div>
   );
 }
+```
+
+## 2 Exemplo:
+
+Função que depende das propriedades, retornando um elemento qualquer
+valor enviado via props
+
+```js
+//Importando o react
+import React from "react";
+
+//Função que depende das propriedades, retornando um elemento qualquer
+//valor enviado via props
+const Display = (props) => {
+  return <h1>{props.title}</h1>;
+};
+
+function App_function_Component() {
+  return (
+    <div className="App_function_Component">
+      <h1>Componente principal</h1>
+      <Display title="teste" />
+    </div>
+  );
+}
+//Exportando Componente
+export default App_function_Component;
 ```
