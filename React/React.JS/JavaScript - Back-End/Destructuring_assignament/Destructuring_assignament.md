@@ -38,3 +38,36 @@ function ElementoJsx() {
 }
 export default ElementoJsx;
 ```
+
+## Destructuring_assignament, para objetos
+
+```js
+//Metodo, React.js
+import React from "react";
+//Destructuring assignament, objeto
+const a = {
+  loading: true,
+  data: 10,
+};
+/*
+//Metodo antigo
+const loading = a.loading
+console.log(loading)
+const data = a.data
+console.log(data)
+*/
+//Metodo Atual
+const { loading } = a;
+// Template string
+//Let variavel = ` Texto ${variavel}`
+let resultado = `Olá ${loading}`;
+
+console.log(loading);
+const { data } = a;
+console.log(data);
+
+function ElementoJsx() {
+  return <div>{resultado}</div>;
+}
+export default ElementoJsx;
+```
