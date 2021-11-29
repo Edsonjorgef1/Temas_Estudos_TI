@@ -1,6 +1,8 @@
-Inscrevam-se: Canal, Engenheiro Youtuber
+Canal do youtube:
 
+```js
 https://www.youtube.com/engenheiroyoutuber
+```
 
 ## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 1 Opção)
 
@@ -391,7 +393,8 @@ py: padding-top and padding-bottom
 ```
 
 ## Estilizando o Css, react-spring (Animation)
-Muito top está biblioteca 
+
+Muito top está biblioteca
 
 site:
 
@@ -507,6 +510,7 @@ Site:
 ```js
 https://react-bootstrap.github.io/
 ```
+
 ## Estilizando o Css, devtools
 
 Site:
@@ -518,18 +522,18 @@ https://react-hook-form.com/pt/dev-tools/
 ## Metodo para estilizar o css, estilos Inline
 
 ```js
-import React from "react"; 
-  
-    let estilo = {
-    color: "red",
-    fontSize: "2em",
-    border: "1px solid red" 
-    }
- 
-    function App_function_Component() {
-     return (
+import React from "react";
+
+let estilo = {
+  color: "red",
+  fontSize: "2em",
+  border: "1px solid red",
+};
+
+function App_function_Component() {
+  return (
     <div className="App_function_Component">
-      <p style ={estilo}>Estilos Inline</p>
+      <p style={estilo}>Estilos Inline</p>
     </div>
   );
 }
