@@ -4,7 +4,9 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## FlexBox Responsivo
+## FlexBox, Responsivo (1)
+
+Este metodo aqui, quando diminui a tela a div vai para baixo
 
 App.js
 
@@ -66,4 +68,52 @@ Link da consulta:
 
 ```js
 https://stackoverflow.com/questions/31830731/div-re-order-with-css
+```
+
+## FlexBox Responsivo (2)
+
+Este método é bem legal, você dimuni a tela e tudo que está
+no meio da div, acompanha proporcionalmente.
+
+App.js
+
+```js
+//Importando o react
+import React from "react";
+
+export default function App() {
+  return (
+    <>
+      <div class="flex-container">
+        <div class="flex-child magenta">Flex Column 1</div>
+
+        <div class="flex-child green">Flex Column 2</div>
+      </div>
+    </>
+  );
+}
+```
+
+App.css
+
+```js
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+```
+
+Link da consulta:
+
+```js
+https://coder-coder.com/display-divs-side-by-side/#flexbox-method
 ```
