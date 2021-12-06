@@ -1,7 +1,8 @@
-Inscrevam-se: Canal, Engenheiro Youtuber
+Canal do youtube:
 
+```js
 https://www.youtube.com/engenheiroyoutuber
-
+```
 ## Criando repósitorio
 
 Quando for criar o seu repositório, você terá que fazer um repositório com o nome do seu usuário para que você possa fazer a apresentação do seu github.

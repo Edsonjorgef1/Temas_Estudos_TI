@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ### React.Native "View" "Text"
 
 Aqui para rodar o projeto depois de pronto, comando: "expo start", você digita no terminar do vscode ou gitbast ou o terminal que você achar mais atraente para você.

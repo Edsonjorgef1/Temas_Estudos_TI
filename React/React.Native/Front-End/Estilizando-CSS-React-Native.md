@@ -1,6 +1,8 @@
-Inscrevam-se: Canal, Engenheiro Youtuber
+Canal do youtube:
 
+```js
 https://www.youtube.com/engenheiroyoutuber
+```
 
 ## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React.native, após criado o projeto, StyleSheet, 1 Opção)
 

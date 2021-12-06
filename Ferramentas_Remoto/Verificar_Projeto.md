@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Testando uma funcionalidade com o node
 
 Você pode utilizar o node, para testar o seu projeto com o console.log
