@@ -33,3 +33,29 @@ return (
   </div>
 );
 ```
+## Rodando alguma coisa quando o componente e colocado na tela
+
+```js
+useEffect(() => {
+  
+  setNome("Flavia");
+}, []); // Dependencia vazia
+```
+
+## Se eu quero que atualize o componente sempre, em um trecho de codigo
+
+```js
+useEffect(() => {
+  
+  setNome("Flavia");
+}); // tiro as dependencia como um todo
+```
+
+## Se eu quero refletir somente uma mudança de uma variavel ou de um intem de estado
+
+```js
+useEffect(() => {
+  
+  setNome("Flavia");
+}, [Varial ou Estado]); 
+```
