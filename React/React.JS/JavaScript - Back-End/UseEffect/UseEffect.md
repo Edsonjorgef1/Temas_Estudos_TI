@@ -39,7 +39,7 @@ return (
 useEffect(() => {
   
   setNome("Flavia");
-}, []); // Dependencia vazia
+}, []); // Dependencia vazia, renderizando apenas uma vez
 ```
 
 ## Se eu quero que atualize o componente sempre, em um trecho de codigo
