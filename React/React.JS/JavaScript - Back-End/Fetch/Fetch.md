@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Buscando dados do servidor
+## Buscando dados do servidor e reutilizando o mesmo codigo
 
 Para teste do servidor, pode utilizar este site
 
@@ -14,9 +14,9 @@ httpbin.org
 Para utilizar, outra vez, use o useHttpGet
 
 App.js
+
 ```js
 import React, { useEffect, useState } from 'react';
-import './App.css';
 
 const useHttpGet = url => {
   const [data, setData] = useState('')
