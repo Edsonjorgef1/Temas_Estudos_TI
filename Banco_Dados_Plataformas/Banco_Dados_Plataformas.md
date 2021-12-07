@@ -19,3 +19,12 @@ Armazenamento de Textos, Imagem e Videos
 https://firebase.google.com/
 ```
 
+## Httpbin
+
+Para teste do servidor, pode utilizar este site
+
+```js
+httpbin.org
+```
+
+
