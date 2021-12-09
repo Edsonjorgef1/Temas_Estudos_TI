@@ -24,6 +24,7 @@ function ElementoJsx() {
   return (
     <div className="ElementoJsx">
       {nome} {/*Repare que estou pegando os dados, fora do componente*/}
+      Nome: {`${nome.toUpperCase()}`}  {/*Outro jeito, deixando a letra maiuscula*/}
     </div>
   );
 }
