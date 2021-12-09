@@ -13,7 +13,7 @@ npx create-react-app Meu_Primeiro_Projeto
 ## Comando para criar um projeto, React.Js (Typescript)
 
 ```js
-npx create-react-app (Nome do Projeto) --template typescript
+npx create-react-app (Nome do Projeto) ls
 ```
 
 ## Yarn ou NPM (Instalar dependências)

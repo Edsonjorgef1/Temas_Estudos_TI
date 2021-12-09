@@ -6,7 +6,7 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## Let
 
-Com o let, é muito legal, você pode alterar o estado da sua variavel.
+Com o let, é muito legal, você pode alterar o estado da sua variavel, quando você precisa mudar o valor do estado atual, agora se não for mudar o estudado da variavel o interessante é usar o const.
 
 ```js
 import React from "react"

@@ -47,3 +47,31 @@ function ElementoJsx() {
 
 export default ElementoJsx;  
 ```
+
+## Operadores Aritméticos, utilizando uma função
+
+```js
+import React from 'react';
+
+
+
+let n1 = 10
+let n2 = 3 
+
+function somar(n1, n2) {
+return n1 + n2
+}
+
+
+
+export default function App() {
+
+  return (
+
+    <div className="App">
+     Somar:{somar(n1, n2)}  {/*esta linha pode ser assim tambem, Somar:{somar(n1, n2) + n1} */}
+    </div> 
+    
+  );
+}
+```
