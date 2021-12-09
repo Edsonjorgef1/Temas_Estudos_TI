@@ -78,3 +78,13 @@ function App_function_Component() {
 //Exportando Componente
 export default App_function_Component;
 ```
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
+##  Props, typeScript
+
+```js
+
+```
