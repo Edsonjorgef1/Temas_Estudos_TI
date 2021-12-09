@@ -36,7 +36,27 @@ let link = "https://engenheiroyoutuber.com.br"
     <div className="App">
     Link para o site: 
     <br/>
-    <a href={link}>Link do site</a>
+    <a href={link}>Link do site </a>
+    </div>
+    
+  );
+}
+```
+Eu posso adicionar uma expressão aqui dentro também se quiser, do lado do link
+
+```js
+import React from 'react';
+
+export default function App() {
+
+let link = "https://engenheiroyoutuber.com.br"
+
+  return (
+
+    <div className="App">
+    Link para o site: 
+    <br/>
+    <a href={link}>Clique para acessar {3 + 1} vezes</a>
     </div>
     
   );
