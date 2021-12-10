@@ -1,5 +1,59 @@
 ## onClick
 
+## Exemplo 1, CLicando e fazendo um alert
+
+Aqui foi criado uma função, com constante.
+
+App.js
+
+```js
+const App = () => {
+
+  const handleButtonClick = () => {
+  alert("O botão foi clicado")
+  }
+
+  return (
+
+    <div className="App">
+   
+   <h1>Executando a função assim que clicar no botão</h1>
+   <button onClick={handleButtonClick}>clique aqui</button>
+   
+   
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Exemplo 2, criando uma função dentro do botão
+
+App.js
+
+```js
+const App = () => {
+
+
+  return (
+
+    <div className="App">
+   
+   <h1>Executando a função assim que clicar no botão</h1>
+   <button onClick={() => { alert("Clicou")}}>clique aqui</button>
+   
+   
+    </div>
+  );
+}
+
+export default App;
+```
+
+
+
+
 ## Exemplo 1
 
 Renderiza um contador. Quando você clica no botão, ele incrementa o valor:
@@ -29,3 +83,4 @@ Renderizou no console, só para você entender, que o componente foi atualizado,
   );
 }
 ```
+
