@@ -7,7 +7,7 @@ https://www.youtube.com/engenheiroyoutuber
 ## UseState
 
 Serve pra obter o valor inicial de uma constante ou utilizado para setar o Valor a uma constante
-
+Podemos guardar uma string, numero, array com varios valores dentro, pode ser objeto com valores dentro tambpem.
 Modelo Padrão:
 
 ```js
@@ -195,3 +195,190 @@ export default StateComponent;
 ```
 
 Você não tem que usar muitas variáveis de state. Elas podem conter objetos e arrays muito bem. Portanto você ainda pode juntar dados relacionados. De qualquer maneira, diferente de this.setState em classe, ao atualizar uma variável de state, ela sempre é substituida ao invés de incorporada.
+
+
+## Outro exempo bem simples, clicando e trocando o nome
+
+```js
+import { useState } from "react";
+
+const App = () => {
+
+  const [name, setName] = useState("Gilberto")
+  
+
+  const handleButtonClick = () => {
+    //alert("O botão foi clicado")
+    setName("Pedro")
+    }
+  
+
+  return (
+
+    <div className="App">
+    
+    Meu nome é {name}
+
+   <h1>Executando a função assim que clicar no botão</h1>
+   <button onClick={handleButtonClick}>clique aqui</button>
+   
+   
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Exemplo, Clicando e atualizando o valor, muito simples
+
+```js
+import { useState } from "react";
+
+const App = () => {
+
+ const [n, setn] = useState(0)
+
+ const handleMinus = () => {
+ setn(n-1)
+ }
+
+ const handleMore = () => {
+ setn(n+1)
+ }
+  
+  return (
+
+    <div className="App">
+    
+    <button onClick={handleMinus}>-</button>
+    <div>
+    {n} 
+    </div>
+    <button onClick={handleMore}>+</button>
+   
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Criando um input com useState (TypeScript)
+
+
+```js
+import React, { useState } from "react";
+
+const App = () => {
+
+  const [name, setName] = useState ('Pedro')
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+  setName(event.target.value)
+  }
+  
+  return (
+
+    <div className="App">
+    Nome: 
+    <input type="text" value={name} onChange={handleInput}/>
+    
+    <hr/>
+    Seu nome é: {name}
+   
+    </div>
+  );
+}
+
+export default App;
+```
+## Criando um input com useState (CRA)
+
+```js
+import { useState } from "react";
+
+const App = () => {
+
+  const [name, setName] = useState ('Pedro')
+
+  const handleInput = (event) => {
+  setName(event.target.value)
+  }
+  
+  return (
+
+    <div className="App">
+    Nome: 
+    <input type="text" value={name} onChange={handleInput}/>
+    
+    <hr/>
+    Seu nome é: {name}
+   
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Criando um input com useState, nome, sobrenome, idade (CRA)
+
+```js
+import { useState } from "react";
+
+const App = () => {
+  
+  //Nome
+  const [name, setName] = useState ('')
+
+  const inputName = (event) => {
+  setName(event.target.value)
+  }
+
+  //Sobrenome
+  const [sobrenome, setSobrenome] = useState (' ')
+
+  const inputSobrenome = (event) => {
+  setSobrenome(event.target.value)
+  }
+
+  //Idade
+  const [idade, setIdade] = useState ('')
+
+  const inputIdade = (event) => {
+  setIdade(event.target.value)
+  }
+
+  return (
+
+    <div className="App">
+    
+    <div>
+    Nome: <br/>
+    <input type="text" value={name} onChange={inputName}/>
+    </div>
+
+    
+    <div>
+    Sobrenome: <br/>
+    <input type="text" value={sobrenome} onChange={inputSobrenome}/>
+    </div>
+
+    <div>
+    Idade: <br/>
+    <input type="text" value={idade} onChange={inputIdade}/>
+    </div>
+    
+
+    <hr/>
+    Olá: {name + sobrenome}, tudo bem? 
+    <br/>
+    Você tem {idade} anos
+   
+    </div>
+  );
+}
+
+export default App;
+```
