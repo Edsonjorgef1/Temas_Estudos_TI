@@ -84,3 +84,44 @@ Renderizou no console, só para você entender, que o componente foi atualizado,
 }
 ```
 
+## Quando clicar faça alguma coisa, quando clicar outra vez faça outra coisa
+
+App.js
+
+```js
+//Se a pagina tiver carregando mostra se a pagina não tiver não mostra
+import { useState } from "react";
+
+
+const App = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClick = () => {
+    setShow( !show )
+
+    {/*
+   
+    if(show) {
+      setShow(false)
+    } else {
+    setShow(true)
+    }
+    
+    */}
+  }
+    
+  return (
+    <div>
+      <button onClick={handleClick}>{show ? 'Ocultar' : "Mostrar"}</button>
+      {/*Se show for igual a true div vai entrar*/}
+      {show === true &&    
+      <div>...</div>
+    } 
+    </div>
+  );
+};
+
+export default App;
+```
+
+
