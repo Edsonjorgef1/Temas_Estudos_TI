@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## 1 Exemplo:
+## 1 Exemplo: (CRA)
 
 Arquivo, Dados.js
 
@@ -52,7 +52,7 @@ export default function Dados(props) {
 }
 ```
 
-## 2 Exemplo:
+## 2 Exemplo: (CRA)
 
 Função que depende das propriedades, retornando um elemento qualquer
 valor enviado via props
@@ -83,8 +83,157 @@ export default App_function_Component;
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-##  Props, typeScript
+## 3 Props, typeScript (vite)
+
+Neste exemplo foi utilizado o Vite
+Repare que neste exemplo, eu posso somente passar, o title.
+
+App.tsx
 
 ```js
+import { Header } from './Components/Header2'
+
+export default function App() {
+
+  return (
+
+    <div className="App">
+    <Header title="Este é um exemplo"/>
+     {/*Para adicionar, <Header /> sem o title, deve adicionar um ?, no arquivo, Components/Header.tsx, para o metodo CRA, não precisa colocar a interrogação*/}
+
+     Olá Mundo
+  
+    </div>
+    
+  );
+}
+```
+Components/Header.tsx
+
+```js
+type Props = {
+  title: String;  // title?: String; desta forma voçê poderá receber um nome diferente sem ser o title.
+}
+
+export const Header = (props: Props) => {
+  return (
+  <header>
+  <h1> {props.title}</h1>
+  <hr/>
+  </header>
+  );
+}
+```
+Components/Header.tsx (Forma resumida)
+
+```js
+type Props = {
+  title: String;
+}
+
+export const Header = ({ title }: Props) => {
+  return (
+  <header>
+  <h1> {title}</h1>
+  <hr/>
+  </header>
+  );
+}
+```
+
+## 4 Exemplo: Neste exemplo vamos fazer, o exemplo 3 só que sem type script, metodo (CRA)
+
+App.js
+
+```js
+import { Header } from './Components/Header'
+
+export default function App() {
+
+  return (
+
+    <div className="App">
+    <Header title="Este é um exemplo"/>
+
+     Olá Mundo
+  
+    </div>
+    
+  );
+}
+```
+
+Components/Header.js
+
+```js
+import React from 'react';
+
+export const Header = (props) => {
+  return (
+  <header>
+  <h1> {props.title}</h1>
+  <hr/>
+  </header>
+  );
+}
+```
+
+## 5 Enviando Imagem e Leganda via Props, Type script (vite)
+Desta forma eu posso retornar somente um elemento, porque está dentro de uma div
+
+App.tsx
+
+```js
+import { Header } from './components/Header2'
+import { Photo } from './components/Photo'
+
+export default function App() {
+
+  return (
+
+    <div className="App">
+    <Header title="Este é um exemplo"/>
+    <Header title="Este é um exemplo"/>
+     
+     Olá Mundo
+     <Photo url="http://www.google.com.br/google.jpg" legend="Google" />
+    </div>
+    
+  );
+}
+```
+compoments/Photo
+
+```js
+type Props = {
+url: string;
+legend: string;
+}
+
+export const Photo = ({ url, legend }: Props) => {
+return (
+<div>
+    <img src={url}/>
+   <p>{legend}</p>
+</div>
+)
+}
+```
+components/Header
+
+```js
+type Props = {
+  title: String;
+}
+
+export const Header = ({ title }: Props) => {
+  return (
+  <header>
+  <h1> {title}</h1>
+  <hr/>
+  </header>
+  );
+}
 
 ```
+
