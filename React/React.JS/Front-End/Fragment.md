@@ -6,7 +6,7 @@ https://www.youtube.com/engenheiroyoutuber
 ```
 
 ## Fragment 
-Ele serve para você, retornar um elemento quando você, 
+Ele serve para você, retornar um elemento, no caso uma div, quando você
 precisar por exemplo retornar só um elemento, passando via props.
 Você pode importar o Fragment e no lugar da div adicionar Fragment ou utilizar <> </> no lugar da div
 

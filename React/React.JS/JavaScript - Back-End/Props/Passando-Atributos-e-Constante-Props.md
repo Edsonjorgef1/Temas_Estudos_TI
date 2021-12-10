@@ -79,10 +79,6 @@ function App_function_Component() {
 export default App_function_Component;
 ```
 
-```js
-https://www.youtube.com/engenheiroyoutuber
-```
-
 ## 3 Props, typeScript (vite)
 
 Neste exemplo foi utilizado o Vite
@@ -237,3 +233,50 @@ export const Header = ({ title }: Props) => {
 
 ```
 
+## Props, chamada Children, passando imagem e legenda em Type Script (vite)
+
+App.tsx
+
+```js
+const App = () => {
+
+  return (
+
+    <div className="App">
+
+    <Header title="Este é um exemplo"/>
+    <Header title="Este é um exemplo"/>
+     
+     Olá Mundo
+
+     <Photo legend= "Google">
+     <img src="http://www.google.com.br/google.jpg" alt="" /> 
+     </Photo>
+    
+     
+    </div>
+  );
+}
+
+export default App;
+```
+
+compoments/Photo
+
+```js
+import { ReactNode } from 'react'
+
+type Props = {
+legend: string;
+children: ReactNode;
+}
+
+export const Photo = ({ legend, children }: Props) => {
+return (
+<>
+   {children}
+   <p>{legend}</p>
+</>
+)
+}
+```
