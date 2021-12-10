@@ -11,3 +11,7 @@ Html auto complete
 Extensão JSX HTML <tags/>
 ```
 
+## Extensão para organizar o codigo em jsx
+
+Prettier - Code form
+
