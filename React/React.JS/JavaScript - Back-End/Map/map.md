@@ -62,3 +62,52 @@ import React from "react";
 }
 export default App_function_Component;
 ```
+
+## Renderização de listas
+
+App.js
+
+```js
+import React from "react";
+import { Pessoa } from "./components/Pessoa"
+
+
+let list = [
+  {name: 'Bonieky', age:'90'},
+  {name: 'Beto', age:'80'}
+]
+
+
+const App = () => {
+return (
+  <div>
+<h2>lista de presença</h2>
+<ul>
+{list.map((item, index)=>(    // index, serve para referencia o numero de cada nome, para não dar erro
+// <li key={index}>{item.name.toUpperCase()} - {item.age} anos</li> este foi o teste anteriormente sem o outro arquivo pessoas
+<Pessoa key={index} data={item}/>
+))}
+
+</ul>
+
+  </div>
+)
+}
+
+export default App
+```
+
+components/Pessoa.js
+
+```js
+import React from "react";
+
+
+export const Pessoa = ({data}) => {
+return (
+    <li>
+    {data.name} - {data.age} anos.
+    </li>
+)
+}
+```
