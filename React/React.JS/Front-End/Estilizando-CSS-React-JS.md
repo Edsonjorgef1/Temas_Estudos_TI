@@ -385,7 +385,7 @@ components/Botao/styles.module.css
 ```js
 
 .Geral{
-backgroundColor: white
+background-Color: white
 }
 
 .Nome1 {
