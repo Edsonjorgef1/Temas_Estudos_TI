@@ -3,6 +3,8 @@ Canal do youtube:
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
+## lembrete
+Sempre quando for declarar o className, colocar nomes diferentes, para que não tenha problemas no futuro, exemplo, na sua pasta botao, no arquivo index.js, colocar nomes, tipo, botao-btn, para evitar conflitos no futuro, com outros componentes criados, não e para dar problema caso esteja os nomes iguais, mas, o ideal fazer deste jeito, pricipalmente quando utilizar com stylesheet.
 
 ## Estilizando o CSS, dentro de um arquivo .CSS, Stylesheet (Projeto básico do React, após criado o projeto, 1 Opção)
 Repare estou importando, o nome do arquivo
