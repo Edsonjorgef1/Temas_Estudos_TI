@@ -4,7 +4,8 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 1 Opção)
+## Estilizando o CSS, dentro de um arquivo .CSS, Stylesheet (Projeto básico do React, após criado o projeto, 1 Opção)
+Repare estou importando, o nome do arquivo
 
 Arquivo App.js
 
@@ -42,6 +43,66 @@ color: #525252;
 font-size: 32px;
 color: #525252;
 ```
+
+## Estilizando o CSS, dentro de um arquivo .CSS, Stylesheet (Projeto básico do React, após criado o projeto, 1.1 Opção)
+
+Repare estou importando, o nome da pasta agora, muito melhor mais organizado
+
+Para você importar, somente a pasta, você deve, deixar o aquivo dentro de botão, index.js e styles.js, assim quando importar o Botao, o react vai reconhecer.
+
+App.js
+
+```js
+import React from "react";
+import Botao from "./components/Botao"
+
+const App = () => {
+  return (
+    <div className="Nome1">
+      < Botao />
+    </div>
+  );
+};
+
+export default App;
+```
+components/Botao/index.js
+
+```js
+import React from "react";
+import './styles.css'
+
+const App = () => {
+  return (
+    <div className="Nome1">
+    <h1>Ola Mundo</h1>
+    </div>
+  );
+};
+
+export default App;
+```
+
+components/Botao/styles.js
+
+```js
+
+.Nome1 {
+background-color: #f8f9fa;
+}
+
+.Nome1 h1 {
+font-size: 32px;
+color: #e03030;
+
+
+}
+```
+
+
+
+
+
 
 ## Estilizando o CSS, dentro de um arquivo .JS Estilo inline (Projeto básico do React, após criado o projeto, 2 Opção)
 
@@ -538,4 +599,59 @@ function App_function_Component() {
   );
 }
 export default App_function_Component;
+```
+## Quando clicar, gostaria de fazer alguma coisa no CSS
+
+App.js
+
+```js
+import { useState } from "react";
+
+
+const App = () => {
+  const [padding, setPadding] = useState(0)
+
+  const handleClick = () => {
+  setPadding(20)
+  }
+    
+  return (
+    <div>
+    <button 
+    onClick={handleClick}
+    style={{ padding}}
+    
+    >clique</button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+## Adicionando um operador ternario, com estilo inline
+
+```js
+import { useState } from "react";
+
+
+const App = () => {
+  const [cor, setCor] = useState(0)
+
+  const handleClick = () => {
+  setCor(true)
+  }
+    
+  return (
+    <div>
+    <button 
+    onClick={handleClick}
+    style={{backgroundColor: cor ? '#0000FF' : '#FF0000'}}
+    
+    >clique</button>
+    </div>
+  );
+};
+
+export default App;
 ```
