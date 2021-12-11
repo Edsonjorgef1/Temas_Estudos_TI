@@ -101,11 +101,6 @@ color: #e03030;
 }
 ```
 
-
-
-
-
-
 ## Estilizando o CSS, dentro de um arquivo .JS Estilo inline (Projeto básico do React, após criado o projeto, 2 Opção)
 
 Adiconei este comando abaixo, em h1 e h2, olha que facil.
@@ -350,7 +345,59 @@ export default App;
 
 ## Estilizando o css, css-modules
 
-...
+Porque utilizar o css-modules ao inves do stylesheet, porque no css-modules, ele cria um numero, por tras dos panos, quando você faz o className, assim nunca vai dar conflito o nome caso você esquecer e deixar igual, imagina um projeto, grande, é dificil de você ficar monitorando se contém algum nome igual, em varios componentes criados, uma otima opção esta aqui.
+
+App.js
+
+```js
+import React from "react";
+import Botao from "./components/Botao"
+
+const App = () => {
+  return (
+    <div className="Nome1">
+      < Botao />
+    </div>
+  );
+};
+
+export default App;
+```
+components/Botao/index.js
+
+```js
+import React from "react";
+import './styles.module.css'
+
+const App = () => {
+  return (
+    <div className={styles.geral}>
+    <h1 className={syles.h1}>Ola Mundo</h1>
+    </div>
+  );
+};
+
+export default App;
+```
+
+components/Botao/styles.module.css
+
+```js
+
+.Geral{
+backgroundColor: white
+}
+
+.Nome1 {
+background-color: #f8f9fa;
+}
+
+.Nome1 h1 {
+font-size: 32px;
+color: #e03030;
+}
+```
+
 
 ## Estilizando o css, Sass
 
