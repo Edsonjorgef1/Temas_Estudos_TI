@@ -213,6 +213,9 @@ Arquivo App.js
 ```js
 import React from "react";
 
+//Outra forma de importar
+//import { Container, Title } from './styled-components'
+
 import { Title } from "./style";
 import { Paragrafo } from "./style";
 import { Botao } from "./style";
