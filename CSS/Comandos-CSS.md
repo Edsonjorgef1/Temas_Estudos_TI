@@ -713,6 +713,10 @@ color: #FFF;
 outline: none; /*Desabilitar, margem interna do input*/
 margin-right: 8px;
 }
+
+.containerInput input::placeholder{ /*Acessando nosso placeholder do input*/
+color: #F1f1f1;
+}
 ```
 
 ## outline: 0;
