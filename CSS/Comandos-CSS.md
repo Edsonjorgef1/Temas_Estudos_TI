@@ -3,6 +3,27 @@ Canal do youtube:
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
+## Bibliotecas
+
+### Biblioteca para icones (react-icons)
+
+Site:
+
+```js
+react-icons.github.io/react-icons/
+```
+Para instalar a biblioteca
+
+```js
+npm install react-icons
+```
+Exemplo: Se eu quiser utilizar algum icone, deste link abaixo.
+
+Basta importar, o ccódigo abaixo:
+
+```js
+import { IconName } from "react-icons/fi";
+```
 
 # Comandos CSS
 
@@ -831,6 +852,47 @@ input[type="button"]:focus {
 background-color: #b10b7f; /*Cor apos passado o mouse em cima do botão*/
 border-color: #850909; /*Cor da borda após passado em cima do botão*/
 transition: all 0.35s; /*Tempo, após passado o mouse, vai carregando a cor no tempo*/
+```
+## transform: scale:
+
+App.js
+
+```js
+import React from "react";
+import './styles.css'
+//import { FiSearch } from 'react-icons/fi'
+
+function App() {
+  return (
+    <div className="container">
+        <button className="buttonSearch">
+        Procurar
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+(Quando passar o mouse em cima ele aumenta o tamanho)
+styles.css
+```js
+.buttonSearch{
+background-color: transparent;
+border: 0;
+display: flex; 
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: transform 0.5s;/*Passando a animação, para aumentar quando passar o mouse em cima*/
+}
+
+.buttonSearch:hover{
+transform: scale(1.2)
+}
 ```
 
 ## Unidades de medida do CSS
