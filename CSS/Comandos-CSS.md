@@ -6,6 +6,15 @@ https://www.youtube.com/engenheiroyoutuber
 
 # Comandos CSS
 
+## *
+Ajuste global
+
+```js
+* {
+
+}
+```
+
 ## align-items: center;
 
 (Centraliza, no meio), exemplo se você utilizar o flex-direction: column;, ai você vai centralizar verticalmente, se usar o, flex-direction: row; você irá centralizar horizontalmente, utilizando o comando abaixo, Obs: Só que você tem que ter pelo menos uma linha para fazer o alinhamento
