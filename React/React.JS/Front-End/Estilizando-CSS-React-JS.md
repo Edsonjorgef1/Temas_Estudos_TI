@@ -202,6 +202,8 @@ Comando para instalar o Styled-Component
 ```js
 yarn add styled-components
 ```
+Site descrição:
+styled-components.com
 
 Arquivo App.js
 
