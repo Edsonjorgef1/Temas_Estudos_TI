@@ -277,7 +277,7 @@ Arquivo App.js
 
 ```js
 import React from "react";
-
+//Aqui aonde foi adicionado a letra St, você pode colocar qual sigla
 import * as St from "./style";
 
 function App() {
