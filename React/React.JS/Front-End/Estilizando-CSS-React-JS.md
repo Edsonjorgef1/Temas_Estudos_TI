@@ -205,6 +205,9 @@ yarn add styled-components
 Site descrição:
 styled-components.com
 
+Caso for instalar para utilizar em um projeto typeScript.
+npm install -D @types/styled-components
+
 Arquivo App.js
 
 ```js
