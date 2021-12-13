@@ -699,6 +699,20 @@ opacity: 1;
 
 ```js
 outline: none;
+
+/*Exemplo, editando input*/
+.containerInput{
+background-color: rgba(255,255,255, 0.2);
+}
+
+.containerInput input{ /*Dentro da tag de input*/
+background-color: transparent;
+border: 0;
+font-size: 20px;
+color: #FFF;
+outline: none; /*Desabilitar, margem interna do input*/
+margin-right: 8px;
+}
 ```
 
 ## outline: 0;
