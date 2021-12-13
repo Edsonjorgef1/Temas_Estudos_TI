@@ -6,7 +6,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Consumindo dados api com React
+## Consumindo dados api, buscando uma url de uma api, com React
 
 Vamos utilizar uma api externa, vai estar retornando os dados para nossa aplicação web, nossa aplicação 
 web vai estar manipulando os dados e apresentando para o usuário.
@@ -93,3 +93,5 @@ baseURL: 'https://api.tvmaze.com/search/shows?q='  // 1 - Aqui se você colocar 
 
 export default api
 ```
+
+
