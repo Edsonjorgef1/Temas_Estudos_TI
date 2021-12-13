@@ -15,6 +15,27 @@ Ajuste global
 }
 ```
 
+## @keyframes 
+
+muito legal esta animação quando entrar, no site carregar a tela, o titulo vai girar
+
+styles.css
+
+```js
+.title{
+animation: flipTitle 2s;
+}
+
+@keyframes flipTitle {
+from{
+transform: rotateX(90deg)
+}
+to{
+transform: rotateX(0deg)
+}
+}
+```
+
 ## align-items: center;
 
 (Centraliza, no meio), exemplo se você utilizar o flex-direction: column;, ai você vai centralizar verticalmente, se usar o, flex-direction: row; você irá centralizar horizontalmente, utilizando o comando abaixo, Obs: Só que você tem que ter pelo menos uma linha para fazer o alinhamento
