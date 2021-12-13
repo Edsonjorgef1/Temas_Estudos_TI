@@ -23,9 +23,14 @@ const [Aqui dentro se chama array] = useState("");
 Valor inicial para o state
 
 ```js
+//Passando um array vazio
 useState([]);
 ou;
+//Passando uma string vazia
 useState("");
+ou
+//Passando um objeto vazio
+ useState({})
 ```
 
 "State" = O state, em React, é onde guardamos os dados do nosso componente, ele são ambos objetos do javascript, é gerenciado de dentro do componente (como variáveis declaradas dentro de uma função).
