@@ -22,3 +22,5 @@ Tecla: CTRL + ; = Comenta toda a linha do código.
 TEcla CTRL + H = Com este comando você, clica em cima do nome da sua varivel, digamos que você tem está varivel 
 chamando, em varios lugares do codigo, de vez você trocar o nome um por um, você faz isso e troca todos os nomes de todos 
 uma vez só.
+
+Tecla CTRL + p = Procurar um arquivo.
