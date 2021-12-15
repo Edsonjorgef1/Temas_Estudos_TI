@@ -15,3 +15,7 @@ Extensão JSX HTML <tags/>
 
 Prettier - Code form
 
+## Extensão babel ES6/ES7
+
+Conhecendo as funcionalidade do javascript
+
