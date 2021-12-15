@@ -363,6 +363,7 @@ function App() {
   
     <St.Container bgColor="#0000FF">
     <St.Botao bg="#FF0000">Botao Grande</St.Botao>
+    
     <St.Botao bg="#00FF00" small>Botao Pequeno</St.Botao>
     </St.Container>
     
@@ -383,9 +384,12 @@ export const Container = styled.div`
 `
 
 export const Botao = styled.button`
+ 
   font-size: ${(props)=> props.small ? '15px' : '30px'};
   background-color: ${props => props.bg}
 `
+/*se for small, quem é small, repare que é o botão pequeno, vai ficar 15px, 
+se não for, small que no caso é o botão grande vai ser 30px*/
 
 /*
 //Type script fazer deste jeito
