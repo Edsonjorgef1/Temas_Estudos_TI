@@ -350,6 +350,58 @@ function App() {
 
 export default App;
 ```
+## Estilizadno Css com Sletd-Component, passando props
+
+App.js
+
+```js
+import React from "react";
+import * as St from "./style";
+
+function App() {
+  return (
+  
+    <St.Container bgColor="#0000FF">
+    <St.Botao bg="#FF0000">Botao Grande</St.Botao>
+    <St.Botao bg="#00FF00" small>Botao Pequeno</St.Botao>
+    </St.Container>
+    
+  );
+}
+
+export default App;
+```
+
+style.js
+```js
+import styled from "styled-components";
+
+export const Container = styled.div`
+  background: blue;
+  color: white;
+  padding: 20px;
+`
+
+export const Botao = styled.button`
+  font-size: ${(props)=> props.small ? '15px' : '30px'};
+  background-color: ${props => props.bg}
+`
+
+/*
+//Type script fazer deste jeito
+
+type BotaoProps = {
+  bg: string;
+  small?: Boolean;
+}
+
+export const Botao = styled.button<BotaoProps`
+  font-size: ${(props)=> props.small ? '15px' : '30px'};
+  background-color: ${props => props.bg}
+`
+*/
+```
+
 
 ## Estilizando o css, css-modules
 
