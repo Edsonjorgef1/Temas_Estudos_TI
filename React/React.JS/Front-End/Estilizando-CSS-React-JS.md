@@ -406,6 +406,63 @@ export const Botao = styled.button<BotaoProps`
 */
 ```
 
+## Estilizando filhos do componente, Styled-Compoent JavaScript (5 Opção)
+
+Neste exemplo é bem legal, define uma cor padrão, assim que passar em cima o mouse troca de cor
+
+App.js
+
+```js
+import React from "react";
+import * as St from "./style";
+
+function App() {
+  return (
+    
+    <St.Container bgColor="#0000FF">
+    <span>Texto do componente</span>
+ 
+    <a href="" className="link">link qualquer</a>
+    
+    </St.Container>
+    
+  );
+}
+
+export default App;
+```
+
+style.js
+
+```js
+import styled from "styled-components";
+
+export const Container = styled.div`
+  background: blue;
+  color: white;
+  padding: 20px;
+
+  span{
+  font-weight: bold;
+  color: #000;
+  }
+  .link {
+  color: #FFF;
+  &:hover {
+  color: #FF0000;
+  }
+`
+
+/*
+//Aqui é a mesma coisa que .link, acima.
+  }
+  .link:hover {
+  color: #00FF00;
+  }
+  */
+  
+```
+
 
 ## Estilizando o css, css-modules
 

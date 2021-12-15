@@ -676,6 +676,66 @@ export const Title = styled.h1`
 `;
 ```
 
+## @media query, resposividade, centralizar, no meio da tela e quando diminuir, ajustar horizontalmente os botões e textos
+
+App.js
+
+```js
+import React from "react";
+import * as St from "./style";
+
+function App() {
+  return (
+  
+    <St.Container bgColor="#0000FF">
+    <span>Texto do componente</span>
+    <a href="" className="link">link qualquer</a>
+    <St.Botao bg="#FF0000" small>Botao Grande</St.Botao>
+    <St.Botao bg="#00FF00" small>Botao Pequeno</St.Botao>
+    </St.Container>
+    
+  );
+}
+
+export default App;
+```
+style.js
+
+```js
+import styled from "styled-components";
+
+export const Container = styled.div`
+  max-width: 600px;
+  background: blue;
+  color: white;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+
+
+  span{
+  font-weight: bold;
+  color: #000;
+  }
+  .link {
+  color: #FFF;
+  &:hover {
+  color: #FF0000;
+  }
+  }
+ @media (max-width: 500px) {
+  background-color: green;
+  flex-direction: column;
+
+  span {
+    color: #0000FF;
+  }
+ }
+
+`
+```
+
+
 ## min-height:
 
 (Altura minima)
@@ -918,4 +978,12 @@ visibility: hidden;
 
 ```js
 width: 100%;
+```
+
+## max-width:
+
+(Largura )
+
+```js
+width: 600px;
 ```
