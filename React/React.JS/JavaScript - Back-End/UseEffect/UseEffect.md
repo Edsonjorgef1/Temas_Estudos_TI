@@ -59,3 +59,30 @@ useEffect(() => {
   setNome("Flavia");
 }, [Varial ou Estado]); 
 ```
+
+## Clicou monitora, quando houve alteração, faça alguma coisa
+
+```js
+import { useEffect, useState } from "react";
+
+function App() {
+  const [name, setName] = useState("Beto");
+
+  useEffect(() => {
+    alert("Executou");
+  }, [name]);
+
+  const handleClick = () => {
+    setName("Pedro");
+  };
+
+  return (
+    <div>
+      Nome: {name}
+      <button onClick={handleClick}>Clique</button>
+    </div>
+  );
+}
+
+export default App;
+```

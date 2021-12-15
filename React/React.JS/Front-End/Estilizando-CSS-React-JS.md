@@ -589,6 +589,19 @@ Site:
 ```js
 https://tailwindcss.com/docs/font-size
 ```
+Para você estilizar com tailwindcss, você deve escolher, em qual jeito você vai fazer o seu projeto
+
+```js
+https://tailwindcss.com/docs/installation/framework-guides
+```
+Depois deve instalar a biblioteca, no caso vou instalar para create react app
+
+```js
+npm install -D tailwindcss postcss autoprefixer
+```
+
+
+
 
 ## Estilizando o Css, rebass
 

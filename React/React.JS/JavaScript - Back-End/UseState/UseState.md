@@ -387,3 +387,37 @@ const App = () => {
 
 export default App;
 ```
+
+## Monitorando duas variaveis, dois input, com o useEffect
+
+```js
+import { useEffect, useState } from "react";
+
+function App() {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [fullName, setFullName] = useState("");
+
+  useEffect(() => {
+  setFullName(`${name} ${lastName}`)
+  }, [name, lastName])
+
+  const handleNameChange = (event) => {
+  setName(event.target.value)
+  }
+
+  const handleLastNameChange = (event) => {
+  setLastName(event.target.value)
+  }
+
+  return (
+    <div className="flex">
+      <input type="text" placeholder="Digite seu Nome" value={name} onChange={handleNameChange} />
+      <input type="text" placeholder="Digite seu Sobrenome" value={lastName} onChange={handleLastNameChange}/>
+      <p>Nome Completo: {fullName}</p>
+    </div>
+  );
+}
+
+export default App;
+```
