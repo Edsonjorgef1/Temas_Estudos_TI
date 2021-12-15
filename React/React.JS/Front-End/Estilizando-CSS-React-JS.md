@@ -350,7 +350,7 @@ function App() {
 
 export default App;
 ```
-## Estilizadno Css com Sletd-Component, passando props
+## Estilizadno Css com Sletd-Component, passando props JavaScript (4 Opção)
 
 App.js
 
