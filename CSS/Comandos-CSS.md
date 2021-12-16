@@ -225,6 +225,14 @@ box-sizing: border-box;
 border-style: solid;
 ```
 
+## border: dashed 
+(Borda pontilhada)
+
+```js
+border; 3px dashed #FF0000
+```
+
+
 ## Children
 
 ```js

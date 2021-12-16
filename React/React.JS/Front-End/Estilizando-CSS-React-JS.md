@@ -838,3 +838,106 @@ const App = () => {
 
 export default App;
 ```
+
+## Passando props, para estilização
+
+```js
+import React from "react";
+import styled from "styled-components";
+
+const Site = styled.button`
+font-size: 19px;
+padding: 10px 15px:
+background-color: ${props => props.color}
+`;
+
+const Botao = styled.button`
+font-size: 19px;
+padding: 10px 15px;
+background-color: ${props => props.color || '#00FF00'}
+`
+
+
+function App() {
+  return (
+    <Site>
+     <Botao color="#FF0000"> Clique aqui </Botao>
+     <Botao color="#0000FF"> Clique aqui </Botao>
+     <Botao> Clique aqui </Botao>
+    </Site>
+  );
+}
+
+export default App;
+```
+
+## Passando props, valor booleano (true ou false)
+
+```js
+import React from "react";
+import styled from "styled-components";
+
+const Site = styled.button`
+font-size: 19px;
+padding: 10px 15px:
+background-color: ${props => props.color}
+`;
+
+const Botao = styled.button`
+font-size: 19px;
+padding: 10px 15px;
+background-color: ${props => props.ativo == true ? '#0000FF' : '#CCC'}
+`
+
+function App() {
+  return (
+    <Site>
+     <Botao ativo={true}> Clique aqui </Botao>
+     <Botao ativo={false}> Clique aqui </Botao>
+    </Site>
+  );
+}
+
+export default App;
+```
+
+## Passando propriedades, do Pai para o filho
+
+App.js
+
+```js
+import React from "react";
+import styled from "styled-components";
+
+const Site = styled.div`
+width: 400px;
+height: 400px;
+background-color: #00FF00;
+`;
+
+const Botao = styled.button`
+font-size: 19px;
+padding: 10px 15px;
+border: 3px dashed #FF0000;
+color: #FF0000;
+background-color: #FFF;
+margin: 5px;
+border-radius: 5px;
+`
+
+const BotaoPequeno = styled(Botao)`
+padding: 5px 10px;
+font-size: 16px;
+`
+
+function App() {
+  return (
+    <Site>
+    <Botao> Clique Aqui </Botao>
+    <BotaoPequeno> Clique Aqui </BotaoPequeno>
+    </Site>
+  );
+}
+
+export default App;
+```
