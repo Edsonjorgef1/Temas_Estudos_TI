@@ -108,7 +108,7 @@ let App = () => <h1>Testando 1</h1>
 export default App;
 ```
 
-## Componente, Arrow Function
+## Componente, Arrow Function, 1
 
 Arquivo, App.js
 
@@ -126,6 +126,17 @@ const App_Arrow_Funcion = () => {
 
 //Exportando Componente
 export default App_Arrow_Funcion;
+```
+## Componente, Arrow Function, resumido 2
+
+App.js
+
+```js
+import React from "react"
+
+const App = () => <h1>Testando 1</h1>
+
+export default App;
 ```
 
 # Componente, Class Component
