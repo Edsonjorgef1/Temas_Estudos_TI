@@ -33,7 +33,7 @@ fazer, o comando yarn add bootstrap, no terminal, ai suas dependências vai fica
 dentro desta pasta, para auxiliar você no desenvolvimento, lembrando que na sua pasta package.json,
 da para ver todos os nomes de suas dependências que foram instaladas, mais facil.
 
-## Componente, Function Component
+## Componente, Function Component, 1
 
 Arquivo, App.js
 
@@ -53,7 +53,19 @@ function App_function_Component() {
 export default App_function_Component;
 ```
 
-## Componente, Function Component, outro jeito
+## Componente, Function Component, 2
+
+```js
+import React from "react"
+
+
+function App() {
+   return <h1>Testando 1</h1>
+}
+export default App;
+```
+
+## Componente, Function Component, 3
 
 Arquivo, App.js
 
@@ -68,6 +80,19 @@ export default function App_function_Component() {
     </div>
   );
 }
+```
+## Componente, Function Component, 4
+
+App.js
+
+```js
+import React from "react"
+
+
+let App = () => {
+   return <h1>Testando 1</h1>
+}
+export default App;
 ```
 
 ## Componente, Arrow Function
