@@ -95,6 +95,19 @@ let App = () => {
 export default App;
 ```
 
+## Componente, Function Component, 5
+
+App.js
+
+```js
+import React from "react"
+
+
+let App = () => <h1>Testando 1</h1>
+
+export default App;
+```
+
 ## Componente, Arrow Function
 
 Arquivo, App.js
