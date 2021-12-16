@@ -50,3 +50,62 @@ return <>
 
 export default App
 ```
+
+## Imagem e props, 1
+
+App.js
+
+```js
+import React from 'react'
+
+function Avatar(props) {
+return (
+<div>
+<img src={props.url} alt={props.name} />
+<br/>
+<span>{props.name}</span>
+</div>
+)
+}
+
+function App() {
+let user = {
+  url: "https://www.google.com.br/google.jpg",
+  name:"Beto"
+}
+return <>
+<Avatar url={user.url} name={user.name}/>
+</>
+}
+export default App
+```
+
+## Imagem e props, resumido 2
+
+App.js
+
+```js
+
+import React, { useRef } from 'react'
+
+function Avatar(props) {
+return (
+<div>
+<img src={props.user.url} alt={props.user.name} />
+<br/>
+<span>{props.user.name}</span>
+</div>
+)
+}
+
+function App() {
+let user = {
+  url: "https://www.google.com.br/google.jpg",
+  name:"Beto"
+}
+return <>
+<Avatar user={user}/>
+</>
+}
+export default App
+```
