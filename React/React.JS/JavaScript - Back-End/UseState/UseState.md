@@ -421,3 +421,200 @@ function App() {
 
 export default App;
 ```
+
+## Somando, com o Usestate
+
+App.js
+
+```js
+import React, { useState } from "react";
+
+
+
+function App() {
+  const [contagem, setContagem] = useState(0)
+
+  const botaoAction = () => {
+  //alert("function")
+  setContagem( contagem + 1)
+  }
+  
+  return (
+    <>
+    <div> {contagem} vezes </div>
+    <button onClick={botaoAction}>Clique para aumentar</button>
+    </>
+  );
+}
+
+export default App;
+```
+
+## Verificando a quantidade de letras digitadas
+
+App.js
+
+```js
+import React, { useState } from "react";
+import styled from 'styled-components'
+
+const Input = styled.input`
+width: 400px;
+height: 30px;
+font-size: 16px;
+padding: 10px;
+border: 1px solid #000
+`
+
+function App() {
+  
+ //Verificando a quantidade de letras digitadas
+  const [ texto, setTexto ] = useState ('')
+  const handleInput = (e) => {
+  setTexto(e.target.value)
+  }
+
+  return (
+    <>
+    //Verificando a quantidade de letras digitadas
+    <Input type="text" value={texto} onChange={handleInput} />
+    <p>{texto.length} Verificando a quantidade de caracteres</p>
+    </>
+  );
+}
+
+export default App;
+```
+
+## Email e Password
+
+App.js
+
+```js
+import React, { useState } from "react";
+import styled from 'styled-components'
+
+const Input = styled.input`
+width: 400px;
+height: 30px;
+font-size: 16px;
+padding: 10px;
+border: 1px solid #000
+`
+
+function App() {
+  
+  const [ email, setEmail ] = useState ('')
+  const [ password, setPassword ] = useState('')
+
+  const handlePasswordInput = (e) => {
+  setPassword(e.target.value)
+  }
+
+  const handleButton = () => {
+  alert(email+' - '+password)
+  }
+
+  return (
+    <>
+    //Desta forma e mais reduzido o codigo
+    <Input placeholder = "Digite um e-mail" type="email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+    //Desta forma crie uma constante.
+    <Input placeholder = "Digite uma senha" type="password" value={password} onChange={handlePasswordInput} />
+    <button onClick={handleButton}>Dizer</button>
+    </>
+  );
+}
+
+export default App;
+```
+## Condicional de Exibição
+
+App.js
+
+```js
+import React, { useState } from "react";
+import styled from 'styled-components'
+
+const Input = styled.input`
+width: 400px;
+height: 30px;
+font-size: 16px;
+padding: 10px;
+border: 1px solid #000
+`
+
+function App() {
+  
+  const [ email, setEmail ] = useState ('')
+  const [ isLogged, setIsLogged ] = useState(false)
+
+ 
+  return (
+    <>
+    <Input placeholder = "Digite um e-mail" type="email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+    {/*//Exibindo um componente, caso seja true
+    //{algo == true && <Componente />} */}
+    
+
+    {email.length > 0 && 
+      <div>
+      <p>{email.length} caractere{email.length == 1 ? '' : 's'}</p>
+      <p>Aviso alguma coisa</p>
+      {/*       {isLogged == true && 
+      <button>Sair</button>
+      }
+      {isLogged == false && 
+      <button>Fazer Login</button>
+      }
+      */}
+      {isLogged 
+        ? <button>Sair</button> 
+        : <button>Fazer Login</button>
+      }
+
+      </div>
+    }
+
+    </>
+  );
+}
+
+export default App;
+```
+
+## Calculadora gorjetas
+
+App.js
+
+```js
+import React, { useState } from "react";
+
+
+function App() {
+  
+  const [percentual, setPercentual] = useState(10);
+  const [valorConta, setValorConta] = useState(0);
+
+ 
+  return (
+    <div style={{ padding: "20px" }}>
+            <h4>Calculadora - Gorjetas</h4>
+            <label for="texto" class="bmd-label-floating">Quanto deu a conta?</label>
+            <input type="number" class="form-control" value={valorConta} onChange={(e) => setValorConta(parseFloat(e.target.value))} />
+            <label for="texto" class="bmd-label-floating">Qual a porcentagem de gorjeta?</label>
+            <input className="Input" type="number" class="form-control" value={percentual} onChange={(e) => setPercentual(parseFloat(e.target.value))} />
+            <br />
+            { valorConta > 0 && (
+              <div>
+                  <h5>Parcial: R$ {valorConta}</h5>
+                  <h5>Gorjeta ({percentual}%): R$ {(percentual / 100) * valorConta}</h5>
+                  <h3>Total: R$ {valorConta + (percentual / 100) * valorConta}</h3>
+              </div>
+            ) }
+          </div>
+    ); 
+            }
+
+export default App;
+```
