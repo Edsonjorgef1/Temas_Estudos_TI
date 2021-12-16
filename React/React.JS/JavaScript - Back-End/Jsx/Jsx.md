@@ -62,4 +62,16 @@ return <>
 export default App
 ```
 
+## Passando imagem ou atribudos para uma div
 
+```js
+function App() {
+let imagem = 'https://www.google.com.br/google.jpg'
+
+return <>
+<img src={imagem} />
+</>
+}
+
+export default App
+```
