@@ -86,3 +86,42 @@ function App() {
 
 export default App;
 ```
+## If e Else com UseEffect e tambem quando sair do ar o useEffect atua
+
+App.js 
+
+```js
+import React, { useState, useEffect } from "react";
+
+
+function App() {
+
+  const [contagem, setContagem] = useState(0)
+  
+
+  useEffect(()=>{
+  if(contagem == 0) {
+    document.title = "Começou a brincadeira!"
+  } else {
+    document.title = "Contagem: "+contagem;
+  }
+  //return, quando você tirar ele do ar faça alguma coisa
+  return () => {
+    alert("Executou");
+  }
+}, [])
+   
+
+  function aumentarAction(){
+    setContagem(contagem + 1)
+  }
+
+  return (
+  <>
+  <h1>Contagem: {contagem}</h1>
+  <button onClick={aumentarAction}>Aumentar Número</button>
+  </>
+  )
+}
+export default App;
+```
