@@ -35,8 +35,17 @@ Exemplo, de uma estrela
 ```js
 <span>&#9733;</span>
 ```
+Você pode adcionar Emojis, também se quiser, utilizando o mesmo metodo acima, copiando o decimal
 
+```js
+https://www.w3schools.com/charsets/ref_emoji_smileys.asp
+```
 
+Exemplo, emoji de oculos
+
+```js
+<span><strong>WoW!</strong> Você está conectado! &#128526;</span>
+```
 
 # Comandos CSS
 
