@@ -19,3 +19,5 @@ Prettier - Code form
 
 Conhecendo as funcionalidade do javascript
 
+## Material Icone Theme
+Icones do VsCode

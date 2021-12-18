@@ -15,12 +15,25 @@ https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfk
 Comando para instalar o Redux
 
 ```js
-yarn add react-redux redux
+yarn add redux react-redux 
 ou
 npm install react-redux redux
 ```
 
-Redux TypeScript
+## Store
+
+Aonde vai ficar todos os dados do redux, cria um store e coloca nossos reducers nele.
+
+## Reducers
+
+Ele é responsavel de armazenar varias informações, sobre determinado assunto.
+
+## Actions
+
+São ações.
+
+
+## Redux TypeScript
 
 Comando para instalar
 

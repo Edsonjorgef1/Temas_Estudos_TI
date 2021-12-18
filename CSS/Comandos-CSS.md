@@ -25,6 +25,19 @@ Basta importar, o ccódigo abaixo:
 import { IconName } from "react-icons/fi";
 ```
 
+## Icones, para adicionar no html, com o decimal
+https://www.w3schools.com/charsets/ref_utf_symbols.asp
+
+Para você utilizar algum icone, basta copiar o decimal, no exemplo abaixo vou mostrar como colocar uma estrela
+
+Exemplo, de uma estrela
+
+```js
+<span>&#9733;</span>
+```
+
+
+
 # Comandos CSS
 
 ## *
