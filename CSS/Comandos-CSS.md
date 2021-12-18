@@ -41,6 +41,7 @@ Exemplo, de uma estrela
 # Comandos CSS
 
 ## *
+
 Ajuste global
 
 ```js
