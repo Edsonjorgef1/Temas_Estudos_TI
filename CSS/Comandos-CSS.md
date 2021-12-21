@@ -5,6 +5,10 @@ https://www.youtube.com/engenheiroyoutuber
 ```
 ## Bibliotecas
 
+### Biblioteca para templates
+
+coreui.io
+
 ### Biblioteca para icones (react-icons)
 
 Site:
