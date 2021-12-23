@@ -24,3 +24,5 @@ chamando, em varios lugares do codigo, de vez você trocar o nome um por um, voc
 uma vez só.
 
 Tecla CTRL + p = Procurar um arquivo.
+
+Tecla alt + shift + f = Organizar código ou botão direito depois de selecionado o codigo e formatar seleção
