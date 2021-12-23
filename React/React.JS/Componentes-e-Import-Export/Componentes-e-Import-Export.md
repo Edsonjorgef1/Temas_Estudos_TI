@@ -266,7 +266,6 @@ Repare que aqui, coloquei o index.js, assim, que importar a pasta home ele ja en
 ```js
 import React from "react";
 import './styles.css'
-import Modal from "../../components/modal"
 
 const Home = () => {
   return (
