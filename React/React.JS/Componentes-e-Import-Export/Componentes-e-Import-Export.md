@@ -237,3 +237,71 @@ function Identificacao() {
 //Exportar componente
 export default Identificacao;
 ```
+
+## Maneiras para navegar entre pastas
+
+src/App.js
+
+Aqui estou importando, a pasta home
+
+```js
+import React from "react";
+import Home from "./view/home"
+
+function App() {
+  
+  return (
+    <div>
+    <Home/>
+    </div>
+  );
+}
+
+export default App
+```
+
+src/view/home/index.js
+Repare que aqui, coloquei o index.js, assim, que importar a pasta home ele ja entende o index.js
+
+```js
+import React from "react";
+import './styles.css'
+import Modal from "../../components/modal"
+
+const Home = () => {
+  return (
+    <div className="Geral">
+    <div className="Header">
+    <h1>Home</h1>
+    </div>
+    </div>
+  );
+};
+
+export default Home;
+```
+
+src/view/home/styles.css
+
+/*styles Css*/
+
+```js
+
+```
+
+## Metodo prodissional, para não quebrar a aplicação, caso tenha que remover alguma pasta
+
+link, para visualizar o video, recomendado
+
+```js
+https://www.youtube.com/watch?v=lAV1-19hHqw
+```
+Para evitar navegando entre pastas, com ./, ../
+
+yarn add react-app-rewired
+
+Na pasta src, criar um arquivo, config-overrides.js
+ele vai substituir algumas configuração do babel
+
+Agora vamos instalar um plugin, yarn add babel-plugin-root-import --dev
+(--dev), está instalando como uma dependencia de desenvolvimento
