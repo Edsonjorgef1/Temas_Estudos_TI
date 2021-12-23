@@ -3,18 +3,19 @@ Canal do youtube:
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
-## Bibliotecas
+## Select (Biblioteca, select)
 
-### coreui.io
+react-select.com
+
+### coreui.io (Biblioteca com varios templates)
 
 coreui.io
 
-### nativebase.io
+### nativebase.io (biblioteca com varios templates)
 
 nativebase.io
 
-
-### Biblioteca para icones (react-icons)
+### react-icons (Blioteca para icones)
 
 Site:
 
