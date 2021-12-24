@@ -19,6 +19,9 @@ yarn add redux react-redux
 ou
 npm install react-redux redux
 ```
+Persistir os dados do redux, se manter no mesmo local
+
+yarn add redux-persist
 
 ## Store
 
