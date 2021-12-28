@@ -445,6 +445,11 @@ você copia e cola o desenho e clica em cima para visualisar o gradiente que est
 ```js
 background-color: rgb(70, 146, 169);
 ```
+Exemplo rgb, estilos inline
+
+```js
+style={{background: 'rgba(38, 153, 251)'}}
+```
 
 ## height:
 
