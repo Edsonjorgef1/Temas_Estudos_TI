@@ -62,7 +62,9 @@ outDir, criando o caminho, aonde vai ser gerado os arquivos, depois de fazer o c
 "noEmit": true, - não gere os arquivos compilados, muito pouco utilizado
 "noEmitOnError": true, - Se tiver algum erro, não emiti nada.
 
-## Configurações para Qualidade do código
+## Configurações para Qualidade do código, noUnusedLoacals, noUnusedParameters
 tracinho vermelho é um erro
 tracinho amarelo é um aviso
-"noUnusedLoacals": true, /**/
+"noUnusedLoacals": true, /*avisar que foi criado uma variavel e não foi utilizado*/
+"noUnusedParameters": true, /*Quando eu tenho um parametro que não estou usando*/
+"noImplicitReturns": true, /*sem retornos implicitos, se eu não tiver retorno nenhum ele avisa, não é bom, liberar está função não*/
