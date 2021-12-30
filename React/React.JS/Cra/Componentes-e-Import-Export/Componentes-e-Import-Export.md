@@ -4,32 +4,6 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Comando para criar um projeto, React.Js
-
-```js
-npx create-react-app Meu_Primeiro_Projeto
-```
-
-## Comando para criar um projeto, React.Js (Typescript)
-
-```js
-npx create-react-app my-app --template typescript
-```
-ou
-
-```js
-npm install -g typescript 
-```
-
-Para verificar a version
-tsc --version
-
-para rodar o projeto
-comando
-npm start
-ou
-yarn start
-
 ## Yarn ou NPM (Instalar dependências)
 
 Você pode instalar as dependência com npm ou yarn, lembre-se se for instalar com o yarn deve instalar ele no seu computador, no site, abaixo.
@@ -173,27 +147,6 @@ class App_Class_Component extends React.Component {
 
 //Exportando Componente
 export default App_Class_Component;
-```
-
-## Componente, Function Component, (Typescript)
-
-Arquivo App.tsx (Repare que aqui o arquivo diferente ele é .tsx)
-
-```js
-//Importando o react
-import React from "react";
-
-// Este React.FC, ele tipa o componente, este FC, é a abreviação do function component
-const App: React.FC = () => {
-  return (
-    <div className="App_function_Component">
-      <h1>Componente principal</h1>
-    </div>
-  );
-};
-
-//Exportando Componente
-export default App;
 ```
 
 # Exemplo de um elemento em JSX
