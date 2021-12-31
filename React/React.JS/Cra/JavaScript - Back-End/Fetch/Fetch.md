@@ -19,6 +19,8 @@ ou Pode usar este site, para simular api
 https://api.edamam.com/
 ```
 
+Extensão para visualizar, json google crome
+Json Beautifier
 
 App.js
 
