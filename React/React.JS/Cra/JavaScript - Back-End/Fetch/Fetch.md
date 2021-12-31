@@ -13,6 +13,13 @@ httpbin.org
 ```
 Para utilizar, outra vez, use o useHttpGet
 
+ou Pode usar este site, para simular api
+
+```js
+https://api.edamam.com/
+```
+
+
 App.js
 
 ```js
