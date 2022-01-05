@@ -680,3 +680,180 @@ section article {
 ```
 
 ### Componentizando os Providers (5)
+
+Mais simples ainda, desta forma
+
+App.js 
+
+```js
+import { useState } from "react";
+import "./App.css";
+
+import { StateProvider } from "./contexts/StateContext";
+
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import Body from "./components/Body";
+
+const App = () => {
+  const [userName, setUserName] = useState("Beto");
+  const [userEmail, setUserEmail] = useState("gilberto-goncalves@outlook.com.br");
+  
+  let providerValue = {
+    theme: 'dark',
+    user: {
+      name: userName,
+      email: userEmail
+      
+    }
+  }
+
+  return (
+    <StateProvider value={providerValue}>
+
+      <div className="container">
+      
+        <Header />
+        <section>
+          <Menu />
+          <Body setUsername={setUserName} />
+         
+        </section>
+      </div>
+    </StateProvider>
+  );
+};
+
+export default App;
+
+
+```
+
+components/Body.js
+
+```js
+import Botao from './Botao'
+import { useStateValue } from '../contexts/StateContext'
+
+export default (props) => {
+    
+    const context = useStateValue()
+    
+    const handleButton = () => {
+    props.setUsername('Paulo')
+    }
+    return (
+        <article className={`box theme-${context.theme}`}>
+       <Botao />
+       <button onClick={handleButton}> Trocar para Paulo</button>
+        </article>
+     )
+    }
+```
+
+components/Botao.js
+
+```js
+import { useStateValue } from '../contexts/StateContext'
+
+export default () => {
+  const context = useStateValue()
+
+  return (
+    <button>{context.user.name} - {context.theme}</button>
+  );
+};
+
+```
+components/Header.js
+
+```js
+import Botao from './Botao'
+import { useStateValue } from '../contexts/StateContext'
+
+export default () => {
+    const context = useStateValue()
+
+    return (
+            <header className={`box theme-${context.theme}`}>
+            <Botao/>
+            </header>
+        );
+}
+```
+
+components/Menu.js
+
+```js
+import Botao from "./Botao";
+import { useStateValue } from '../contexts/StateContext'
+
+export default () => {
+  const context = useStateValue()
+  
+  return (
+        <aside className={`box theme-${context.theme}`}>
+          <Botao />
+        </aside>
+  );
+};
+
+```
+
+contexts/StateContext.js
+
+```js
+import { createContext, useContext } from 'react';
+
+export const StateContext = createContext();
+
+export const StateProvider = ({ children, value }) => (
+    <StateContext.Provider value={value}>
+        {children}
+    </StateContext.Provider>
+);
+
+export const useStateValue = () => useContext(StateContext);
+```
+
+App.css
+
+```js
+body {
+    margin: 0;
+    background-color: #098dc2;
+}
+.box {
+background-color: #FFF;
+border: 1px solid #000;
+border-radius: 20px;
+padding: 10px;
+margin: 10px;
+}
+.container {
+    width: 800px;
+    margin: auto;
+}
+section {
+    display: flex;
+}
+section aside {
+    width: 200px;
+}
+section article {
+    flex: 1;
+    min-height: 400px;
+}
+.theme-ligth {
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #000;
+}
+.theme-dark {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #999;
+}
+```
+
+### Entendendo o Reducer
