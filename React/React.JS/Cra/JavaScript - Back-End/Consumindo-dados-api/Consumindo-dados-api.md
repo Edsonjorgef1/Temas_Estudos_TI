@@ -94,4 +94,20 @@ baseURL: 'https://api.tvmaze.com/search/shows?q='  // 1 - Aqui se você colocar 
 export default api
 ```
 
+Axios Puchando dados
+axios.get
 
+Deu tudo certo
+.then 
+
+Deu errado
+.cath
+
+Enviando informação para api 
+axios.post
+
+Fazendo alteração, Metodo put
+axios.put
+
+deletando informações
+axios.delete
