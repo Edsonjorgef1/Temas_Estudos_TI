@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Const
 
 Const, é legar ser utilizado aonde você não precisar mudar o valor da sua variavel, assim dando muito mais qualidade no código

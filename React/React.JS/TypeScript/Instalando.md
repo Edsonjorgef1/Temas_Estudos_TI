@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## TypeScript
 
 ## Comando para criar um projeto, React.Js (Typescript)

@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Como trocar a cor do fundo, VsCode
 
 CTRL + k + T

@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Any 
 
 Verificação dos types, eu falo para o typescript, faça isso e pronto, ignore a tipagem e pode recer qualquer coisa dentro do array, string, number, booblean

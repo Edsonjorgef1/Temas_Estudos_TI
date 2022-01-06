@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Dica para tipagem 
 
 Sempre quando for tipar o nome da variavel, utilizar letra minuscula

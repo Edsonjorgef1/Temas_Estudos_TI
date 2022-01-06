@@ -4,6 +4,12 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Criando um projeto em Vite
 
 ```js

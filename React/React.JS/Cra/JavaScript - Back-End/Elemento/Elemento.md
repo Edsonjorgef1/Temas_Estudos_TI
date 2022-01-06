@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 # Exemplo de um elemento em JSX
 
 Arquivo, App.js

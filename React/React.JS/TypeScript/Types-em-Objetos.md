@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Types em Objetos
 
 Nunca esquecer de tipar, o objeto que está sendo usado, no caso aqui é o nome e a idade

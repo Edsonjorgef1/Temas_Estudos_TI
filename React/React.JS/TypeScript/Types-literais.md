@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Types Literais
 
 Dentro desta variavel só pode ter isso, não pode mudar

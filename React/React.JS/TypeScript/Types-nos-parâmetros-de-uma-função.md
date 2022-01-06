@@ -1,4 +1,11 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Parametros de funções
+
 ```js
 UpperCase, jogar para caixa alta a primeira letra
 

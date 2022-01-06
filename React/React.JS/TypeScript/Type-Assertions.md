@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Type Assertions
 
 Fazendo o javascript sendo mais específico, as HTMLInputElement

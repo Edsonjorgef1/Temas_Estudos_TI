@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Usando o watchMode no arquivo
 
 Modo de escuta, monitorando o arquivo, verificando se contém erros, qualquer alteração, ele vai monitorar
