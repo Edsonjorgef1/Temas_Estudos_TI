@@ -3,6 +3,7 @@ Canal do youtube:
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
+
 ## Select (Biblioteca, select)
 
 react-select.com
@@ -15,6 +16,10 @@ coreui.io
 
 nativebase.io
 
+### Mui
+
+https://mui.com/pt/getting-started/installation/
+
 ### react-icons (Blioteca para icones)
 
 Site:
@@ -22,11 +27,13 @@ Site:
 ```js
 react-icons.github.io/react-icons/
 ```
+
 Para instalar a biblioteca
 
 ```js
 npm install react-icons
 ```
+
 Exemplo: Se eu quiser utilizar algum icone, deste link abaixo.
 
 Basta importar, o ccódigo abaixo:
@@ -36,16 +43,20 @@ import { IconName } from "react-icons/fi";
 ```
 
 ## Icones, para adicionar no html, com o decimal
+
 https://www.w3schools.com/charsets/ref_utf_symbols.asp
 
-Para você utilizar algum icone, basta copiar o decimal, no exemplo abaixo vou mostrar como colocar uma estrela
+Para você utilizar algum icone, basta copiar o decimal, no exemplo abaixo vou
+mostrar como colocar uma estrela
 
 Exemplo, de uma estrela
 
 ```js
 <span>&#9733;</span>
 ```
-Você pode adcionar Emojis, também se quiser, utilizando o mesmo metodo acima, copiando o decimal
+
+Você pode adcionar Emojis, também se quiser, utilizando o mesmo metodo acima,
+copiando o decimal
 
 ```js
 https://www.w3schools.com/charsets/ref_emoji_smileys.asp
@@ -54,12 +65,14 @@ https://www.w3schools.com/charsets/ref_emoji_smileys.asp
 Exemplo, emoji de oculos
 
 ```js
-<span><strong>WoW!</strong> Você está conectado! &#128526;</span>
+<span>
+  <strong>WoW!</strong> Você está conectado! &#128526;
+</span>
 ```
 
 # Comandos CSS
 
-## *
+## \*
 
 Ajuste global
 
@@ -69,9 +82,10 @@ Ajuste global
 }
 ```
 
-## @keyframes 
+## @keyframes
 
-muito legal esta animação quando entrar, no site carregar a tela, o titulo vai girar
+muito legal esta animação quando entrar, no site carregar a tela, o titulo vai
+girar
 
 styles.css
 
@@ -92,7 +106,10 @@ transform: rotateX(0deg)
 
 ## align-items: center;
 
-(Centraliza, no meio), exemplo se você utilizar o flex-direction: column;, ai você vai centralizar verticalmente, se usar o, flex-direction: row; você irá centralizar horizontalmente, utilizando o comando abaixo, Obs: Só que você tem que ter pelo menos uma linha para fazer o alinhamento
+(Centraliza, no meio), exemplo se você utilizar o flex-direction: column;, ai
+você vai centralizar verticalmente, se usar o, flex-direction: row; você irá
+centralizar horizontalmente, utilizando o comando abaixo, Obs: Só que você tem
+que ter pelo menos uma linha para fazer o alinhamento
 
 ```js
 align-items: center;
@@ -100,7 +117,10 @@ align-items: center;
 
 ## align-content: center;
 
-(Centraliza, no meio), exemplo se você utilizar o flex-direction: column;, ai você vai centralizar verticalmente, se usar o, flex-direction: row; você irá centralizar horizontalmente, utilizando o comando abaixo, Obs: Só que neste caso, pode alinhar mais de uma linha
+(Centraliza, no meio), exemplo se você utilizar o flex-direction: column;, ai
+você vai centralizar verticalmente, se usar o, flex-direction: row; você irá
+centralizar horizontalmente, utilizando o comando abaixo, Obs: Só que neste
+caso, pode alinhar mais de uma linha
 
 ```js
 align-content: center;
@@ -132,7 +152,8 @@ align-items: flex-start;
 
 ## align-self: flex-end;
 
-(Centraliza, do lado direito, somente um elemento, os demais ficaram, alinhados).
+(Centraliza, do lado direito, somente um elemento, os demais ficaram,
+alinhados).
 
 ```js
 align-items: flex-start;
@@ -156,7 +177,9 @@ animation-duration: 20s;
 
 ## animation-iteration-count: infinite;
 
-(Propriedade especifica o número de vezes que uma animação deve ser reproduzida, infinite significa infinito, agora se colocar numero, vai fazer quantas vezes foi determinado)
+(Propriedade especifica o número de vezes que uma animação deve ser reproduzida,
+infinite significa infinito, agora se colocar numero, vai fazer quantas vezes
+foi determinado)
 
 ```js
 animation-iteration-count: infinite;
@@ -244,7 +267,8 @@ border-style: solid;
 
 ## box-sizing: border-box;
 
-(Tamanho da caixa, moldura, o preenchimento e a borda serão incluídos na largura e na altura, ambos div tem o mesmo tamanho agora)
+(Tamanho da caixa, moldura, o preenchimento e a borda serão incluídos na largura
+e na altura, ambos div tem o mesmo tamanho agora)
 
 ```js
 box-sizing: border-box;
@@ -258,13 +282,13 @@ box-sizing: border-box;
 border-style: solid;
 ```
 
-## border: dashed 
+## border: dashed
+
 (Borda pontilhada)
 
 ```js
 border; 3px dashed #FF0000
 ```
-
 
 ## Children
 
@@ -272,16 +296,14 @@ border; 3px dashed #FF0000
 //Metodo, React.js
 import React from "react";
 
-
-const QTY = "Beto"
-const nome = `Localizamos que você ${QTY}, contém endereço em Cadastro.` // Templete string, chamando o qty
-
+const QTY = "Beto";
+const nome = `Localizamos que você ${QTY}, contém endereço em Cadastro.`; // Templete string, chamando o qty
 
 //Componente Function Component
 function ElementoJsx() {
   return (
     <div className="ElementoJsx">
-    <h1 children= {`Olá, ${nome}!`}/>
+      <h1 children={`Olá, ${nome}!`} />
     </div>
   );
 }
@@ -289,7 +311,6 @@ function ElementoJsx() {
 //Exportar componente
 export default ElementoJsx;
 ```
-
 
 ## color:
 
@@ -358,8 +379,9 @@ flex-direction: row;
 
 ## flex-wrap: wrap;
 
-(Quebra, do elemento, quando passar da tela ele automaticamente, vai para baixo, exemplo que você tem um alinhamento
-horizontal e não cabe na tela, quanto você faz este comando ele ajusta automaticamente para parte de baixo.
+(Quebra, do elemento, quando passar da tela ele automaticamente, vai para baixo,
+exemplo que você tem um alinhamento horizontal e não cabe na tela, quanto você
+faz este comando ele ajusta automaticamente para parte de baixo.
 
 ```js
 flex-wrap: wrap;
@@ -367,7 +389,9 @@ flex-wrap: wrap;
 
 ## flex: 1;
 
-(Pegar o espaço disponivel, quer dizer que este elemento box, ele é flexivel, quer dizer ele vai flexionar sua largura e altura, para sempre caber no container pai)
+(Pegar o espaço disponivel, quer dizer que este elemento box, ele é flexivel,
+quer dizer ele vai flexionar sua largura e altura, para sempre caber no
+container pai)
 
 ```js
 flex: 1;
@@ -439,12 +463,13 @@ Mais exemplos de gradientes
 https://www.w3schools.com/css/css3_gradients.asp
 ```
 
-Você também pode copiar uma cor de um gradiente no paint,
-você copia e cola o desenho e clica em cima para visualisar o gradiente que está na imagem.
+Você também pode copiar uma cor de um gradiente no paint, você copia e cola o
+desenho e clica em cima para visualisar o gradiente que está na imagem.
 
 ```js
 background-color: rgb(70, 146, 169);
 ```
+
 Exemplo rgb, estilos inline
 
 ```js
@@ -461,7 +486,8 @@ height: 100%;
 
 ## justify-content: space-between;
 
-(Vai deixar um espaço igual para todos os elementos, só no primeiro em cima e embaixo que não tem espaço)
+(Vai deixar um espaço igual para todos os elementos, só no primeiro em cima e
+embaixo que não tem espaço)
 
 ```js
 justify-content: space-between;
@@ -469,7 +495,8 @@ justify-content: space-between;
 
 ## justify-content: space-around;
 
-(Vai deixar um espaço igual para todos os elementos, só no primeiro em cima vai ter um espaço também igual e embaixo tambem vai ter um espaço igual)
+(Vai deixar um espaço igual para todos os elementos, só no primeiro em cima vai
+ter um espaço também igual e embaixo tambem vai ter um espaço igual)
 
 ```js
 justify-content: space-between;
@@ -577,17 +604,21 @@ max-width: 415px;
 
 ## @media
 
-Media query, ele serve para deixar seu site responsivo, de acordo com a necessidade do seu projeto.
-No google crome, quando você clicar com a tecla f12, do lado direito da tela vai aparecer umas opções,
-você vai clicar na opção aonde parece um quadrado e dentro um formato de celular, quando você clicar a primeira vez,
-você poderá diminuir e aumentar a tela manualmente e ver o tamanho da tela em pixel, se clicar outra vez, vai aparecer
-varios tipos de modelos de celular e tablet, para você deixar seu site responsivo, caso não tiver todos os modelos é só clicar em
-editar, e adicionar outros modelos de celular e tablet. Isto é uma ferramenta do google crome.
+Media query, ele serve para deixar seu site responsivo, de acordo com a
+necessidade do seu projeto. No google crome, quando você clicar com a tecla f12,
+do lado direito da tela vai aparecer umas opções, você vai clicar na opção aonde
+parece um quadrado e dentro um formato de celular, quando você clicar a primeira
+vez, você poderá diminuir e aumentar a tela manualmente e ver o tamanho da tela
+em pixel, se clicar outra vez, vai aparecer varios tipos de modelos de celular e
+tablet, para você deixar seu site responsivo, caso não tiver todos os modelos é
+só clicar em editar, e adicionar outros modelos de celular e tablet. Isto é uma
+ferramenta do google crome.
 
-Media query, estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 1 Opção)
+Media query, estilizando o CSS, dentro de um arquivo .CSS (Projeto básico do
+React, após criado o projeto, 1 Opção)
 
-/_Dimensões de um Ipad, 768px / 1024px_/
-Com este exemplo, está configurado um Ipad, quando tiver configurado, você tem que dizer o que vai fazer.
+/_Dimensões de um Ipad, 768px / 1024px_/ Com este exemplo, está configurado um
+Ipad, quando tiver configurado, você tem que dizer o que vai fazer.
 
 Arquivo App.js
 
@@ -608,8 +639,8 @@ function App_function_Component() {
 export default App_function_Component;
 ```
 
-Arquivo App.css
-Neste exemplo, repare que tem a minima largura (min-width: 768px) e maxima largura (max-width: 1024px)
+Arquivo App.css Neste exemplo, repare que tem a minima largura (min-width:
+768px) e maxima largura (max-width: 1024px)
 
 ```js
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -623,8 +654,9 @@ Neste exemplo, repare que tem a minima largura (min-width: 768px) e maxima largu
 }
 ```
 
-Mas você poria também determinar, somente a largura máxima, depois que passar do valor da largura máxima,
-não faça mais nada, abaixo do valor determinado, vai fazer o que você desejar
+Mas você poria também determinar, somente a largura máxima, depois que passar do
+valor da largura máxima, não faça mais nada, abaixo do valor determinado, vai
+fazer o que você desejar
 
 ```js
 @media (max-width: 100px) {
@@ -638,8 +670,9 @@ não faça mais nada, abaixo do valor determinado, vai fazer o que você desejar
 }
 ```
 
-Aqui você pode determinar a largura mínima, como funciona, quando passar acima do valor determinado da largura mínima, vai fazer o que você deseja,
-abaixo do valor determinado da largura minima não faça nada
+Aqui você pode determinar a largura mínima, como funciona, quando passar acima
+do valor determinado da largura mínima, vai fazer o que você deseja, abaixo do
+valor determinado da largura minima não faça nada
 
 ```js
 @media (min-width: 100px) {
@@ -691,9 +724,8 @@ export const Title = styled.h1`
 `;
 ```
 
-Agora para você determinar quando o celular está em pé ou deitado:
-Landscape, celular em pé.
-Portrait celular deitado.
+Agora para você determinar quando o celular está em pé ou deitado: Landscape,
+celular em pé. Portrait celular deitado.
 
 Arquivo, style.js
 
@@ -732,19 +764,24 @@ import * as St from "./style";
 
 function App() {
   return (
-  
     <St.Container bgColor="#0000FF">
-    <span>Texto do componente</span>
-    <a href="" className="link">link qualquer</a>
-    <St.Botao bg="#FF0000" small>Botao Grande</St.Botao>
-    <St.Botao bg="#00FF00" small>Botao Pequeno</St.Botao>
+      <span>Texto do componente</span>
+      <a href="" className="link">
+        link qualquer
+      </a>
+      <St.Botao bg="#FF0000" small>
+        Botao Grande
+      </St.Botao>
+      <St.Botao bg="#00FF00" small>
+        Botao Pequeno
+      </St.Botao>
     </St.Container>
-    
   );
 }
 
 export default App;
 ```
+
 style.js
 
 ```js
@@ -758,29 +795,26 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
 
-
-  span{
-  font-weight: bold;
-  color: #000;
+  span {
+    font-weight: bold;
+    color: #000;
   }
   .link {
-  color: #FFF;
-  &:hover {
-  color: #FF0000;
+    color: #fff;
+    &:hover {
+      color: #ff0000;
+    }
   }
-  }
- @media (max-width: 500px) {
-  background-color: green;
-  flex-direction: column;
+  @media (max-width: 500px) {
+    background-color: green;
+    flex-direction: column;
 
-  span {
-    color: #0000FF;
+    span {
+      color: #0000ff;
+    }
   }
- }
-
-`
+`;
 ```
-
 
 ## min-height:
 
@@ -806,7 +840,8 @@ min-width: 500px;
 
 ## opacity: 0;
 
-(Opacity especifica a trasparencia de um elemento, isto é, o grau no qual o background atrás do elemento é sobreposto)
+(Opacity especifica a trasparencia de um elemento, isto é, o grau no qual o
+background atrás do elemento é sobreposto)
 
 ```js
 opacity: 0;
@@ -856,7 +891,8 @@ outline: 0;
 
 ## padding:
 
-(Distancia entre os lados, 0, encima e embaixo, 15px distancia entre os dois lados)
+(Distancia entre os lados, 0, encima e embaixo, 15px distancia entre os dois
+lados)
 
 ```js
 padding: 0 15px;
@@ -880,7 +916,12 @@ padding-horizontal: 20;
 
 ## position: relative;
 
-(As propriedade position pode assumir 4 valores diferentes: Static, Relative, Absolute e Fixed Utilizando o position relative o elemento passa a aceitar as propriedades Top, Botton, Left e Rigth. Com elas você pode alterar o posicionamento do elemento*/ overflow: visible; /*A propriedade overflow define o comportamento de um elemento quando suas dimensões são excedidas pelo conteúdo Hidden, O Conteudo excedido não ficará visível)
+(As propriedade position pode assumir 4 valores diferentes: Static, Relative,
+Absolute e Fixed Utilizando o position relative o elemento passa a aceitar as
+propriedades Top, Botton, Left e Rigth. Com elas você pode alterar o
+posicionamento do elemento*/ overflow: visible; /*A propriedade overflow define
+o comportamento de um elemento quando suas dimensões são excedidas pelo conteúdo
+Hidden, O Conteudo excedido não ficará visível)
 
 ```js
 position: relative;
@@ -896,7 +937,8 @@ position: absolute;
 
 ## position: fixed;
 
-(Quando clicado, fixar a imagem no meio da tela, independente se rolar para baixo ou para cima)
+(Quando clicado, fixar a imagem no meio da tela, independente se rolar para
+baixo ou para cima)
 
 ```js
 position: fixed;
@@ -928,7 +970,8 @@ text-align: right;
 
 ## text-decoration: none;
 
-([none (Sem decoração)], [underline red (sublinhado red)], [underline wavy cor (Sublinhado ondulado cor)] )
+([none (Sem decoração)], [underline red (sublinhado red)], [underline wavy cor
+(Sublinhado ondulado cor)] )
 
 ```js
 text-decoration: none;
@@ -959,6 +1002,7 @@ background-color: #b10b7f; /*Cor apos passado o mouse em cima do botão*/
 border-color: #850909; /*Cor da borda após passado em cima do botão*/
 transition: all 0.35s; /*Tempo, após passado o mouse, vai carregando a cor no tempo*/
 ```
+
 ## transform: scale:
 
 App.js
@@ -983,13 +1027,13 @@ export default App;
 
 ```
 
-(Quando passar o mouse em cima ele aumenta o tamanho)
-styles.css
+(Quando passar o mouse em cima ele aumenta o tamanho) styles.css
+
 ```js
 .buttonSearch{
 background-color: transparent;
 border: 0;
-display: flex; 
+display: flex;
 justify-content: center;
 align-items: center;
 cursor: pointer;
