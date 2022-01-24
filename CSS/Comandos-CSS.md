@@ -20,6 +20,10 @@ nativebase.io
 
 https://mui.com/pt/getting-started/installation/
 
+### Tailwind 
+
+https://tailwindcss.com/
+
 ### react-icons (Blioteca para icones)
 
 Site:
