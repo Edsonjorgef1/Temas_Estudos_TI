@@ -20,6 +20,10 @@ nativebase.io
 
 https://mui.com/pt/getting-started/installation/
 
+### Material Design
+
+https://material.io/components
+
 ### Tailwind 
 
 https://tailwindcss.com/
