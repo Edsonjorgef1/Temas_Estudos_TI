@@ -3,6 +3,7 @@ Canal do youtube:
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
+
 ## cloudinary
 
 Armazenamento de fotos e videos
@@ -24,7 +25,13 @@ https://firebase.google.com/
 Para teste do servidor, pode utilizar este site
 
 ```js
-httpbin.org
+httpbin.org;
 ```
 
+## Jsonplaceholder
 
+Para teste do servidor, pode utilizar este site
+
+```js
+https://jsonplaceholder.typicode.com/
+```
