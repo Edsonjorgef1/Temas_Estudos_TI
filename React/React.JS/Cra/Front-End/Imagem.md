@@ -41,14 +41,16 @@ export default function App_function_Component() {
 
 ```js
 function App() {
-let imagem = 'https://www.google.com.br/google.jpg'
+  let imagem = "https://www.google.com.br/google.jpg";
 
-return <>
-<img src={imagem} />
-</>
+  return (
+    <>
+      <img src={imagem} />
+    </>
+  );
 }
 
-export default App
+export default App;
 ```
 
 ## Imagem e props, 1
@@ -56,28 +58,30 @@ export default App
 App.js
 
 ```js
-import React from 'react'
+import React from "react";
 
 function Avatar(props) {
-return (
-<div>
-<img src={props.url} alt={props.name} />
-<br/>
-<span>{props.name}</span>
-</div>
-)
+  return (
+    <div>
+      <img src={props.url} alt={props.name} />
+      <br />
+      <span>{props.name}</span>
+    </div>
+  );
 }
 
 function App() {
-let user = {
-  url: "https://www.google.com.br/google.jpg",
-  name:"Beto"
+  let user = {
+    url: "https://www.google.com.br/google.jpg",
+    name: "Beto",
+  };
+  return (
+    <>
+      <Avatar url={user.url} name={user.name} />
+    </>
+  );
 }
-return <>
-<Avatar url={user.url} name={user.name}/>
-</>
-}
-export default App
+export default App;
 ```
 
 ## Imagem e props, resumido 2
@@ -85,27 +89,28 @@ export default App
 App.js
 
 ```js
-
-import React, { useRef } from 'react'
+import React, { useRef } from "react";
 
 function Avatar(props) {
-return (
-<div>
-<img src={props.user.url} alt={props.user.name} />
-<br/>
-<span>{props.user.name}</span>
-</div>
-)
+  return (
+    <div>
+      <img src={props.user.url} alt={props.user.name} />
+      <br />
+      <span>{props.user.name}</span>
+    </div>
+  );
 }
 
 function App() {
-let user = {
-  url: "https://www.google.com.br/google.jpg",
-  name:"Beto"
+  let user = {
+    url: "https://www.google.com.br/google.jpg",
+    name: "Beto",
+  };
+  return (
+    <>
+      <Avatar user={user} />
+    </>
+  );
 }
-return <>
-<Avatar user={user}/>
-</>
-}
-export default App
+export default App;
 ```
