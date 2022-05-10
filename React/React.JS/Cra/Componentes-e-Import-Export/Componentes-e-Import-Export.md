@@ -254,6 +254,8 @@ import App_function_Component from "./App_function_Component";
 import App_Arrow_Funcion from "./App_Arrow_Funcion";
 //Importando o componente
 import App_Class_Component from "./App_Class_Component";
+
+//importando um componente utilizando styled-component
 import Cart from "./components/Cart";
 
 //Componente Function Component
