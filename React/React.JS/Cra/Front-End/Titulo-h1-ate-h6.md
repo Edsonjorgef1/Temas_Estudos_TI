@@ -10,7 +10,7 @@ O google utilizam os motores de busca, a tag h1 de maior importancia até h6,
 para fazer as buscar nos sites em geral, por isso fique atento nos seus titulos,
 para mostrar as divisões de conteúdos.
 
-### React.Js "div" "H1"
+### React.Js
 
 React.js, temos que importar o React, para que possa funcionar o Jsx dentro do
 componente. Exemplo abaixo:

@@ -4,9 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Parágrafo
-
-<p> </p>
+## Button, praticamente é um botão
 
 ### React.Js
 
@@ -24,13 +22,6 @@ React.js, tempos o "Div" dentro da div fica o Jsx.
   Aqui vai conter o JSX, vamos ver mas para frente como vai ficar este lugar
   aqui.
 </div>
-```
-
-React.Js, temos o "p", ele é o parágrafo do seu texto.
-
-```js
-<h1>Titulo</h1> //Titulo
-<p>Parágrafo<p/> //Paragrafo
 ```
 
 React.js - Arquivo, "App.js" Neste exemplo abaixo, utilizamos o
@@ -57,8 +48,8 @@ const Geral = styled.div`
   h1 {
     color: white;
   }
-  p1 {
-    color: blue;
+  button {
+    background-color: blue;
   }
 `;
 
@@ -67,8 +58,8 @@ function App() {
   return (
     <Geral>
       {/*Aqui dentro JSX, ja está funcionando agora, porque importamos o react*/}
-      <h1>Titulo</h1>
-      <p1>Parágrafo</p1>
+      <h1>Exemplo de um botão</h1>
+      <button>Clique aqui</button>
     </Geral>
   );
 }
