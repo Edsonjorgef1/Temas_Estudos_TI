@@ -41,8 +41,8 @@ export default function App_function_Component() {
 
 ```js
 function App() {
-  let imagem = "https://www.google.com.br/google.jpg";
-
+  let imagem = "https://www.google.com.br/google.jpg" alt="Logo do Google";
+  // alt = serve se minha pagina da internet não funcionar, aparecerá está mensagem logo do google e também se colocar o mause em cima da imagem o google vai ler para pessoa com deficiência, com estados especiais.
   return (
     <>
       <img src={imagem} />
