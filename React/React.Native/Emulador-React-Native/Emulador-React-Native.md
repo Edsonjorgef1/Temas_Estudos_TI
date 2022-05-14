@@ -18,6 +18,12 @@ Instalando Expo
 yarn global add expo-cli
 ```
 
+ou
+
+```js
+npm install -g expo-cli
+```
+
 Comandos Expo, verificando todos os comandos disponível
 
 ```js
@@ -36,9 +42,13 @@ criando um projeto
 expo init testeemulator
 ```
 
+## Criando um projeto no expo
+
+expo init CadastroHooks
+
 ## 1 Passo:
 
-# Criar um projeto em React.native
+Criar um projeto em React.native
 
 ```js
 npx create-react-native-app (Nome do projeto)
