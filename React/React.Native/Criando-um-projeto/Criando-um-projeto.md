@@ -10,6 +10,12 @@ https://www.youtube.com/engenheiroyoutuber
 create-react-native-app (Nome do projeto)
 ```
 
+ou
+
+```js
+npx react-native init nomedoprojeto
+```
+
 ## Comando para criar um projeto, React.Native (Typescript)
 
 ```js

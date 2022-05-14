@@ -24,14 +24,16 @@ https://mui.com/pt/getting-started/installation/
 
 https://material.io/components
 
-### Tailwind 
+### Tailwind
 
 https://tailwindcss.com/
 
 ### Bootstrap
+
 https://getbootstrap.com/
 
 ## Reacstrap
+
 https://reactstrap.github.io/?path=/story/home-installation--page
 
 ### react-icons (Blioteca para icones)
