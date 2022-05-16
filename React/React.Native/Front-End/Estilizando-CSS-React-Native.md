@@ -12,34 +12,45 @@ Comando para criar um projeto em React.native
 npx create-react-native-app (Nome do projeto)
 ```
 
-Para estilizar o css em React.native, modelo padão que vem, depois que cria o projeto, você deve importar o "StyleSheet", para que possa funcionar.
+Para estilizar o css em React.native, modelo padão que vem, depois que cria o
+projeto, você deve importar o "StyleSheet", para que possa funcionar.
 
 ```js
 import { StyleSheet } from "react-native";
 ```
 
-Exemplo: Text, ele é o texto que será exibido na tela, mas para isso você deve importar ele, igual está abaixo.
+Exemplo: Text, ele é o texto que será exibido na tela, mas para isso você deve
+importar ele, igual está abaixo.
 
 ```js
 import { Text } from "react-native";
 ```
 
-Exemplo: View, ele é igual a div, do react.js, só que no react.native está com este nome, para ele funcionar você deve importar ele também.
+Exemplo: View, ele é igual a div, do react.js, só que no react.native está com
+este nome, para ele funcionar você deve importar ele também.
 
 ```js
 import { View } from "react-native";
 ```
 
-View, foi adicionado, este comando para estlizar o css.
-Container e o nome que eu criei para esta nova view, ok, você poderia dar qualquer nome para ela, lembrando que a View e como se fosse a div do react.js ou do Html padrão.
+View, foi adicionado, este comando para estlizar o css. Container e o nome que
+eu criei para esta nova view, ok, você poderia dar qualquer nome para ela,
+lembrando que a View e como se fosse a div do react.js ou do Html padrão.
 
 ```js
 <View style={styles.container}></View>
 ```
 
-Text, foi adicionado este comando para estilizar o css.
-logo é o nome que eu criei para este novo text.
-Text significa, texto.
+ou
+
+```js
+<SafeAreaView style={styles.container}></SafeAreaView>
+```
+
+SafeAreaView, é bom, tem algumas coisas que ele vai ajustar no IOS
+
+Text, foi adicionado este comando para estilizar o css. logo é o nome que eu
+criei para este novo text. Text significa, texto.
 
 ```js
 <Text style={styles.logo}>Engenheiro Youtuber</Text>
@@ -82,8 +93,9 @@ const styles = StyleSheet.create({
 
 ## Estilizando o CSS, (Class) dentro de um arquivo .CSS (Projeto básico do React, após criado o projeto, 2 Opção)
 
-Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text", "View".
-O"StyleSheet", que foi importado anteriormente neste exemplo não precisa.
+Neste outro modelo, é quase igual o exemplo anterior, deve importar, "Text",
+"View". O"StyleSheet", que foi importado anteriormente neste exemplo não
+precisa.
 
 View foi adicionado este comando para estilizar o css
 
@@ -169,7 +181,8 @@ export default App;
 
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.2 Opção)
 
-Aqui já exporta direto no componente, não precisa fazer a linha abaixo que estava anteriormente,
+Aqui já exporta direto no componente, não precisa fazer a linha abaixo que
+estava anteriormente,
 
 ```js
 export default App;
@@ -297,8 +310,8 @@ export const Title = styled.Text`
 
 ## Estilizando o CSS, dentro de um arquivo .js (styled-components, 3 Opção)
 
-Repare que neste exemplo, está tudo no mesmo arquivo, não estamos utizando
-outro arquivo para separar o css, agora depende qual a empresa vai querer para
+Repare que neste exemplo, está tudo no mesmo arquivo, não estamos utizando outro
+arquivo para separar o css, agora depende qual a empresa vai querer para
 estilizar o projeto.
 
 Arquivo App.js
