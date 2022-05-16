@@ -18,7 +18,8 @@ npx react-native init (Nome do projeto) --template react-native-template-typescr
 
 ## Yarn ou NPM (Instalar dependências)
 
-Você pode instalar as dependência com npm ou yarn, lembre-se se for instalar com o yarn deve instalar ele no seu computador, no site, abaixo.
+Você pode instalar as dependência com npm ou yarn, lembre-se se for instalar com
+o yarn deve instalar ele no seu computador, no site, abaixo.
 
 ```js
 https://yarnpkg.com/
@@ -26,8 +27,10 @@ https://yarnpkg.com/
 
 ## Emular aplicativo
 
-Você pode usar o Expo, pois e mais leve, principalmente quem está aprendendo, pois o emulador android studio e muito pesado, tem que ter um computador bom para emular com ele, por isso recomento o expo.
-Comando para emular o aplicativo.
+Você pode usar o Expo, pois e mais leve, principalmente quem está aprendendo,
+pois o emulador android studio e muito pesado, tem que ter um computador bom
+para emular com ele, por isso recomento o expo. Comando para emular o
+aplicativo.
 
 ```js
 expo start
@@ -44,11 +47,13 @@ emulador -no-snapshot -avd Nexus_5_api_28
 ## Node_Modules
 
 Depois que você criar seu projeto, repare que foi criado automático uma pasta
-node_modules, nesta pasta vai conter suas dependências, já foi criado um projeto basico de react, de exemplo.
-Exemplo, se você, instalar, o bootstrap, para o estilo do projeto ficar mais bunito, você irá,
-fazer, o comando yarn add bootstrap, no terminal, ai suas dependências vai ficar instalada
-dentro desta pasta, para auxiliar você no desenvolvimento, lembrando que na sua pasta package.json,
-da para ver todos os nomes de suas dependências que foram instaladas, mais facil.
+node_modules, nesta pasta vai conter suas dependências, já foi criado um projeto
+basico de react, de exemplo. Exemplo, se você, instalar, o bootstrap, para o
+estilo do projeto ficar mais bunito, você irá, fazer, o comando yarn add
+bootstrap, no terminal, ai suas dependências vai ficar instalada dentro desta
+pasta, para auxiliar você no desenvolvimento, lembrando que na sua pasta
+package.json, da para ver todos os nomes de suas dependências que foram
+instaladas, mais facil.
 
 ## Componente, Function Component
 
@@ -102,6 +107,20 @@ const App_Arrow_Funcion = () => {
     </View>
   );
 };
+
+//Exportando Componente
+export default App_Arrow_Funcion;
+```
+
+## Componete forma resumida
+
+```js
+//Importando o react
+import React from "react";
+import { text } from "react-native";
+
+export default () => <Text> Componente principal </Text>
+
 
 //Exportando Componente
 export default App_Arrow_Funcion;
