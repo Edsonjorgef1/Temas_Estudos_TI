@@ -266,6 +266,12 @@ Comando para instalar o styled-components
 yarn add styled-components
 ```
 
+ou
+
+```js
+yarn add styled-components --save
+```
+
 Arquivo App.js
 
 ```js
@@ -355,9 +361,9 @@ Arquivo App.js
 
 ```js
 import React from "react";
-import styled, { Css } from "styled-components/native";
+import styled from "styled-components/native";
 
-const Geral = styled.View`
+const Geral = styled.SafeAreaView`
   flex: 1;
   background-color: yellow;
   justify-content: center;
@@ -371,6 +377,35 @@ function App() {
   return (
     <Geral>
       <Texto>Olá mundo</Texto>
+    </Geral>
+  );
+}
+
+export default App;
+```
+
+## Estilizando o CSS, dentro de um arquivo .js (styled-components, recebendo as props e reutlizando aonde quiser
+
+Arquivo App.js
+
+```js
+import React from "react";
+import styled from "styled-components/native";
+
+const Geral = styled.SafeAreaView`
+  flex: 1;
+  background-color: yellow;
+  justify-content: center;
+`;
+const Texto = styled.Text`
+  color: ${props => props.cor};
+  text-align: center;
+`;
+
+function App() {
+  return (
+    <Geral>
+      <Texto cor="blue">Olá mundo</Texto>
     </Geral>
   );
 }
