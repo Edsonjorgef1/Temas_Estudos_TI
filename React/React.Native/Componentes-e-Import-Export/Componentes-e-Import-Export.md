@@ -62,6 +62,7 @@ Arquivo, App.js
 ```js
 //Importando o react
 import React from "react";
+import { View, Text } from "react-native";
 
 function App_function_Component() {
   return (
@@ -82,6 +83,7 @@ Arquivo, App.js
 ```js
 //Importando o react
 import React from "react";
+import { View, Text } from "react-native";
 
 export default function App_function_Component() {
   return (
@@ -99,6 +101,7 @@ Arquivo, App.js
 ```js
 //Importando o react
 import React from "react";
+import { View, Text } from "react-native";
 
 const App_Arrow_Funcion = () => {
   return (
@@ -117,7 +120,7 @@ export default App_Arrow_Funcion;
 ```js
 //Importando o react
 import React from "react";
-import { text } from "react-native";
+import { Text } from "react-native";
 
 export default () => <Text> Componente principal </Text>
 
@@ -133,6 +136,7 @@ Arquivo, App.js
 ```js
 //Importando o react
 import React from "react";
+import { View, Text } from "react-native";
 
 class App_Class_Component extends React.Component {
   render() {
@@ -155,6 +159,7 @@ Arquivo App.tsx (Repare que aqui o arquivo diferente ele é .tsx)
 ```js
 //Importando o react
 import React from "react";
+import { View, Text } from "react-native";
 
 // Este React.FC, ele tipa o componente, este FC, é a abreviação do function component
 const App: React.FC = () => {
@@ -176,6 +181,7 @@ Arquivo, App.js
 ```js
 //Importando o react
 import React from "react";
+import { View, Text } from "react-native";
 
 //Elemento JSX
 const elemento = (
