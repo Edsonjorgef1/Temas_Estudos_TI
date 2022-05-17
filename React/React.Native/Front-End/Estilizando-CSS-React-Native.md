@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, 1.2 Opção)
+## Estilizando o CSS, dentro de um arquivo .js (StyleSheet, 1.2 Opção)
 
 Aqui já exporta direto no componente, não precisa fazer a linha abaixo que
 estava anteriormente,
@@ -219,6 +219,43 @@ const styles = StyleSheet.create({
     marginBottom: 10, // Margem inferior
   },
 });
+```
+
+## Estilizando o CSS, (Hooks) dentro de um arquivo .js (StyleSheet, utilizando array, para reutilizar a estilização
+
+```js
+import React from "react";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
+
+function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.texto}>Texto</Text>
+      <Text style={[styles.texto, { fontSize: 22 }]}>Segundo texto </Text> {/*{[Array]}*/}
+    </SafeAreaView>
+  );
+}
+
+//Chamando o Css, estrutura padrão.
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // Pegar o espaço disponível
+    backgroundColor: "#003f5c", // Cor de fundo
+    alignItems: "center", //  Centraliza verticalmente
+    textAlign: "center", // Centraliza no meio da tela
+    justifyContent: "center", //Para alinhar itens flexíveis ao longo do eixo principal
+  },
+  texto: {
+    fontWeight: "bold", // Tipo da fonte
+    fontSize: 50, // Tamanho da fonte
+    color: "#fb5b5a", // Cor da fonte
+    textAlign: "center", // Centraliza no meio da tela
+    marginBottom: 10, // Margem inferior
+  },
+});
+
+//Exportando Componente
+export default App;
 ```
 
 ## Estilizando o CSS, (Hooks) dentro de um arquivo .js (styled-components, 1 Opção)
