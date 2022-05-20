@@ -245,7 +245,7 @@ function App() {
 export default App;
 ```
 
-## Mudando State com Botões
+## Mudando State com Botões e armazenando em um backup
 
 ```js
 import React, { useState } from "react"; /*Iportando state*/
