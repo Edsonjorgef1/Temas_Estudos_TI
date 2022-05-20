@@ -4,9 +4,70 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-Arquivo, App.js
+### Props
 
-Passando atributos para a props
+Props são propriedades, que você poem ao seu componente externamente, então
+normalmente props são propriedades fixas, são coisas que não vão mudar com o
+
+## Passando um nome com props
+
+```js
+import React from "react";
+import { Text } from "react-native";
+import styled from "styled-components/native";
+
+const Page = styled.SafeAreaView`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+const Hello = props => {
+  return <Text>{props.frase}</Text>;
+};
+
+function App() {
+  return (
+    <Page>
+      <Hello frase="Seja bem vindo(a)" />
+      <Hello frase="Outra frase" />
+    </Page>
+  );
+}
+
+export default App;
+
+/*ou*/
+
+/******************************/
+
+import React from "react";
+import { Text } from "react-native";
+import styled from "styled-components/native";
+
+const Page = styled.SafeAreaView`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+const Hello = ({ frase }) => {
+  return <Text>{frase}</Text>;
+};
+
+function App() {
+  return (
+    <Page>
+      <Hello frase="Seja bem vindo(a)" />
+      <Hello frase="Outra frase" />
+    </Page>
+  );
+}
+
+export default App;
+```
+
+## Passando atributos para a props
+
+Arquivo, App.js
 
 ```js
 import React from "react";

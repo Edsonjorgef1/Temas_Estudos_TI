@@ -6,7 +6,15 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## UseState
 
-Serve pra obter o valor inicial de uma constante ou utilizado para setar o Valor a uma constante
+Serve pra obter o valor inicial de uma constante ou utilizado para setar o Valor
+a uma constante
+
+É uma variavel um valor que você irá pegar, é uma valor que você irá ouzar em
+algum canto do seu componente ou mostra na tela de verdade.
+
+State é um item interno é uma definição de variavel que você irá fazer
+internamente a outra caracterista a principal foi feitas para serem mudadas, com
+react hooks, usestate para criar state.
 
 Modelo Padrão:
 
@@ -28,13 +36,22 @@ ou;
 useState("");
 ```
 
-"State" = O state, em React, é onde guardamos os dados do nosso componente, ele são ambos objetos do javascript, é gerenciado de dentro do componente (como variáveis declaradas dentro de uma função).
+"State" = O state, em React, é onde guardamos os dados do nosso componente, ele
+são ambos objetos do javascript, é gerenciado de dentro do componente (como
+variáveis declaradas dentro de uma função).
 
-"SetState" = Todas as alterações que fizer na variável, teria que usar está função, agenda uma atualização para o objeto state de um componente. Quando o state muda, o componente responde renderizando novamente
+"SetState" = Todas as alterações que fizer na variável, teria que usar está
+função, agenda uma atualização para o objeto state de um componente. Quando o
+state muda, o componente responde renderizando novamente
 
-O nome "state", pode ser chamado o nome que desejar depois, exemplo o state pode chamar se eu quiser "count" de um contador, mas você pode dar o nome que você quiser.
-O nome "setState", pode ser chamado o nome que desejar para ficar melhor a interpretação, exemplo poderia chamar de "setCount"
-Esta é uma maneira de “preservar” alguns valores entre as chamadas de funções — useState é uma nova maneira de usar as mesmas capacidades que o this.state tem em uma classe. Normalmente, variáveis “desaparecem” quando a função sai mas variáveis de state são preservadas pelo React.
+O nome "state", pode ser chamado o nome que desejar depois, exemplo o state pode
+chamar se eu quiser "count" de um contador, mas você pode dar o nome que você
+quiser. O nome "setState", pode ser chamado o nome que desejar para ficar melhor
+a interpretação, exemplo poderia chamar de "setCount" Esta é uma maneira de
+“preservar” alguns valores entre as chamadas de funções — useState é uma nova
+maneira de usar as mesmas capacidades que o this.state tem em uma classe.
+Normalmente, variáveis “desaparecem” quando a função sai mas variáveis de state
+são preservadas pelo React.
 
 Modelo com nomes editados:
 
@@ -49,27 +66,30 @@ React.js
 
 ```js
 import React, { useState } from "react"; // Aqui você deve importar o "useState" para que ele possa funcionar.
+import { View, Button } from "react-native";
 // Aqui também foi importado o React, tem que importar o React para o que estiver dentro do componente, no return em div, possa funcionar, que no caso é o jsx, o babel processador do javascript fica responsavel em fazer, funcionar o jsx por baixo dos panos sem menos você notar.
 
-function Example() {
+function App() {
   // Component function component
 
   const [count, setCount] = useState(0); // Aqui é o modelo padrão do useState só que agora editamos.
   //Dentro do componente Example, declaramos uma nova variável de state chamando o Hook useState. Ele retorna um par de valores, no qual damos nomes. Estamos chamando nossa variável count porque ela mantém o número de cliques no botão. Inicializamos como zero passando 0 como o único argumento do useState. O segundo item retornado é a própria função. Ela nos permite atualizar o count então nomeamos para setCount.
 
-console.log('Renderizou') // Repare, que sempre que o valor de estado precisa ser atualizado, o que React vai fazer vai atualizar o componente, assim vai escrever o
-Renderizou no console, só para você entender, que o componente foi atualizado, para teste.
+  console.log("Renderizou"); // Repare, que sempre que o valor de estado precisa ser atualizado, o que React vai fazer vai atualizar o componente, assim vai escrever o
 
   return (
-    <div>
+    <View>
       {/*Aqui dentro jsx, só está funcionando porque importamos o React*/}
       <p>You clicked {count} times</p>
       {/*Porque colocamos o count aqui, para ele monitorar, lembra o que é count, ele é o state, que foi explicado, acima, resumindo ele vai mostrar o que foi guardado, dentro dele, apenas a ultima atualização*/}
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <Button title={"Salvar"} onPress={() => setCount(count + 1)}>
+        Click me
+      </Button>
       {/*Quando for clicado o button, que no caso é o botão, ele vai pegar o setCount que no caso é o setState lembra, ele vai pegar a atualização que foi feita e vai enviar para o state, que é o count, depois está somando mais um, o que estiver no state, e somar mais um.*/}
-    </div>
+    </View>
   );
 }
+export default App;
 ```
 
 ## Exemplo 2
@@ -109,13 +129,17 @@ Você pode ter percebido os colchetes quando declaramos a variável state:
 const [count, setCount] = useState(0);
 ```
 
-Os nomes na esquerda não são parte da API do React. Você pode nomear suas próprias variáveis state:
+Os nomes na esquerda não são parte da API do React. Você pode nomear suas
+próprias variáveis state:
 
 ```js
 const [fruit, setFruit] = useState("banana");
 ```
 
-Esta sintaxe do JavaScript é chamada de “atribuição via desestruturação”. Significa que estamos fazendo duas novas variáveis fruit e setFruit, onde fruit é definido para o primeiro valor retornado por useState, e setFruit é o segundo. É equivalente a este código:
+Esta sintaxe do JavaScript é chamada de “atribuição via desestruturação”.
+Significa que estamos fazendo duas novas variáveis fruit e setFruit, onde fruit
+é definido para o primeiro valor retornado por useState, e setFruit é o segundo.
+É equivalente a este código:
 
 ```js
 var fruitStateVariable = useState("banana"); // Retorna um par
@@ -123,11 +147,17 @@ var fruit = fruitStateVariable[0]; // Primeiro item do par
 var setFruit = fruitStateVariable[1]; // Segundo item do par
 ```
 
-Quando declaramos uma variável com useState, ela retorna um par — um array com dois itens. O primeiro item é o valor atual e o segundo é uma função que nos permite atualizá-la. Usar [0] e [1] para acessá-las é um pouco confuso porque elas tem um significado específico. É por isto que utilizamos atribuição via desestruturação no lugar.
+Quando declaramos uma variável com useState, ela retorna um par — um array com
+dois itens. O primeiro item é o valor atual e o segundo é uma função que nos
+permite atualizá-la. Usar [0] e [1] para acessá-las é um pouco confuso porque
+elas tem um significado específico. É por isto que utilizamos atribuição via
+desestruturação no lugar.
 
 ## Usando Múltiplas Variáveis State
 
-Declarar variáveis de state como par de [something, setSomething] também é útil porque nos permite dar diferentes nomes para diferentes váriaveis de state se quiséssemos usar mais de uma:
+Declarar variáveis de state como par de [something, setSomething] também é útil
+porque nos permite dar diferentes nomes para diferentes váriaveis de state se
+quiséssemos usar mais de uma:
 
 ```js
 function ExampleWithManyStates() {
@@ -137,7 +167,8 @@ function ExampleWithManyStates() {
   const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
 ```
 
-No componente acima, temos age, fruit e todos como variáveis locais e podemos atualizá-las individualmente:
+No componente acima, temos age, fruit e todos como variáveis locais e podemos
+atualizá-las individualmente:
 
 ```js
 function handleOrangeClick() {
@@ -157,7 +188,7 @@ const stateComponent = () => {
 
   console.log("Renderizando!");
 
-  const updateUser = (newUser) => {
+  const updateUser = newUser => {
     if (newUser.username !== user.username) {
       setUser(newUser);
     }
@@ -174,4 +205,91 @@ const stateComponent = () => {
 export default StateComponent;
 ```
 
-Você não tem que usar muitas variáveis de state. Elas podem conter objetos e arrays muito bem. Portanto você ainda pode juntar dados relacionados. De qualquer maneira, diferente de this.setState em classe, ao atualizar uma variável de state, ela sempre é substituida ao invés de incorporada.
+Você não tem que usar muitas variáveis de state. Elas podem conter objetos e
+arrays muito bem. Portanto você ainda pode juntar dados relacionados. De
+qualquer maneira, diferente de this.setState em classe, ao atualizar uma
+variável de state, ela sempre é substituida ao invés de incorporada.
+
+## Passando um nome useState
+
+```js
+import React, { useState } from "react"; /*Iportando state*/
+import { Text } from "react-native";
+import styled from "styled-components/native";
+
+const Page = styled.SafeAreaView`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+const Hello = ({ frase }) => {
+  /*Criando State */
+  /*const[Criando uma state chamada name, função que muda este name, setName] */
+  const [name, setName] = useState("Beto");
+  //Sempre que uma state é modificada o componente e renderizado novamente, o que está dentro de return
+  return (
+    <Text>
+      Nome: {name} {frase}
+    </Text>
+  );
+};
+
+function App() {
+  return (
+    <Page>
+      <Hello frase="Seja bem vindo(a)" />
+    </Page>
+  );
+}
+
+export default App;
+```
+
+## Mudando State com Botões
+
+```js
+import React, { useState } from "react"; /*Iportando state*/
+import { Text, View, Button } from "react-native";
+import styled from "styled-components/native";
+
+const Page = styled.SafeAreaView`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
+const Input = styled.TextInput`
+  width: 200px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 5px;
+`;
+
+const Hello = ({ frase }) => {
+  const [name, setName] = useState("Qual o nome?");
+  const [backupName, setBackupName] = useState("");
+
+  const handleClick = () => {
+    // alert("Clicou no botão");
+    // setName("Beto");
+    setBackupName(name);
+  };
+
+  return (
+    <View>
+      <Input value={name} onChangeText={t => setName(t)} />
+      <Button title="Trocar nome para Beto" onPress={handleClick} />
+      <Text>{backupName}</Text>
+    </View>
+  );
+};
+
+function App() {
+  return (
+    <Page>
+      <Hello />
+    </Page>
+  );
+}
+
+export default App;
+```
