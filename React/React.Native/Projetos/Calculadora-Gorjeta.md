@@ -7,7 +7,7 @@ https://www.youtube.com/engenheiroyoutuber
 ## Calculadora Gorjetas
 
 ```js
-import React, { useState, useEffect } from "react"; /*Iportando state*/
+import React, { useState, useEffect } from "react";
 import { Text, View, Button } from "react-native";
 import styled from "styled-components/native";
 
