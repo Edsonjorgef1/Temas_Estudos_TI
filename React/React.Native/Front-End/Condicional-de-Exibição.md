@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## COndicional de Exibição
+## Condicional de Exibição
 
 App.js
 
