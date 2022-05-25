@@ -1,5 +1,7 @@
 ## Styles e Class
 
+## Estilos inline
+
 app.component.html
 
 ```js
@@ -20,7 +22,11 @@ app.component.html
 
 <!-- 3 Forma de estilização -->
 <div [style.width.px]="100">Texto 3</div>
+```
 
+## Estilos Class
+
+```js
 <!-- 4 Forma de estilização (Vericar como adicionar class nas divs) -->
 <div [class]="{ class1: false, class2: false }">Texto Class</div>
 
@@ -33,4 +39,42 @@ app.component.html
 
 <!-- 7 Forma de estilização  -->
 <div [class]="{ menu: false }">Texto</div>
+```
+
+## Estilos Class 2 Opção
+
+app.component.html
+
+```js
+<div class="bg">
+  <h3>Esse é meu primeiro componente</h3>
+  <p>Que legal</p>
+</div>
+```
+
+app.component.css
+
+```js
+.bg {
+  background-color: #cccccc;
+}
+```
+
+## Estilos ID
+
+app.component.html
+
+```js
+<div id="bg">
+  <h3>Esse é meu primeiro componente</h3>
+  <p>Que legal</p>
+</div>
+```
+
+app.component.css
+
+```js
+#bg {
+  background-color: #cccccc;
+}
 ```
