@@ -34,3 +34,9 @@ Para rodar o projeto
 ```js
 ng serve -o
 ```
+
+ou
+
+```js
+ng serve --open
+```
