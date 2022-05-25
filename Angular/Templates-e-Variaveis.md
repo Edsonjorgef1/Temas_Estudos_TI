@@ -1,1 +1,0 @@
-## Templates e Variaveis
