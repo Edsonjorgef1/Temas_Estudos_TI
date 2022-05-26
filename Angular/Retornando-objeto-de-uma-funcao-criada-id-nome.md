@@ -1,10 +1,10 @@
-Canal do youtube:
+## Retornando objeto de uma funcao criada id e nome
+
+Propriedade id e propriedade nome Canal do youtube:
 
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
-
-## Exibindo dados, atraves de uma variavel
 
 app/primeiro-component/primeiro-componente.component.html
 
@@ -15,10 +15,15 @@ app/primeiro-component/primeiro-componente.component.html
 </div>
 <br />
 <div>
-    <h4>{{ meutitulo + meutitulo2 }}</h4>
-    <p>Olá {{meutitulo}} <p/>
+  <p>{{ cliente.id }}</p>
+  <p>{{ cliente.nome }}</p>
+    <p>{{ cliente.id }} - {{ cliente.nome }}</p>
 
 </div>
+<div>
+  <p></p>
+</div>
+
 ```
 
 app/primeiro-component/primeiro-componente.component.ts
@@ -32,10 +37,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./primeiro-componente.component.css"],
 })
 export class PrimeiroComponenteComponent implements OnInit {
-  meutitulo = "Exibindo dados, atraves de uma variavel";
-  meutitulo2 = "Exibindo dados, 2 ";
+  cliente = {
+    id: 1,
+    nome: "Fulano",
+  };
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 }
 ```
