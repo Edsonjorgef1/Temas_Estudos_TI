@@ -4,165 +4,163 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Condicionais
+## Básico do click
 
-## Se tiver mais de dois nomes, aparece uma messagem se não, ficará sem mensagem
-
-app.component.ts
+app/primeiro-componente/primeiro-componente.component.html
 
 ```js
-import { Component } from "@angular/core";
-import { Pessoa } from "./pessoa";
+<!-- (evento)="metodo()" -->
+<!-- (click)="clicked()" -->
 
-@Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-})
-export class AppComponent {
-  title = "angularaulas";
-  nomes = [
-    new Pessoa(1, "Beto", 90),
-    new Pessoa(2, "Paulo", 20),
-    new Pessoa(3, "Fulano", 40),
-    new Pessoa(4, "Ciclano", 60),
-    new Pessoa(5, "Mae", 90),
-    new Pessoa(6, "Joao", 5),
-  ];
-  nomePrincipal = this.nomes[0];
-}
-```
-
-pessoa.ts
-
-```js
-export class Pessoa {
-  public id: number;
-  public nome: string;
-  public idade: number;
-
-  constructor(id: number, nome: string, idade: number) {
-    this.id = id;
-    this.nome = nome;
-    this.idade = idade;
-  }
-
-  getTipo() {
-    if (this.idade <= 15) {
-      return 'Criança';
-    } else if (this.idade > 15 && this.idade <= 20) {
-      return 'Jovem';
-    } else if (this.idade > 20 && this.idade <= 50) {
-      return 'Adulto';
-    } else if (this.idade > 50 && this.idade <= 80) {
-      return 'Idoso';
-    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
-    {
-      return 'Super Sayadin';
-    }
-  }
-}
-```
-
-app.component.html
-
-```js
-<h1>{{ title }}</h1>
-<h4>Sub-legenda legal</h4>
-
-<p>Total de nomes: {{ nomes.length }}</p>
-<p>Nome Principal: {{ nomePrincipal.nome }}</p>
-
-<ul>
-  <li *ngFor="let item of nomes" style="color: #ff0000">
-    {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
-  </li>
-</ul>
-
-<p *ngIf="nomes.length > 2">Tem muitos nomes cadastrados</p>
-```
-
-## Posso cadastrar até 4 nomes, ai depois de 4 nomes, não tem como mais cadastrar, o imput some
-
-app.component.ts
-
-```js
-import { Component } from "@angular/core";
-import { Pessoa } from "./pessoa";
-
-@Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-})
-export class AppComponent {
-  title = "angularaulas";
-  nomes = [
-    new Pessoa(1, "Beto", 90),
-    new Pessoa(2, "Paulo", 20),
-    new Pessoa(3, "Fulano", 40),
-    new Pessoa(4, "Ciclano", 60),
-    new Pessoa(5, "Mae", 90),
-    new Pessoa(6, "Joao", 5),
-  ];
-  nomePrincipal = this.nomes[0];
-}
-```
-
-pessoa.ts
-
-```js
-export class Pessoa {
-  public id: number;
-  public nome: string;
-  public idade: number;
-
-  constructor(id: number, nome: string, idade: number) {
-    this.id = id;
-    this.nome = nome;
-    this.idade = idade;
-  }
-
-  getTipo() {
-    if (this.idade <= 15) {
-      return 'Criança';
-    } else if (this.idade > 15 && this.idade <= 20) {
-      return 'Jovem';
-    } else if (this.idade > 20 && this.idade <= 50) {
-      return 'Adulto';
-    } else if (this.idade > 50 && this.idade <= 80) {
-      return 'Idoso';
-    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
-    {
-      return 'Super Sayadin';
-    }
-  }
-}
-```
-
-app.component.html
-
-```js
-<h1>{{ title }}</h1>
-<h4>Sub-legenda legal</h4>
-
-<p>Total de nomes: {{ nomes.length }}</p>
-<p>Nome Principal: {{ nomePrincipal.nome }}</p>
-
-// Foi adicionado está div
-<div *ngIf="nomes.length <= 4">
-  <input type="text" />
-  <button>Adicionar</button>
+<!-- Clicando em uma div -->
+<div class="bg" (click)="clicked()">
+  <!-- Clicando em um texto  -->
+  <h1 (click)="clicked()">Olá</h1>
+  <!-- Clicando em um botton  -->
+  <button (click)="clicked()">button</button>
 </div>
 
+```
+
+app/primeiro-componente/primeiro-componente.component.css
+
+```js
+.bg {
+  background-color: #d43d3d;
+}
+```
+
+app/primeiro-componente/primeiro-componente.component.ts
+
+```js
+import { Component, OnInit } from "@angular/core";
+
+@Component({
+  selector: "app-primeiro-componente",
+  templateUrl: "./primeiro-componente.component.html",
+  styleUrls: ["./primeiro-componente.component.css"],
+})
+export class PrimeiroComponenteComponent implements OnInit {
+  // Criando metodo clicked
+  clicked(): void {
+    window.alert("ola");
+  }
+
+  constructor() {}
+
+  ngOnInit() {}
+}
+```
+
+## Clicando e trocando a cor
+
+app.component.ts
+
+```js
+import { Component } from "@angular/core";
+import { Pessoa } from "./pessoa";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+  nomes = [
+    new Pessoa(1, "Beto", 90),
+    new Pessoa(2, "Paulo", 20),
+    new Pessoa(3, "Fulano", 40),
+    new Pessoa(4, "Ciclano", 60),
+    new Pessoa(5, "Mae", 90),
+    new Pessoa(6, "Joao", 5),
+  ];
+  nomePrincipal = this.nomes[0];
+  corPrincipal = "#FF0000";
+
+  /*Criando uma função */
+  trocarCor = (cor: string) => {
+    return (this.corPrincipal = cor);
+  };
+}
+```
+
+app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<h4>Sub-legenda legal</h4>
+
+<p>Total de nomes: {{ nomes.length }}</p>
+<p>Nome Principal: {{ nomePrincipal.nome }}</p>
+
 <ul>
-  <li *ngFor="let item of nomes" style="color: #ff0000">
+  <li *ngFor="let item of nomes" [style.color]="corPrincipal">
     {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
   </li>
 </ul>
 
-<p *ngIf="nomes.length > 2">Tem muitos nomes cadastrados</p>
+<!-- <button (click)="corPrincipal = '#0000FF'">Aperte aqui</button> -->
+
+<!-- ou -->
+
+<button (click)="trocarCor('#0000FF')">Colocar Azul</button>
+<button (click)="trocarCor('#FF0000')">Colocar Vermelho</button>
 ```
 
-## Fazendo mostrar um aviso, mostrar um aviso especifico seja qual for
+pessoa.ts
+
+```js
+export class Pessoa {
+  public id: number;
+  public nome: string;
+  public idade: number;
+
+  constructor(id: number, nome: string, idade: number) {
+    this.id = id;
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  getTipo() {
+    if (this.idade <= 15) {
+      return 'Criança';
+    } else if (this.idade > 15 && this.idade <= 20) {
+      return 'Jovem';
+    } else if (this.idade > 20 && this.idade <= 50) {
+      return 'Adulto';
+    } else if (this.idade > 50 && this.idade <= 80) {
+      return 'Idoso';
+    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
+    {
+      return 'Super Sayadin';
+    }
+  }
+}
+```
+
+## Criar eventos de click que compartilham informações inclusive com loops com coisas dinamicas, vamos criar um evento de click, ele irá mandar o item do proprio loop, o item do proprio loop será uma classe de uma própria pessoa
+
+app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<h4>Sub-legenda legal</h4>
+
+<p>Total de nomes: {{ nomes.length }}</p>
+<p>Nome Principal: {{ nomePrincipal.nome }}</p>
+
+<ul>
+  <li
+    *ngFor="let item of nomes"
+    [style.color]="corPrincipal"
+    (click)="clicou(item)"
+  >
+    {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
+  </li>
+</ul>
+<!-- Clicou trocou o title -->
+<button (click)="title = 'Testando 1,2,3'">Mudar Titulo</button>
+```
 
 pessoa.ts
 
@@ -195,31 +193,6 @@ export class Pessoa {
 }
 ```
 
-app.component.html
-
-```js
-<h1>{{ title }}</h1>
-<h4>Sub-legenda legal</h4>
-
-<p>Total de nomes: {{ nomes.length }}</p>
-<p>Nome Principal: {{ nomePrincipal.nome }}</p>
-
-<div *ngIf="nomes.length <= 4">
-  <input type="text" />
-  <button>Adicionar</button>
-</div>
-
-<ul>
-  <li *ngFor="let item of nomes" style="color: #ff0000">
-    {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
-  </li>
-</ul>
-
-<p *ngIf="nomes.length > 2">Tem muitos nomes cadastrados</p>
-
-<div *ngIf="showAviso">{{ avisoMsg }}</div>
-```
-
 app.component.ts
 
 ```js
@@ -241,9 +214,12 @@ export class AppComponent {
     new Pessoa(6, "Joao", 5),
   ];
   nomePrincipal = this.nomes[0];
+  corPrincipal = "#FF0000";
 
-  //Aviso
-  showAviso = true;
-  avisoMsg = "Estem é um aviso";
+  /*Criando uma função */
+  clicou = (pessoa: Pessoa) => {
+    // return alert('Clicou em: ' + pessoa.nome);
+    return alert("Clicou em um " + pessoa.getTipo());
+  };
 }
 ```

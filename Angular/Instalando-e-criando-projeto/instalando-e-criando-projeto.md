@@ -14,6 +14,12 @@ Abra seu terminal, e instalando globalmente
 npm install -g @angular/cli
 ```
 
+ou
+
+```js
+yarn global add @angular/cli
+```
+
 Comando, se reconhecer o projeto, sinal que já instalo o angular
 
 ```js

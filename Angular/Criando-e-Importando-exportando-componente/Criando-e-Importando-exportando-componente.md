@@ -24,6 +24,12 @@ Aqui iremos criar um componente
 ng generate component primeiro-componente
 ```
 
+ou
+
+```js
+ng g c primeiro-componente
+```
+
 Depois de criado o componente.repare que ele irá aparecer na pasta
 src/app/primeiro-componente
 

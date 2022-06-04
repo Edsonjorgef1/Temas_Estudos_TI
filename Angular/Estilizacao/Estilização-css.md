@@ -2,7 +2,7 @@
 
 ## Estilos inline
 
-app.component.html
+app/app.component.html
 
 ```js
 <!-- 1 Forma de estilização -->
@@ -22,6 +22,20 @@ app.component.html
 
 <!-- 3 Forma de estilização -->
 <div [style.width.px]="100">Texto 3</div>
+```
+
+app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  tamanhoFonte: 20;
+}
 ```
 
 ## Estilos Class
@@ -76,5 +90,61 @@ app.component.css
 ```js
 #bg {
   background-color: #cccccc;
+}
+```
+
+# Html dentro do arquivo
+
+app.component.ts
+
+```js
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  template: ` <h1 class="h1">Olá Mundo</h1> `,
+})
+export class AppComponent {
+  title = "angularaulas";
+}
+```
+
+app.component.css
+
+```js
+.h1 {
+  color: blue;
+}
+```
+
+## html em outro aquivo, mais organizado
+
+app.component.ts
+
+```js
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+}
+```
+
+app.component.html
+
+```js
+<h1 class="h1">Meu proprio Html</h1>
+```
+
+app.component.css
+
+```js
+.h1 {
+  color: blue;
 }
 ```
