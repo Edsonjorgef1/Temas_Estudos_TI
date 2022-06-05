@@ -223,3 +223,410 @@ export class AppComponent {
   };
 }
 ```
+
+## Clicando e trocando a cor, básico
+
+app/app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<p>Nome principal: {{ nomePrincipal.nome }}</p>
+
+<ul>
+  <li *ngFor="let item of nomes" [style.color]="corPrincipal">
+    {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
+  </li>
+</ul>
+
+<button (click)="corPrincipal = '#0000FF'">Aperte aqui</button>
+```
+
+app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+import { Pessoa } from "./pessoa";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+  /*Array com objetos */
+  nomes = [
+    new Pessoa(1, "Beto", 90),
+    new Pessoa(2, "Paulo", 20),
+    new Pessoa(3, "Fulano", 20),
+    new Pessoa(4, "Ciclano", 20),
+    new Pessoa(5, "Beltrano", 20),
+    new Pessoa(6, "Joao", 5),
+  ];
+  nomePrincipal = this.nomes[2];
+
+  corPrincipal = "#FF0000";
+}
+```
+
+app/pessoa.ts
+
+```js
+export class Pessoa {
+  public id: number;
+  public nome: string;
+  public idade: number;
+
+  constructor(id: number, nome: string, idade: number) {
+    this.id = id;
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  getTipo() {
+    if (this.idade <= 15) {
+      return 'Criança';
+    } else if (this.idade > 15 && this.idade <= 20) {
+      return 'Jovem';
+    } else if (this.idade > 20 && this.idade <= 50) {
+      return 'Adulto';
+    } else if (this.idade > 50 && this.idade <= 80) {
+      return 'Idoso';
+    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
+    {
+      return 'Super Sayadin';
+    }
+  }
+}
+```
+
+## Clicando e executando uma função
+
+app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+import { Pessoa } from "./pessoa";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+  /*Array com objetos */
+  nomes = [
+    new Pessoa(1, "Beto", 90),
+    new Pessoa(2, "Paulo", 20),
+    new Pessoa(3, "Fulano", 20),
+    new Pessoa(4, "Ciclano", 20),
+    new Pessoa(5, "Beltrano", 20),
+    new Pessoa(6, "Joao", 5),
+  ];
+  nomePrincipal = this.nomes[2];
+  corPrincipal = "#FF0000";
+  // Criando uma função, quando for clicado o botão irá executar está função
+  trocarCor = () => {
+    this.corPrincipal = "#00FF00";
+  };
+}
+```
+
+app/app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<p>Nome principal: {{ nomePrincipal.nome }}</p>
+
+<ul>
+  <li *ngFor="let item of nomes" [style.color]="corPrincipal">
+    {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
+  </li>
+</ul>
+
+<button (click)="trocarCor()">Aperte aqui</button>
+```
+
+app/pessoa.ts
+
+```js
+export class Pessoa {
+  public id: number;
+  public nome: string;
+  public idade: number;
+
+  constructor(id: number, nome: string, idade: number) {
+    this.id = id;
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  getTipo() {
+    if (this.idade <= 15) {
+      return 'Criança';
+    } else if (this.idade > 15 && this.idade <= 20) {
+      return 'Jovem';
+    } else if (this.idade > 20 && this.idade <= 50) {
+      return 'Adulto';
+    } else if (this.idade > 50 && this.idade <= 80) {
+      return 'Idoso';
+    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
+    {
+      return 'Super Sayadin';
+    }
+  }
+}
+```
+
+## Clicando e passando parametros
+
+app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+import { Pessoa } from "./pessoa";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+  /*Array com objetos */
+  nomes = [
+    new Pessoa(1, "Beto", 90),
+    new Pessoa(2, "Paulo", 20),
+    new Pessoa(3, "Fulano", 20),
+    new Pessoa(4, "Ciclano", 20),
+    new Pessoa(5, "Beltrano", 20),
+    new Pessoa(6, "Joao", 5),
+  ];
+  nomePrincipal = this.nomes[2];
+  corPrincipal = "#FF0000";
+  //
+  trocarCor = (cor: string) => {
+    this.corPrincipal = cor;
+  };
+}
+```
+
+app/app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<p>Nome principal: {{ nomePrincipal.nome }}</p>
+
+<ul>
+  <li *ngFor="let item of nomes" [style.color]="corPrincipal">
+    {{ item.nome }} - {{ item.idade }} anos - {{ item.getTipo() }}
+  </li>
+</ul>
+
+<button (click)="trocarCor('#0000FF')">Colocar Azul</button>
+
+<button (click)="trocarCor('#FF0000')">Colocar Vermelho</button>
+```
+
+app/pessoa.ts
+
+```js
+export class Pessoa {
+  public id: number;
+  public nome: string;
+  public idade: number;
+
+  constructor(id: number, nome: string, idade: number) {
+    this.id = id;
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  getTipo() {
+    if (this.idade <= 15) {
+      return 'Criança';
+    } else if (this.idade > 15 && this.idade <= 20) {
+      return 'Jovem';
+    } else if (this.idade > 20 && this.idade <= 50) {
+      return 'Adulto';
+    } else if (this.idade > 50 && this.idade <= 80) {
+      return 'Idoso';
+    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
+    {
+      return 'Super Sayadin';
+    }
+  }
+}
+```
+
+## Criando um evento de click no próprio <li>, quando clicar no nome, ele irá aparecer quem foi clicado
+
+app/app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<p>Nome principal: {{ nomePrincipal.nome }}</p>
+
+<ul>
+  <li
+    *ngFor="let item of nomes"
+    [style.color]="corPrincipal"
+    (click)="clicou(item)"
+  >
+    {{ item.nome }} - {{ item.idade }} anos = {{ item.getTipo() }}
+  </li>
+</ul>
+```
+
+app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+import { Pessoa } from "./pessoa";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+  /*Array com objetos */
+  nomes = [
+    new Pessoa(1, "Beto", 90),
+    new Pessoa(2, "Paulo", 20),
+    new Pessoa(3, "Fulano", 20),
+    new Pessoa(4, "Ciclano", 20),
+    new Pessoa(5, "Beltrano", 20),
+    new Pessoa(6, "Joao", 5),
+  ];
+
+  nomePrincipal = this.nomes[2];
+
+  corPrincipal = "#FF0000";
+
+  clicou = function (pessoa: Pessoa) {
+    //alert('Clicou em: ' + pessoa.nome);
+    // ou
+    alert("Clicou em: " + pessoa.getTipo());
+  };
+}
+```
+
+app/pessoa.ts
+
+```js
+export class Pessoa {
+  public id: number;
+  public nome: string;
+  public idade: number;
+
+  constructor(id: number, nome: string, idade: number) {
+    this.id = id;
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  getTipo() {
+    if (this.idade <= 15) {
+      return 'Criança';
+    } else if (this.idade > 15 && this.idade <= 20) {
+      return 'Jovem';
+    } else if (this.idade > 20 && this.idade <= 50) {
+      return 'Adulto';
+    } else if (this.idade > 50 && this.idade <= 80) {
+      return 'Idoso';
+    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
+    {
+      return 'Super Sayadin';
+    }
+  }
+}
+```
+
+## Clicando e trocando o nome da variavel
+
+app/app.component.html
+
+```js
+<h1>{{ title }}</h1>
+<p>Nome principal: {{ nomePrincipal.nome }}</p>
+
+<ul>
+  <li
+    *ngFor="let item of nomes"
+    [style.color]="corPrincipal"
+    (click)="clicou(item)"
+  >
+    {{ item.nome }} - {{ item.idade }} anos = {{ item.getTipo() }}
+  </li>
+</ul>
+//Clicou trocou o nome da variavel
+<button (click)="title = 'Testando 1,2,3'">Mudar Titulo</button>
+```
+
+app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+import { Pessoa } from "./pessoa";
+
+@Component({
+  selector: "app-root",
+  styleUrls: ["./app.component.css"],
+  templateUrl: "./app.component.html",
+})
+export class AppComponent {
+  title = "angularaulas";
+  /*Array com objetos */
+  nomes = [
+    new Pessoa(1, "Beto", 90),
+    new Pessoa(2, "Paulo", 20),
+    new Pessoa(3, "Fulano", 20),
+    new Pessoa(4, "Ciclano", 20),
+    new Pessoa(5, "Beltrano", 20),
+    new Pessoa(6, "Joao", 5),
+  ];
+
+  nomePrincipal = this.nomes[2];
+
+  corPrincipal = "#FF0000";
+
+  clicou = function (pessoa: Pessoa) {
+    //alert('Clicou em: ' + pessoa.nome);
+    // ou
+    alert("Clicou em: " + pessoa.getTipo());
+  };
+```
+
+app/pessoa.ts
+
+```js
+export class Pessoa {
+  public id: number;
+  public nome: string;
+  public idade: number;
+
+  constructor(id: number, nome: string, idade: number) {
+    this.id = id;
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  getTipo() {
+    if (this.idade <= 15) {
+      return 'Criança';
+    } else if (this.idade > 15 && this.idade <= 20) {
+      return 'Jovem';
+    } else if (this.idade > 20 && this.idade <= 50) {
+      return 'Adulto';
+    } else if (this.idade > 50 && this.idade <= 80) {
+      return 'Idoso';
+    } else this.idade > 80 && this.idade <= 80; // Faça assim nesta linha
+    {
+      return 'Super Sayadin';
+    }
+  }
+}
+```

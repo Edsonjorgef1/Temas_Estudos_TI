@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Instalando e criando projeto
+## Instalando Angular
 
 Instalando o Angular
 
@@ -26,7 +26,7 @@ Comando, se reconhecer o projeto, sinal que já instalo o angular
 ng;
 ```
 
-Para criar seu projeto
+## Criando o projeto em angular
 
 ```js
 ng new angularaulas
@@ -45,4 +45,9 @@ ou
 
 ```js
 ng serve --open
+```
+ou
+
+```js
+npm start
 ```

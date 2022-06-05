@@ -72,6 +72,7 @@ app.component.html
 <p>Nome Principal: {{ nomePrincipal.nome }}</p>
 
 <ul>
+ <!-- item = Este nome item, você pode colocar qualquer nome, e a variavel nomes, é do aquivo app.component.ts, estamos praticamente colocando tudo da variavel nomes, dentro da variavel item criada, e depois só referenciar quem você quer achar que no caso item.nome ou item.idade e o ngFor estaá fazendo um loop para imprimir os nossos dados-->
   <li *ngFor="let item of nomes" style="color: #ff0000">
     {{ item.nome }} - {{ item.idade }} anos
   </li>

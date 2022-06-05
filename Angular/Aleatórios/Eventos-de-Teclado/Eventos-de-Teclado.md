@@ -18,7 +18,7 @@ app.component.html
 <!-- Valor que ira aparecer no campo quando carregar -->
 <!--(input)="trocarNome(nomeInput.value)"  // Desta forma com o (input), quando você clica no teclado ele ja digita  -->
 <!--(keyup)="trocarNome(nomeInput.value)"  // Desta forma com o (keyup), só quando eu troca a tela que ele faz o efeito, a questão de memoria este é melhor pois só vai trocar a letra depois que soltar a tecla  -->
-<!-- (keyup.enter)="trocarNome(nomeInput.value)" // Eçe só irá escrever o que foi digitado depois de fazer o Enter do teclado-->
+<!-- (keyup.enter)="trocarNome(nomeInput.value)" // Ele só irá escrever o que foi digitado depois de fazer o Enter do teclado-->
 <input
   #nomeInput
   type="text"

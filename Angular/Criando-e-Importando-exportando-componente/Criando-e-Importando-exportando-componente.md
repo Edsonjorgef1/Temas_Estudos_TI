@@ -121,7 +121,7 @@ import { AppComponent } from "./app.component";
 import { PrimeiroComponenteComponent } from "./primeiro-componente/primeiro-componente.component";
 
 @NgModule({
-  declarations: [AppComponent, PrimeiroComponenteComponent],
+  declarations: [AppComponent, PrimeiroComponenteComponent], // Aqui dentro está os componentes criados e importados automáticos dentro de []
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent], // Aqui ele está referenciando que o AppComponent será o primeiro arquivo a ser executado

@@ -34,7 +34,7 @@ import { Component } from "@angular/core";
   templateUrl: "./app.component.html",
 })
 export class AppComponent {
-  tamanhoFonte: 20;
+  tamanhoFonte: "20px";
 }
 ```
 
@@ -53,6 +53,26 @@ export class AppComponent {
 
 <!-- 7 Forma de estilização  -->
 <div [class]="{ menu: false }">Texto</div>
+```
+
+## Estilos Class, Habilitando ou Desabilitando Class e estilos
+
+app.component.html
+
+```js
+<div [class.teste1]="true">teste1</div>
+<div [class.teste2]="true">teste2</div>
+```
+
+app.component.css
+
+```js
+.teste1 {
+  color: blue;
+}
+.teste2 {
+  color: brown;
+}
 ```
 
 ## Estilos Class 2 Opção

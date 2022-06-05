@@ -29,3 +29,48 @@ export class AppComponent {
   avisoMsg = "Estem é um aviso";
 }
 ```
+
+## Exemplo, aparecendo ou não um cliente
+
+app/primeiro-componente/primeiro-componente.component.html
+
+```js
+<div *ngFor="let umCliente of clientes">
+  <p *ngIf="umCliente.ativo">{{ umCliente.id }} - {{ umCliente.nome }}</p>
+</div>
+```
+
+app/primeiro-componente/primeiro-componente.component.ts
+
+```js
+import { Component, OnInit } from "@angular/core";
+
+@Component({
+  selector: "app-primeiro-componente",
+  templateUrl: "./primeiro-componente.component.html",
+  styleUrls: ["./primeiro-componente.component.css"],
+})
+export class PrimeiroComponenteComponent implements OnInit {
+  clientes = [
+    {
+      id: 1,
+      nome: "Fulano",
+      ativo: true,
+    },
+    {
+      id: 2,
+      nome: "Beltrano",
+      ativo: false,
+    },
+    {
+      id: 3,
+      nome: "Ciclano",
+      ativo: true,
+    },
+  ];
+
+  constructor() {}
+
+  ngOnInit(): void {}
+}
+```
