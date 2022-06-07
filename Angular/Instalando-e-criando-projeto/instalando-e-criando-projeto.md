@@ -26,10 +26,16 @@ Comando, se reconhecer o projeto, sinal que já instalo o angular
 ng;
 ```
 
-## Criando o projeto em angular
+## Criando o projeto em angular, sem rotas
 
 ```js
 ng new angularaulas
+```
+
+## Criando o projeto em angular. já com rotas
+
+```js
+ng new angularaulas --routing
 ```
 
 Depois que criar o projeto, você irá colocar yes, depois você você tem que
@@ -46,6 +52,7 @@ ou
 ```js
 ng serve --open
 ```
+
 ou
 
 ```js

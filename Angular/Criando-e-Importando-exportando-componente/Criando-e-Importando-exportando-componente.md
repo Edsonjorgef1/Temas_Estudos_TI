@@ -30,6 +30,12 @@ ou
 ng g c primeiro-componente
 ```
 
+Agora se quiser criar um componente sem o teste unitário
+
+```js
+ng g c primeiro-componente --spec=false
+```
+
 Depois de criado o componente.repare que ele irá aparecer na pasta
 src/app/primeiro-componente
 
