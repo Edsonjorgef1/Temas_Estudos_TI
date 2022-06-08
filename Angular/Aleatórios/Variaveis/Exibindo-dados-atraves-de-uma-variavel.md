@@ -11,6 +11,7 @@ app/primeiro-component/primeiro-componente.component.html
 ```js
 <div id="bg">
   <h3>Esse é meu primeiro componente</h3>
+  <p>{{title}}<p/>
   <p>Que legal</p>
 </div>
 <br />
@@ -34,6 +35,11 @@ import { Component, OnInit } from "@angular/core";
 export class PrimeiroComponenteComponent implements OnInit {
   meutitulo = "Exibindo dados, atraves de uma variavel";
   meutitulo2 = "Exibindo dados, 2 ";
+  //Quando colocamos puclic, quer dizer que podemos utilizar em outros lugares da nossa aplicação
+  public title = 'Bem Vindo';
+  //public title: string = 'Bem vindo';
+  //Private, não pode ser usado em outros lugares
+  //private title = 'Bem Vindo';
   constructor() {}
 
   ngOnInit(): void {}

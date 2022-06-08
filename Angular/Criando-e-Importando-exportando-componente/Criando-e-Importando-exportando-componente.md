@@ -4,6 +4,10 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
+Uma aplicação Angular é baseada em componentes. Com eles, nós podemos encapsular
+comportamentos e regras da interface, torando a criação de aplicações algo mais
+simples. Inclusive, um componente pode encapsular outros componentes.
+
 ## Para emular o projeto
 
 ```js
@@ -149,6 +153,19 @@ export class AppComponent {
   // Exportando o componente
   title = "angularaulas";
 }
+```
+
+Desta forma, se quiser expluir o arquivo app/app.component.html e o css Repare
+que a rota adicionei direto aqui dentro, no template
+
+```js
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  template: "<router-outlet></router-outlet>",
+})
+export class AppComponent {}
 ```
 
 app/app.component.html

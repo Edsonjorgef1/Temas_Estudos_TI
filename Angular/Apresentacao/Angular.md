@@ -11,3 +11,9 @@ Ele é um framework.
 ```js
 https://angular.io/
 ```
+
+Pesquisas Angular
+
+```js
+https://vidafullstack.com.br/
+```

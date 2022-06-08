@@ -168,3 +168,21 @@ app.component.css
   color: blue;
 }
 ```
+
+## SCSS
+
+Importando um arquivo, com seu css
+
+src/styles.scss
+
+```js
+@import "./scss/*index.scss"
+```
+
+src/scss/index.scss
+
+```js
+body {
+  background-color: red;
+}
+```
