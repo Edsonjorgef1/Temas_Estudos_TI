@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Exercicio, buscando idade, nome e verificando, criança, Jovem, Adulto, Idoso, Super Sayadin
 
 pessoa.ts

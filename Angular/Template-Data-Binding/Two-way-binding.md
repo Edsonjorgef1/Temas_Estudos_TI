@@ -9,7 +9,7 @@ https://www.youtube.com/engenheiroyoutuber
 É A União do property-binding com event-binding. Use para ouvir eventos e
 atualizar valores simultaneamente entre os componentes pai e filho.
 
-## ngModel
+## ngModule
 
 app/title/title.component.ts
 
@@ -37,24 +37,4 @@ app/title/title.component.html
 <input [(ngModel)]="nome" />
 <span>{{ nome }}</span>
 
-```
-
-app/app.module.ts
-
-```js
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
-
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { TitleComponent } from "./title/title.component";
-//Importando FormsModule, para habilitar o ngModel
-@NgModule({
-  declarations: [AppComponent, TitleComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
 ```

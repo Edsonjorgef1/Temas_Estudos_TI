@@ -19,7 +19,8 @@ app/primeiro-componente/primeiro-componente.component.html
   <!-- Clicando em um botton  -->
   <button (click)="clicked()">button</button>
 </div>
-
+<button (click)="alertInfo()">Evento</button>
+<button (click)="alertInfo('Deu bom Dener')">Evento</button>
 ```
 
 app/primeiro-componente/primeiro-componente.component.css
@@ -49,6 +50,13 @@ export class PrimeiroComponenteComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  /*public altertInfo(){
+    altert('Deu bom')
+  }*/
+  /*ou*/
+   public alertInfo(valor: string) {
+    alert(valor);
+  }
 }
 ```
 

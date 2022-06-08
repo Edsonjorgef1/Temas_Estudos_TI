@@ -9,7 +9,7 @@ https://www.youtube.com/engenheiroyoutuber
 É A União do property-binding com event-binding. Use para ouvir eventos e
 atualizar valores simultaneamente entre os componentes pai e filho.
 
-## ngModel
+## ngModule
 
 app/title/title.component.ts
 
