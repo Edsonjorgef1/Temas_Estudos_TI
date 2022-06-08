@@ -1,4 +1,13 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## ngStyle
+
+NgStyle - Adiciona e remove um conjunto de estilos HTML /_Aqui mechamos direto
+no style do html_/
 
 Adicona ou remove estilos no html
 

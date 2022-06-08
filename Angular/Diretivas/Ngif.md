@@ -4,6 +4,10 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
+## NgIf
+
+Condicionalmente cria ou descarta visualizações do modelo.
+
 ## Aviso
 
 app.component.html
@@ -72,5 +76,58 @@ export class PrimeiroComponenteComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+}
+```
+
+## Outros exemplos
+
+app/diretivas-estruturais/diretivas-estruturais.component.html
+
+```js
+<!-- <p *ngIf="false">True</p> -->
+<p *ngIf="conditional; else elseBlock">Alerta</p>
+<ng-template #elseBlock>
+  <p>False</p>
+</ng-template>
+<hr />
+<p *ngIf="conditionalClick">true</p>
+<p *ngIf="!conditionalClick">False</p>
+
+<button (click)="onClick()">Clicar</button>
+```
+
+app/diretivas-estruturais/diretivas-estruturais.component.ts
+
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-diretivas-estruturais',
+  templateUrl: './diretivas-estruturais.component.html',
+  styleUrls: ['./diretivas-estruturais.component.scss'],
+})
+export class DiretivasEstruturaisComponent implements OnInit {
+  public conditional: boolean = true;
+  public conditionalClick: boolean = true;
+
+  constructor() {}
+
+  ngOnInit(): void {
+    //A cada segundo vou fazer alguma coisa
+    setInterval(() => {
+      if (this.conditional) {
+        this.conditional = false;
+      } else {
+        this.conditional = true;
+      }
+    }, 2000);
+  }
+  public onClick() {
+    if (this.conditionalClick) {
+      this.conditionalClick = false;
+    } else {
+      this.conditionalClick = true;
+    }
+  }
 }
 ```

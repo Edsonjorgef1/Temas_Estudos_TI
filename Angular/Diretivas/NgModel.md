@@ -11,6 +11,9 @@ atualizar valores simultaneamente entre os componentes pai e filho.
 
 ## ngModel
 
+NgModel - Adiciona vinculação de dados bidirecionais a um elemento de formulário
+HTML
+
 app/title/title.component.ts
 
 ```js
