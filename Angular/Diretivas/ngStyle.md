@@ -43,3 +43,47 @@ export class PrimeiroComponenteComponent implements OnInit {
   isRed = true;
 }
 ```
+
+## Aumentando e diminuindo a altura
+
+src/app/diretivas-atributos/diretivas-atributos.component.html
+
+```js
+<p [ngStyle]="{ height: heightPx, background: backgroundColor }">NgStyle</p>
+```
+
+src/app/diretivas-atributos/diretivas-atributos.component.ts
+
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-diretivas-atributos',
+  templateUrl: './diretivas-atributos.component.html',
+  styleUrls: ['./diretivas-atributos.component.scss'],
+})
+export class DiretivasAtributosComponent implements OnInit {
+  public valor: boolean = true;
+  public heightPx: string = '20px';
+  public backgroundColor: string = 'red';
+
+  constructor() {}
+
+  ngOnInit(): void {
+    setInterval(() => {
+      if (this.valor) {
+        this.valor = false;
+      } else {
+        this.valor = true;
+      }
+      if (this.heightPx == '20px') {
+        this.heightPx = '50px';
+        this.backgroundColor = 'blue';
+      } else {
+        this.heightPx = '20px';
+        this.backgroundColor = 'red';
+      }
+    }, 2000);
+  }
+}
+```

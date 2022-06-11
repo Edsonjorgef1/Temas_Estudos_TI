@@ -40,6 +40,12 @@ Agora se quiser criar um componente sem o teste unitário
 ng g c primeiro-componente --spec=false
 ```
 
+Para criar um componente dentro de uma pasta especifica
+
+```js
+ng g c /nomedapasta/nomedoquivo
+```
+
 Depois de criado o componente.repare que ele irá aparecer na pasta
 src/app/primeiro-componente
 
