@@ -59,3 +59,71 @@ Pages
 
 Vamos criar uma pasta chamada Pages, criaremos de página para nosso angular
 entender onde realmente iniciaremos.
+
+Vamos criar um projeto, em angular:
+
+```js
+ng new app-todo
+```
+
+Para start do projeto
+
+```js
+ng serve -o
+```
+
+ou
+
+```js
+ng s
+```
+
+Vamos criar agora, nosso module
+
+```js
+ng g m modules/home
+```
+
+Vamos criar agora nosso componente, components
+
+```js
+ng g c modules/home/components
+```
+
+Vamos criar agora nosso componente, header
+
+```js
+ng g c modules/home/components/header
+```
+
+Vamos criar nosso componente todoButtonDeleteAll
+
+```js
+ng g c modules/home/components/todoButtonDeleteAll
+```
+
+Vamos criar nosso componente, todoInputAddItens
+
+```js
+ng g c modules/home/components/todoInputAddItens
+```
+
+Vamos criar o componente, todoList
+
+```js
+ng g c modules/home/components/todoList
+```
+
+Vamos criar o componente, home
+
+```js
+ng g c modules/home/pages/home
+```
+
+Criando um arquivo, variables.scss
+
+dist/scss/variables.scss
+
+Esta variables, é para definir as cores
+
+No google existe o google fonts

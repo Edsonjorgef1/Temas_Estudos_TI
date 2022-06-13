@@ -20,6 +20,12 @@ ou
 ng serve --open
 ```
 
+ou
+
+```js
+ng s
+```
+
 ## Como criar um componente
 
 Aqui iremos criar um componente
