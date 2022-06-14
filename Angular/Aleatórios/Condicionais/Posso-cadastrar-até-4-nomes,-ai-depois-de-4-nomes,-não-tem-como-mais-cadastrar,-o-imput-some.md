@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Posso cadastrar até 4 nomes, ai depois de 4 nomes, não tem como mais cadastrar, o imput some
 
 app.component.ts

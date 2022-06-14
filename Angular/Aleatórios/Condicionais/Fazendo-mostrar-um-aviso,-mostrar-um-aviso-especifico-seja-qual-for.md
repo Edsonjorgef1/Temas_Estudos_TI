@@ -1,3 +1,9 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
 ## Fazendo mostrar um aviso, mostrar um aviso especifico seja qual for
 
 pessoa.ts
