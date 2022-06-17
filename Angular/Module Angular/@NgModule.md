@@ -30,7 +30,7 @@ import = ele importa funcionalidades de outros componentes
 
 export = ele serve para exportar o seu modulo alem de declarar
 
-providers = aonde você quer fazer uma requeisição externa temos que declarar o
+providers = aonde você quer fazer uma requesição externa temos que declarar o
 nosso service dentro do ngmodel para utilizar nossa injeção de dependencia
 
 bottstrap = utilizar em nosso componente principal, ele é a inicialização do
