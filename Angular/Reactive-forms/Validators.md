@@ -4,7 +4,13 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## Utilizando o Formulário
+## Validators
+
+Documentação
+
+```js
+https://angular.io/guide/form-validation
+```
 
 src/app/reactive-forms/reactive-forms.component.html
 
@@ -13,21 +19,49 @@ src/app/reactive-forms/reactive-forms.component.html
   <input type="text" formControlName="firstName" />
   <br />
   <input type="text" formControlName="lastName" />
+
+  <!-- Obs: Aonde está o nome firstName, não colocar aspas duplas, porque da erro, utilizar aspas simples -->
+  <span
+    class="alert"
+    *ngIf="
+      cadastroForm.get('firstName')?.errors &&
+      cadastroForm.get('firstName')?.touched &&
+      cadastroForm.get('firstName')?.dirty
+    "
+  >
+    Favor adicionar o nome
+  </span>
+
   <p>
-    {{ cadastroForm.get("firstName")?.value }}
+    {{ cadastroForm.get("firstName")?.errors | json }}
   </p>
-  <p
-    {{ cadastroForm.get("lastName")?.value }}
+
+  <p>
+    {{ cadastroForm.get("firstName")?.touched | json }}
   </p>
+
+  <p>
+    {{ cadastroForm.get("firstName")?.dirty | json }}
+  </p>
+
   <button>Enviar</button>
 </form>
+```
+
+src/app/reactive-forms/reactive-forms.component.scss
+
+```js
+.alert {
+  color: white;
+  background-color: red;
+}
 ```
 
 src/app/reactive-forms/reactive-forms.component.ts
 
 ```js
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -35,15 +69,15 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./reactive-forms.component.scss'],
 })
 export class ReactiveFormsComponent implements OnInit {
-  public cadastroForm: FormGroup = this.formBuilder.group({
-    firstName: [''],
+  cadastroForm: FormGroup = this.formBuilder.group({
+    //required, quer dizer que só vai ser submitido, se tiver algum valor neste campo
+    firstName: ['', Validators.required],
     lastName: [''],
   });
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {}
-
   public submitForm() {
     console.log(this.cadastroForm.value);
     console.log(this.cadastroForm.value.firstName);
