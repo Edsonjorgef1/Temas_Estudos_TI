@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## ngForm + input text
+## ngForm + input rádio
 
 src/app/shared/shared.module.ts
 
@@ -27,9 +27,24 @@ src/app/shared/forms/forms.component.html
 
 ```js
 <form #form="ngForm">
+
   <label>
     Nome:
-    <input type="text" name="nome" ngModel />
+    <input type="radio" name="sexo" value="Masculino" ngModel />
+  </label>
+  <br />
+  <br />
+
+  <label>
+    Feminino:
+    <input type="radio" name="sexo" value="Feminino" ngModel />
+  </label>
+  <br />
+  <br />
+
+  <label>
+    Outros:
+    <input type="radio" name="sexo" value="Outros" ngModel />
   </label>
   <br />
   <br />

@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## ngForm + input text
+## ngForm selected
 
 src/app/shared/shared.module.ts
 
@@ -27,13 +27,35 @@ src/app/shared/forms/forms.component.html
 
 ```js
 <form #form="ngForm">
-  <label>
-    Nome:
-    <input type="text" name="nome" ngModel />
-  </label>
+//...................................................................
+  <!-- 1 Exemplo -->
+  <!--
+  <select name="comidas" ngModel>
+    <option value="">Selecione um alimento</option>
+    <option value="X-Salada">X-Salada</option>
+    <option value="X-Bacon">X-Bacon</option>
+    <option value="Coxinha">Coxinha</option>
+  </select>
+ -->
+ //..................................................................
+  <!-- 2 Exemplo, passando nosso array -->
+  <select name="comidas" ngModel>
+    <option value="">Selecione um alimento</option>
+
+    <!-- [ngValue]="item", assim ele aceita um objeto-->
+    <!-- [value]="item", assim, não aceita um objeto, aceita assim [object Object] -->
+
+    <option *ngFor="let item of listComidas" [ngValue]="item">
+      <!-- Mesma coisa -->
+      <!-- <option *ngFor="let item of listComidas" [value]="item.comida"> -->
+      {{ item.comida }} - {{ item.preco }}
+    </option>
+  </select>
+
   <br />
   <br />
 </form>
+
 {{ form.value | json }}
 
 //<!-- ngModel, ajuda a passar os valores  -->
@@ -44,14 +66,20 @@ src/app/shared/forms/forms.component.html
 src/app/shared/forms/forms.component.ts
 
 ```js
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-forms",
-  templateUrl: "./forms.component.html",
-  styleUrls: ["./forms.component.scss"],
+  selector: 'app-forms',
+  templateUrl: './forms.component.html',
+  styleUrls: ['./forms.component.scss'],
 })
 export class FormsComponent implements OnInit {
+  public listComidas: Array<{ comida: string; preco: string }> = [
+    { comida: 'X-salada', preco: 'R$10,00' },
+    { comida: 'X-bacon', preco: 'R$11,00' },
+    { comida: 'Coxinha', preco: 'R$12,00' },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -4,7 +4,7 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-## ngForm + input text
+## ngForm + input checkbox
 
 src/app/shared/shared.module.ts
 
@@ -28,12 +28,27 @@ src/app/shared/forms/forms.component.html
 ```js
 <form #form="ngForm">
   <label>
-    Nome:
-    <input type="text" name="nome" ngModel />
+    Angular:
+    <input type="checkbox" name="angular" value="Outros" ngModel />
+  </label>
+  <br />
+  <br />
+
+  <label>
+    Vue:
+    <input type="checkbox" name="vue" ngModel />
+  </label>
+  <br />
+  <br />
+
+  <label>
+    React:
+    <input type="checkbox" name="react" ngModel />
   </label>
   <br />
   <br />
 </form>
+
 {{ form.value | json }}
 
 //<!-- ngModel, ajuda a passar os valores  -->
