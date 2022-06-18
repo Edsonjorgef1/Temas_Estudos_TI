@@ -19,3 +19,30 @@ Vamos instalar
 ```js
 npm install -g json-server
 ```
+
+Para rodar
+
+```js
+json-server --watch db.json
+```
+
+fake-server/db.json
+
+```js
+{
+  "list-food": [
+    {
+      "id": 1,
+      "nome": "X Bacon"
+    },
+    {
+      "id": 2,
+      "nome": "Feijão"
+    },
+    {
+      "id": 3,
+      "nome": "Ovo"
+    }
+  ]
+}
+```
