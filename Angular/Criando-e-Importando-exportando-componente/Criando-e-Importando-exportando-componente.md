@@ -26,6 +26,12 @@ ou
 ng s
 ```
 
+## Criando um componente dentro de uma pasta especifica
+
+```js
+$ ng g c --module pages pages/details
+```
+
 ## Como criar um componente
 
 Aqui iremos criar um componente

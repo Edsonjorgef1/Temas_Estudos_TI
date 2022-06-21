@@ -1,0 +1,14 @@
+Canal do youtube:
+
+```js
+https://www.youtube.com/engenheiroyoutuber
+```
+
+Arquivo 
+karma.conf.js
+
+Configuração dos testes do Karma
+
+Dentro do nosso arquivo json está o karma e jasmine em nossas dependencias.
+
+ng test = Para testar fazer os testes
