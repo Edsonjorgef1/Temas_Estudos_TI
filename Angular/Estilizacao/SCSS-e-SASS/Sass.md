@@ -55,7 +55,7 @@ src/app/modules/componts/header/header.component.html
 <h1>header works!</h1>
 ```
 
-src/app/modules/componts/header/header.component.css
+src/app/modules/componts/header/header.component.scss
 
 ```js
 //Importando o caminho da fonte
