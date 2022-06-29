@@ -21,20 +21,9 @@ muito bom, pois tem projetos que já tem cores definidas, isso ajuda muito.
 src/scss/variables.scss
 
 ```js
-$primary-color: #af7eeb;
-$secondary-color: #939cbd;
-$tertiary-color: #ffffff;
-
-//Vamos importar está cor olha que facil
-$primary-background-color: #e3e9ff;
-
-$secondary-background-color: $tertiary-color;
-$tertiary-background-color: $primary-color;
-
-$primary-text-color: $secondary-color;
-$secondary-text-color: $tertiary-color;
-
-$danger-color: #ff002e;
+$bg-color: #eee;
+$title-backgroud: #333;
+$main-color: #fff;
 ```
 
 src/styles.scss
@@ -52,7 +41,13 @@ body {
 src/app/modules/componts/header/header.component.html
 
 ```js
-<h1>header works!</h1>
+<div class="container">
+  <h1 id="title">oi</h1>
+</div>
+<div class="container-bottom">
+  <p>Teste</p>
+</div>
+<router-outlet></router-outlet>
 ```
 
 src/app/modules/componts/header/header.component.scss
@@ -61,15 +56,20 @@ src/app/modules/componts/header/header.component.scss
 //Importando o caminho da fonte
 @import "../../../../../dist//scss//variables.scss";
 
-h1 {
-  width: 100%;
-  padding: 15px 0;
+.container {
+  background-color: $bg-color;
+  padding: 20px;
 
+  #title {
+    background-color: $title-backgroud;
+    color: $main-color;
+    text-align: center;
+    padding: 10px;
+  }
+}
+.container-bottom {
+  background-color: blue;
+  padding: 50px;
   text-align: center;
-  font-size: 18px;
-  //Aqui estou importando a cor, da fonte
-  color: $secondary-text-color;
-  //Aqui estou importando a cor do fundo
-  background-color: $tertiary-background-color;
 }
 ```
