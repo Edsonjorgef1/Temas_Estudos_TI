@@ -13,7 +13,7 @@ import React from "react";
 import data from "../data/data.json";
 
 //Json
-const Json = data.map((data) => {
+const Json = data.map(data => {
   return (
     <div>
       {data.id}
@@ -32,7 +32,7 @@ Arquivo, data.json
 
 ```js
 [
-  {
+  {+
     id: 1,
     Nome: "Gilberto",
     Cpf: "31405459832",
