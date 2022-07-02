@@ -73,3 +73,34 @@ src/app/modules/componts/header/header.component.scss
   text-align: center;
 }
 ```
+
+## Aqui vou demonstrar outro forma de chamar um variavel
+
+src/app/core/components/header/header.component.html
+
+```js
+<body class="dark-theme">
+  <h1> Theme Dark Teme </h1>
+</body>
+```
+
+src/app/styles.css
+
+```js
+:root {
+  --primary: #1976d2;
+  --body: #fff; // Branco
+  --text-menu: #fff;
+  --text-body: #4b4b4;
+}
+:root .dark-theme {
+  --primary: #0d47a1;
+  --body: #4b4b4b; // Cinza
+  --text-menu: #fff;
+  --text-body: #fff;
+}
+body {
+  //Repare que legal, eu estou utilizando a var(--body), quando meu body, for igual dark-theme, ele irá ficar cinza se não for ficara branco.
+  background-color: var(--body);
+}
+```

@@ -10,6 +10,12 @@ https://www.youtube.com/engenheiroyoutuber
 ng g m shared
 ```
 
+## Criando um submodulo já com rotas filhas, caso precise
+
+```js
+ng g m shared --routing
+```
+
 Criar um componete agora a minha pasta shared
 
 ```js

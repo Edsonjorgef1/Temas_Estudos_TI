@@ -6,7 +6,8 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## Aqui vai conter, algumas extenções, para auxiliar nos projetos
 
-Html auto complete
+## Html auto complete
+
 ```js
 Extensão JSX HTML <tags/>
 ```
@@ -20,4 +21,9 @@ Prettier - Code form
 Conhecendo as funcionalidade do javascript
 
 ## Material Icone Theme
+
 Icones do VsCode
+
+## Prettier - Code formatter
+
+Alinhamento dos códigos
