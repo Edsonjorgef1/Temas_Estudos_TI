@@ -4,6 +4,10 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
+## Site referência de CSS e outros
+
+https://www.w3schools.com/css/default.asp
+
 ## Select (Biblioteca, select)
 
 react-select.com
