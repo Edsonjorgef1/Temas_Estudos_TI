@@ -306,6 +306,15 @@ border-style: solid;
 border; 3px dashed #FF0000
 ```
 
+## bottom: 0
+
+(Este aqui serve para posicionar o texto la embaixo do site, no caso o footer)
+
+```js
+bottom: 0; //referência parte de baixo
+position: fixed; // Fixado
+```
+
 ## Children
 
 ```js
@@ -584,6 +593,12 @@ margin-bottom: 18px;
 
 ```js
 margin: 1em 0;
+```
+
+ou
+
+```js
+margin: 50px 0 10px;// margin top, margem laterais, margem baixo
 ```
 
 ## margin-left:
@@ -1068,6 +1083,14 @@ Layout Fixo px - Pixels
 Layout Fluido % - Porcentagem auto - Automática vh - Viewport Height vw - Viewport Width
 Textos fixos 1px = 0.75pt 16px = 12pt
 Texto fluidos em - multiplicado pelo pai rem - multiplicado pelo root
+```
+
+## vertical-align: midle;
+
+Alinhar o texto no meio
+
+```js
+vertical-align: middle;
 ```
 
 ## visibility: hidden;
