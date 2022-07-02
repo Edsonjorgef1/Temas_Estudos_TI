@@ -74,7 +74,7 @@ src/app/modules/componts/header/header.component.scss
 }
 ```
 
-## Aqui vou demonstrar outro forma de chamar um variavel
+## Aqui vou demonstrar, outro forma de chamar uma variavel no scss
 
 src/app/core/components/header/header.component.html
 
