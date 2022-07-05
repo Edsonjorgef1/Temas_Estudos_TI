@@ -213,3 +213,99 @@ app/index.html
 </body>
 </html>
 ```
+
+## Desta forma, é mais facil de importar e exportar
+
+Criar um componente, chamado calculadora
+
+ng g c calculadora/caculadora
+
+src/app/calculadora/componentes/calculadora.component.html
+
+```js
+<p>calculadora works!</p>
+```
+
+src/app/calculadora/componentes/calculadora.component.ts
+
+```js
+import { Component, OnInit } from "@angular/core";
+
+@Component({
+  selector: "app-calculadora",
+  templateUrl: "./calculadora.component.html",
+  styleUrls: ["./calculadora.component.scss"],
+})
+export class CalculadoraComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit(): void {}
+}
+```
+
+src/app/calculadora/componentes/index.ts
+
+```js
+export * from "./calculadora.component";
+```
+
+Dentro da calculadora foi criado um modulo
+
+```js
+ng g m calculadora
+```
+
+src/app/calculadora/calculadora.module.ts
+
+```js
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { CalculadoraComponent } from "./components";
+
+@NgModule({
+  imports: [CommonModule],
+  declarations: [CalculadoraComponent],
+  exports: [CalculadoraComponent],
+})
+export class CalculadoraModule {}
+```
+
+src/app/app.module.ts
+
+```js
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+
+import { CalculadoraModule } from "./calculadora";
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, CalculadoraModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
+
+src/app/app.component.ts
+
+```js
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
+})
+export class AppComponent {}
+```
+
+src/app/app.component.html
+
+```js
+<app-calculadora></app-calculadora>
+<router-outlet></router-outlet>
+```

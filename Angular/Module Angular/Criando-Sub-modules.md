@@ -149,3 +149,59 @@ src/app/app.component.html
 // Este outro é a mesma coisa só que é o input
 <app-input></app-input>
 ```
+
+## Podemos fazer de outra forma, sem precisar importar o modulo, no app.module principal
+
+src/app/shared/shared.module.ts
+
+```js
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { NewComponentComponent } from "./new-component/new-component.component";
+import { InputComponent } from "./input/input.component";
+
+@NgModule({
+  //Inporto o componente, InputComponet, automático
+  declarations: [NewComponentComponent, InputComponent],
+  //Aqui deve exportar, o InputComponent, pois ele não faz
+  exports: [NewComponentComponent, InputComponent],
+  imports: [CommonModule],
+})
+//Este nome SharedModule, ele é importado depois no app.module.ts o modulo principal
+export class SharedModule {}
+```
+
+Depois de criado o modulo, basta criar um arquivo dentro da pasta shared,
+index.js
+
+src/app/shared/index.js
+
+```js
+export * from "./calculadora.module";
+```
+
+Pronto assim, temos nosso modulo público, para importar de onde quisermos.
+
+src/app/app.module.ts
+
+Modulo principal
+
+```js
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
+
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { SharedModule } from "./shared/shared.module";
+
+@NgModule({
+  declarations: [AppComponent],
+  //Repare que foi importado o nome, SharedModule e dentro deste module tem outros componentes criados
+  //Também deve, importar o FormsModule, para que o ngModule que está dentro do shared.module.ts funcione
+  imports: [BrowserModule, AppRoutingModule, FormsModule, SharedModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```

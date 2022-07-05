@@ -41,6 +41,12 @@ Comando, se reconhecer o projeto, sinal que já instalo o angular
 ng;
 ```
 
+Verificando a versão
+
+```js
+ng --version
+```
+
 ## Criando o projeto em angular, sem rotas
 
 ```js
@@ -78,4 +84,28 @@ Irá pegar as configurações padrões, para build, ler a documentação
 
 ```js
 ng b
+```
+
+Teste Unitários
+
+```js
+ng test
+```
+
+Testes de integração
+
+```js
+ng e2e
+```
+
+Coridigo padronizado, ele irá ver a qualidade do código
+
+```js
+ng lint
+```
+
+Código pronto para produção
+
+```js
+ng build --prod
 ```
