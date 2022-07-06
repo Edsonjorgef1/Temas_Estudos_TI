@@ -6,6 +6,10 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## Criando nosso service
 
+Nosso service é responsavel por todas as operações relacionadas a tarefas,
+listagem, cadastro, edição, remoção, atualização de status e o que for
+necessario, ficará neste aquivo.
+
 ```js
 ng g s \gerandoDentroDesteDiretório\nomeDoService
 ```
