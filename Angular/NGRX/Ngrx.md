@@ -48,4 +48,4 @@ Os efeitos são um modelo de efeito colateral alimentado por RxJS para Store . O
 efeitos usam fluxos para fornecer novas fontes de ações para reduzir o estado
 com base em interações externas, como solicitações de rede (Dados externos).
 
-<img src="img/ngrxImg.png" width=100>
+<img src="img/ngrxImg.png" width=1000 heigth=1000>
