@@ -10,8 +10,6 @@ https://ngrx.io/
 npm install @ngrx/store –save
 ```
 
-image.png
-
 ```js
 npm install @ngrx/effects –save
 ```
