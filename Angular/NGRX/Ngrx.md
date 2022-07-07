@@ -29,7 +29,7 @@ mudanças de estado
 ## Ações (Action)
 
 As ações são um dos principais blocos de construção do NgRx. As ações expressam
-eventos exclusivos que acontecem em todo o seu aplicativo. Desdea interação do
+eventos exclusivos que acontecem em todo o seu aplicativo. Desde a interação do
 usuário com a página, interação externa por meio de solicitações de rede e
 interação direta com as APIs do dispositivo, esses e mais eventos são descritos
 com ações.
