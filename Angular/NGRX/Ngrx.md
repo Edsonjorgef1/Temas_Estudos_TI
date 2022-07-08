@@ -1,5 +1,7 @@
 ## NgRx
 
+NgRx, é muito bom quando temos mais de uma api.
+
 ```js
 https://ngrx.io/
 ```
@@ -47,3 +49,9 @@ efeitos usam fluxos para fornecer novas fontes de ações para reduzir o estado
 com base em interações externas, como solicitações de rede (Dados externos).
 
 <img src="img/ngrxImg.png" width=1000 heigth=1000>
+
+Projeto, Exemplo:
+
+```js
+https://github.com/gilbertogoncalvesdelima/Crud-Ngrx-Angular
+```
