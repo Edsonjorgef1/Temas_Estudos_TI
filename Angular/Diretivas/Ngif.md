@@ -6,6 +6,12 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## NgIf
 
+A primeira diretiva estrutural que veremos é o ngIf, que funciona de forma similar a estrutura condicional IF: dado um valor booleano, se verdadeiro um bloco de código deve ser executado.
+
+No caso da diretiva ngIf, dado um valor booleano, se verdadeiro um elemento HTML deve ser renderizado para o usuário.
+
+Diretivas estruturais como o ngIf podem ser utilizadas em qualquer elemento HTML ou componentes Angular, e são essenciais no desenvolvimento de interfaces com o Angular.
+
 Condicionalmente cria ou descarta visualizações do modelo.
 
 ## Aviso
@@ -129,5 +135,103 @@ export class DiretivasEstruturaisComponent implements OnInit {
       this.conditionalClick = true;
     }
   }
+}
+```
+## Mostrando ou não um texto específico
+
+condicional.component.html
+
+```js
+<button (click)="toggleConteudo()">Toggle</button>
+
+<h1 *ngIf="exibirConteudo">Conteúdo oculto!</h1>
+```
+
+condicional.component.ts
+
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-contador',
+  templateUrl: './contador.component.html',
+  styleUrls: ['./contador.component.scss'],
+})
+export class ContadorComponent implements OnInit {
+  public exibirConteudo = true;
+
+  toggleConteudo() {
+    this.exibirConteudo = !this.exibirConteudo;
+  }
+
+  constructor() {}
+
+  ngOnInit(): void {}
+}
+```
+
+## Olha que legal, eu posso agora tirar ou adicionar um componente se eu quiser
+
+condicional.component.html
+
+```js
+<button (click)="toggleConteudo()">Toggle</button>
+
+<h1 *ngIf="exibirConteudo">Conteúdo oculto!</h1>
+```
+
+src/app/condicional.component.ts
+
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-contador',
+  templateUrl: './contador.component.html',
+  styleUrls: ['./contador.component.scss'],
+})
+export class ContadorComponent implements OnInit {
+  public exibirConteudo = true;
+
+  toggleConteudo() {
+    this.exibirConteudo = !this.exibirConteudo;
+  }
+
+  constructor() {}
+
+  ngOnInit(): void {}
+}
+```
+
+src/app/condicional.component.html
+
+```js
+<button (click)="toggleConteudo()">Toggle</button>
+
+<h1 *ngIf="exibirConteudo">Conteúdo oculto!</h1>
+```
+
+
+## Quando clicar no botão sumir um componente
+
+src/app.component.html
+
+```js
+<app-contador></app-contador>
+<app-teste *ngIf="exibirConteudo"></app-teste>
+<router-outlet></router-outlet>
+```
+src/app.component.ts
+
+```js
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  public exibirConteudo = true;
 }
 ```

@@ -4,8 +4,6 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-t
-
 ## cloudinary
 
 Armazenamento de fotos e videos
