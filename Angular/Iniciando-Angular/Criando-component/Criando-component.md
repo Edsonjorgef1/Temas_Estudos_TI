@@ -4,28 +4,6 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
-Uma aplicação Angular é baseada em componentes. Com eles, nós podemos encapsular
-comportamentos e regras da interface, torando a criação de aplicações algo mais
-simples. Inclusive, um componente pode encapsular outros componentes.
-
-## Para emular o projeto
-
-```js
-ng serve -o
-```
-
-ou
-
-```js
-ng serve --open
-```
-
-ou
-
-```js
-ng s
-```
-
 ## Criando um componente dentro de uma pasta especifica
 
 ```js
@@ -33,6 +11,7 @@ $ ng g c --module pages pages/details
 ```
 
 ## Como criar um componente
+
 
 Aqui iremos criar um componente
 

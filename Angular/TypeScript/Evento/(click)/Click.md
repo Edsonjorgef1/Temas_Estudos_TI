@@ -4,6 +4,93 @@ Canal do youtube:
 https://www.youtube.com/engenheiroyoutuber
 ```
 
+## Click
+
+✓ Qual elemento vai emitir o evento?
+No nosso caso button;
+
+✓ Qual o nome do evento que será emitido pelo elemento?
+click!
+
+app.component.ts
+
+```js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent {
+  onClick(event: any) {
+    console.log('Recebi um click');
+  }
+}
+```
+
+app.component.html
+
+(click) = Nome do evento
+
+"onClick($event)" = Método do componente
+
+```js
+<button (click)="onClick($event)">Me Clica</button>
+
+<router-outlet></router-outlet>
+```
+
+## Agora vamos fazer um click, utilizando outro componente
+
+Aqui criaremos o componente
+
+```js
+ng g c click-me
+```
+
+click-me.component.ts
+
+```js
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-click-me',
+  templateUrl: './click-me.component.html',
+  styleUrls: ['./click-me.component.scss'],
+})
+export class ClickMeComponent implements OnInit {
+  onClick() {
+    console.log('Recebi um click');
+  }
+
+  constructor() {}
+
+  ngOnInit(): void {}
+}
+```
+
+click-me.component.html
+
+(click) = Nome do evento
+
+"onClick($event)" = Método do componente
+
+```js
+<button (click)="onClick()">CLick Me</button>
+```
+
+app.component.html
+
+Componente Principal
+
+```js
+<app-click-me></app-click-me>
+
+<router-outlet></router-outlet>
+```
+
+
 ## Básico do click
 
 app/primeiro-componente/primeiro-componente.component.html

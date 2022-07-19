@@ -6,6 +6,8 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## ngOnDestroy
 
+É executado antes do Angular destruir o componente. O ideal é que esse método seja utilizado para promover uma 'limpeza' no componente, tal como remover events handler por exemplo, antes da sua destruição para evitar memory leaks.
+
 Ele vai ser ativado quando destruirmos alguma coisa, quando destruirmos um
 componente, ai la no componente irá falar fui destruido, então envoque uma ação
 Opção de uso: 1 - Quando fazermos as requisições ele é utilizado para não gerar

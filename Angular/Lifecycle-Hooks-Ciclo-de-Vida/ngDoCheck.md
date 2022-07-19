@@ -6,49 +6,15 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## ngDoCheck
 
+O ngDoCheck() detecta e age mediante mudanças que o Angular não consegue detectar sozinho. Entretanto é sempre bom ficar atento a utilização desse método, pois uma simples troca de foco de um campo de texto por exemplo, já seria suficiente para disparar esse método, o que pode prejudicar o desempenho da sua aplicação. Isso ocorre porque o ngDoCheck() é executado sempre que o detector de mudanças do angular é chamado, mesmo que não haja nenhuma alteração. Esse método é executado executado sempre após o ngOnChanges()
+
+É recomendado que nunca se utilize o ngDoCheck() e o ngOnChanges() para checar mudanças em propriedades @Input ao mesmo tempo, pois isso poderá causar problemas.
+
 Este evento é disparado sempre que as propriedades de entrada de um componente
 são verificadas
 
 ```js
 ngDoCheck();
-```
-
-Filhos
-
-## ngAfterContentInit
-
-Este método de ciclo de vida é executado quando o Angular realiza qualquer
-projeção de conteúdo as visualizações do componente.
-
-```js
-ngAfterContentInit();
-```
-
-## ngAfterContentChecked
-
-Este método de gancho de ciclo de vida é executado sempre que o conteúdo do
-componente é verificado pelo mecanismo de detecção de alteração do Angular.
-
-```js
-ngAfterContentChecked();
-```
-
-## ngAfterViewInit
-
-Este método de gancho de ciclo de vida pe executado quando a visualização do
-componente foi totalmente inicializada
-
-```js
-ngAfterViewInit();
-```
-
-## ngAfterViewChecked
-
-Ele é executado toda vez que a visualização de um determinado componente foi
-verificada pelo algoritimo de detecção de alterações do Angular.
-
-```js
-ngAfterViewChecked();
 ```
 
 app/app.component.ts

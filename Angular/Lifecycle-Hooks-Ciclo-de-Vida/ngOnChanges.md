@@ -6,6 +6,11 @@ https://www.youtube.com/engenheiroyoutuber
 
 ## ngOnChanges
 
+O ngOnChanges() é executado quando uma propriedade decorada com @Input é alterada. Ele recebe um objeto do tipo SimpleChanges com o valor atual e anterior da propriedade.
+
+O @Input é um decorador que informa ao Angular que uma propriedade do componente filho pode compartilhar dados com o componente pai, é dessa forma que podemos utilizar o ngOnChanges para detectar mudanças que ocorrem no componente filho.
+Além de ser chamado após cada alteração das propriedades decoradas, o ngOnChanges() também é executado uma vez durante o carregamento do componente, antes mesmo do ngOnInit()
+
 Este evento é executado sempre que um valor de um controle de entrada dentro do
 componente é alterado. Sempre que um componente recebe um dado através do
 @input() o ngOnChanges() é invocado
