@@ -3,8 +3,6 @@
 ```js
 https://www.youtube.com/engenheiroyoutuber
 ```
-- Empresa 1
-- Empresa 2
 
 # Angular
 
