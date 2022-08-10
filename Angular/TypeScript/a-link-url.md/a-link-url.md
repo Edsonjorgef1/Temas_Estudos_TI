@@ -51,3 +51,11 @@ export class ContadorComponent implements OnInit {
   ngOnInit(): void {}
 }
 ```
+
+## Outro exemplo
+
+```js
+<a routerLink="/restaurants">Restaurantes</a>
+//ou
+<a [routerLink]="['/restaurants']">Restaurantes</a>
+```
