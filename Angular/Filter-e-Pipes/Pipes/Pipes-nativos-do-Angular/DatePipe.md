@@ -1,3 +1,0 @@
-## DatePipe
-
-Para datas
